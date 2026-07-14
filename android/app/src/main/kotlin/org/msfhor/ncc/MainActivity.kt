@@ -1,4 +1,4 @@
-package org.msfhor.ncc.ncc
+package org.msfhor.ncc
 
 import io.flutter.embedding.android.FlutterActivity
 
