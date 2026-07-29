@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:ncc/core/di/init_di.dart';
-import 'package:ncc/core/extensions/string.dart';
-import 'package:ncc/core/locale/app_language.dart';
-import 'package:ncc/core/locale/app_localizations_helper.dart';
-import 'package:ncc/core/src/entities/language.dart';
-import 'package:ncc/core/src/widgets/app_version_widget.dart';
-import 'package:ncc/core/src/widgets/loading_widget.dart';
-import 'package:ncc/core/utils/constants.dart';
-import 'package:ncc/src/home/presentation/widgets/language_changer_widget.dart';
-import 'package:ncc/src/home/presentation/widgets/ncc_info/ncc_info_widget.dart';
-import 'package:ncc/src/settings/domain/entities/device_settings.dart';
-import 'package:ncc/src/settings/presentation/blocs/device_settings/device_settings_bloc.dart';
+import '../../../../core/di/init_di.dart';
+import '../../../../core/extensions/string.dart';
+import '../../../../core/locale/app_language.dart';
+import '../../../../core/locale/app_localizations_helper.dart';
+import '../../../../core/src/entities/language.dart';
+import '../../../../core/src/widgets/app_version_widget.dart';
+import '../../../../core/src/widgets/loading_widget.dart';
+import '../../../../core/utils/constants.dart';
+import '../../../home/presentation/widgets/language_changer_widget.dart';
+import '../../../home/presentation/widgets/ncc_info/ncc_info_widget.dart';
+import '../../domain/entities/device_settings.dart';
+import '../blocs/device_settings/device_settings_bloc.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});

@@ -18,7 +18,7 @@ void mainDi() {
     () => IntroSlidesBloc(getIntroSlidesUsecase: sl(),
     ),
   );
-  sl.registerLazySingleton<MainRepositoryImpl>(
+  sl.registerLazySingleton<MainRepository>(
     () => MainRepositoryImpl(localDataSource: sl()),
   );
 }
