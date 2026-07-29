@@ -1,5 +1,5 @@
 import 'package:get_it/get_it.dart';
-import 'package:ncc/core/di/main_di.dart';
+import 'main_di.dart';
 
 import '../../core/di/extrnal_di.dart';
 import '../../core/di/services_di.dart';

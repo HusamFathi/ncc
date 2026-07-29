@@ -6,6 +6,7 @@ sealed class IntroSlidesEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
 class IntroSlidesStarted extends IntroSlidesEvent {
   const IntroSlidesStarted();
 }
