@@ -1,9 +1,9 @@
 import 'package:go_router/go_router.dart';
+
+import '../../src/home/presentation/pages/home_page.dart';
 import '../../src/main/presentation/pages/main_page.dart';
 import '../../src/main/presentation/pages/main_shell_page.dart';
 import '../../src/settings/presentation/pages/settings_page.dart';
-
-import '../../src/home/presentation/pages/home_page.dart';
 import 'routes_config.dart';
 
 class RoutesList {

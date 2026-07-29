@@ -1,4 +1,3 @@
-
 import '../../domain/entities/intro_slide_data.dart';
 
 class IntroSlideDataModel extends IntroSlideData {

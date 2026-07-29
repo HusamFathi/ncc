@@ -1,16 +1,13 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/di/init_di.dart';
-import '../../../../core/utils/constants.dart';
-import '../../domain/entities/intro_slide_data.dart';
-import '../blocs/intro_slides/intro_slides_bloc.dart';
-import '../widgets/slider_widget.dart';
-import 'package:skeletonizer/skeletonizer.dart';
 
+import '../../../../core/di/init_di.dart';
 import '../../../../core/extensions/string.dart';
 import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../radio/presentation/widgets/radio_widget.dart';
+import '../../domain/entities/intro_slide_data.dart';
+import '../blocs/intro_slides/intro_slides_bloc.dart';
+import '../widgets/slider_widget.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});

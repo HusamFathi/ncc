@@ -1,5 +1,4 @@
-
-import 'package:ncc/core/di/init_di.dart';
+import 'init_di.dart';
 
 import '../../src/main/data/datasources/local/main_local_data_source.dart';
 import '../../src/main/data/repositories/main_repository_impl.dart';
@@ -15,8 +14,7 @@ void mainDi() {
     () => MainLocalDataSourceImpl(),
   );
   sl.registerFactory<IntroSlidesBloc>(
-    () => IntroSlidesBloc(getIntroSlidesUsecase: sl(),
-    ),
+    () => IntroSlidesBloc(getIntroSlidesUsecase: sl()),
   );
   sl.registerLazySingleton<MainRepository>(
     () => MainRepositoryImpl(localDataSource: sl()),
