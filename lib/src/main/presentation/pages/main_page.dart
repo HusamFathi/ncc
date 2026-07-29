@@ -1,11 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ncc/core/di/init_di.dart';
-import 'package:ncc/core/utils/constants.dart';
-import 'package:ncc/src/main/domain/entities/intro_slide_data.dart';
-import 'package:ncc/src/main/presentation/blocs/intro_slides/intro_slides_bloc.dart';
-import 'package:ncc/src/main/presentation/widgets/slider_widget.dart';
+import '../../../../core/di/init_di.dart';
+import '../../../../core/utils/constants.dart';
+import '../../domain/entities/intro_slide_data.dart';
+import '../blocs/intro_slides/intro_slides_bloc.dart';
+import '../widgets/slider_widget.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../../../core/extensions/string.dart';

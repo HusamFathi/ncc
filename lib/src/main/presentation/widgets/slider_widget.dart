@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:ncc/core/di/init_di.dart';
-import 'package:ncc/core/route/routes_config.dart';
-import 'package:ncc/core/utils/constants.dart';
-import 'package:ncc/src/main/domain/entities/intro_slide_data.dart';
+import '../../../../core/di/init_di.dart';
+import '../../../../core/route/routes_config.dart';
+import '../../../../core/utils/constants.dart';
+import '../../domain/entities/intro_slide_data.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 

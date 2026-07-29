@@ -3,10 +3,10 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:fpdart/fpdart.dart';
-import 'package:ncc/core/failures/failures.dart';
-import 'package:ncc/core/src/entities/no_params.dart';
-import 'package:ncc/src/main/domain/entities/intro_slide_data.dart';
-import 'package:ncc/src/main/domain/usecases/get_intro_slides_usecase.dart';
+import '../../../../../core/failures/failures.dart';
+import '../../../../../core/src/entities/no_params.dart';
+import '../../../domain/entities/intro_slide_data.dart';
+import '../../../domain/usecases/get_intro_slides_usecase.dart';
 
 part 'intro_slides_event.dart';
 part 'intro_slides_state.dart';

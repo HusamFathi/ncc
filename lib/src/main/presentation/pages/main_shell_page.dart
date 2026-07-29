@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ncc/core/extensions/string.dart';
-import 'package:ncc/core/locale/app_localizations_helper.dart';
+import '../../../../core/extensions/string.dart';
+import '../../../../core/locale/app_localizations_helper.dart';
 
 import '../../../../core/di/init_di.dart';
 import '../../../../core/route/routes_config.dart';
