@@ -1,10 +1,11 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:encrypt_shared_preferences/provider.dart';
 
 import 'init_di.dart';
 
 Future<void> externalDi() async {
-  final sharedPreferences = await SharedPreferences.getInstance();
+  final EncryptedSharedPreferences sharedPreferences =
+      EncryptedSharedPreferences.getInstance();
   // Use sharedPreferences as needed
   // Inject sharedPreferences to be used elsewhere
-  sl.registerSingleton<SharedPreferences>(sharedPreferences);
+  sl.registerSingleton<EncryptedSharedPreferences>(sharedPreferences);
 }

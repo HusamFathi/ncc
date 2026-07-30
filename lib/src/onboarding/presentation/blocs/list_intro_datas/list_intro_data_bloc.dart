@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fpdart/fpdart.dart';
 
@@ -11,7 +12,7 @@ part 'list_intro_data_state.dart';
 
 class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
   final ListIntroDataUsecase listIntroData;
-
+final  PageController pageController= PageController();
   ListIntroDataBloc({required this.listIntroData})
     : super(ListIntroDataInitialState()) {
     on<ListIntroDataStarted>((event, emit) async {
@@ -28,7 +29,7 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
               message: failure.message,
               code: failure.code,
               onRetry: () {
-                add(ListIntroDataLoadNextPage(page: 1));
+                add(ListIntroDataStarted());
               },
             ),
           );
@@ -43,5 +44,10 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
         },
       );
     });
+
+    on<ListIntroDataChangeIndex>((event, emit) {
+      pageController.jumpToPage(event.index);
+      
+    },);
   }
 }

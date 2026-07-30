@@ -1,3 +1,5 @@
+import 'package:encrypt_shared_preferences/provider.dart'
+    show EncryptedSharedPreferences;
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -11,6 +13,7 @@ import 'core/utils/configure_non_web.dart'
 Future<void> main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await EncryptedSharedPreferences.initialize('9UwbWAJo8elUBZFg');
 
   // This will call the correct version of configureApp
   // based on the platform (web or non-web)
