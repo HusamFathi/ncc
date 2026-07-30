@@ -12,6 +12,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../core/injection/init_di.dart';
 import '../blocs/list_intro_datas/list_intro_data_bloc.dart';
+import 'notifications_permissions_page.dart';
 
 class OnboardingPage extends StatelessWidget {
   final Map<String, dynamic> query;
@@ -39,6 +40,11 @@ class OnboardingPage extends StatelessWidget {
                         bloc.add(ListIntroDataChangeIndex(index: 1));
                       },
                       isMobile: isMobile,
+                    ),
+                    NotificationsPermissionsPage(
+                      goNext: () {
+                        bloc.add(ListIntroDataChangeIndex(index: 2));
+                      },
                     ),
                     ConcentricPageView(
                       colors: <Color>[Colors.white, Colors.blue, Colors.red],
