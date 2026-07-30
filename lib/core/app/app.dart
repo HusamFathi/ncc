@@ -43,7 +43,7 @@ class _AppState extends State<App> {
     final GoRouter router = GoRouter(
       initialLocation: kIsWeb
           ? RoutesService.homeRoute
-          : RoutesService.mainRoute,
+          : RoutesService.oboardingRoute,
       navigatorKey: RoutesService.navigatorKey,
       routes: sl<RoutesService>().routes,
     );

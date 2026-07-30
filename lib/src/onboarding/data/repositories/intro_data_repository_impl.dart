@@ -14,9 +14,9 @@ class IntroDataRepositoryImpl implements IntroDataRepository {
   });
 
   @override
-  Future<List<IntroData>> listIntroDatas() async {
+  Future<IntroData> listIntroData() async {
     try {
-      return await _localDataSource.listIntroDatas();
+      return await _localDataSource.listIntroData();
     } catch (e) {
       throw NoInternetConnectionException();
     }

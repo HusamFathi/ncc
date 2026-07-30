@@ -1,8 +1,9 @@
 import 'package:go_router/go_router.dart';
-import '../../src/main/presentation/pages/main_page.dart';
 
 import '../../src/home/presentation/pages/home_page.dart';
+import '../../src/main/presentation/pages/main_page.dart';
 import '../../src/main/presentation/pages/main_shell_page.dart';
+import '../../src/onboarding/presentation/pages/onboarding_page.dart';
 import '../../src/settings/presentation/pages/settings_page.dart';
 import 'routes_config.dart';
 
@@ -13,14 +14,12 @@ class RoutesList {
         path: RoutesService.homeRoute,
         builder: (context, state) => const HomePage(),
       ),
-      // GoRoute(
-      //   path: RoutesService.mainRoute,
-      //   builder: (context, state) => const MainPage(),
-      // ),
-      // GoRoute(
-      //   path: RoutesService.settingsRoute,
-      //   builder: (context, state) => const SettingsPage(),
-      // ),
+      GoRoute(
+        path: RoutesService.oboardingRoute,
+        builder: (context, state) =>
+            OnboardingPage(query: state.pathParameters),
+      ),
+
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
           return MainShellPage(navigationShell: navigationShell);

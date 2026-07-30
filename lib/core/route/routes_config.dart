@@ -23,6 +23,7 @@ class RoutesService {
 
   //* landing page
   static const String homeRoute = '/';
+  static const String oboardingRoute = '/oboarding';
   static const String mainRoute = '/app';
   static const String settingsRoute = '/settings';
 
