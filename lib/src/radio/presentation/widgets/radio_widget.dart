@@ -303,7 +303,8 @@ class _RadioWidgetState extends State<RadioWidget> {
                                             itemBuilder: (context, index) {
                                               final bool isSelected =
                                                   currentId == index;
-                                              final RadioStreamData  e = radioStreams[index];
+                                              final RadioStreamData e =
+                                                  radioStreams[index];
                                               return Container(
                                                 decoration: isSelected
                                                     ? BoxDecoration(
