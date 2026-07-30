@@ -1,0 +1,24 @@
+import '../../../../core/exceptions/exceptions.dart';
+import '../../../../core/network/network_info.dart';
+import '../../domain/entities/intro_data.dart';
+import '../../domain/repositories/intro_data_repository.dart';
+import '../datasources/local/intro_data_local_data_source.dart';
+
+class IntroDataRepositoryImpl implements IntroDataRepository {
+  final NetworkInfo _networkInfo;
+  final IntroDataLocalDataSourceImpl _localDataSource;
+
+  IntroDataRepositoryImpl({
+    required this._networkInfo,
+    required this._localDataSource,
+  });
+
+  @override
+  Future<List<IntroData>> listIntroDatas() async {
+    try {
+      return await _localDataSource.listIntroDatas();
+    } catch (e) {
+      throw NoInternetConnectionException();
+    }
+  }
+}

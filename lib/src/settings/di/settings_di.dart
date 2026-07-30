@@ -1,4 +1,4 @@
-import '../../../core/di/init_di.dart';
+import '../../../core/injection/init_di.dart';
 import '../data/datasources/local/device_settings_local_data_source.dart';
 import '../data/mappers/device_settings_mapper.dart';
 import '../data/repositories/device_settigns_repository_impl.dart';

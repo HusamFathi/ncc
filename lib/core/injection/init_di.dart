@@ -1,8 +1,8 @@
 import 'package:get_it/get_it.dart';
 import 'main_di.dart';
 
-import '../../core/di/extrnal_di.dart';
-import '../../core/di/services_di.dart';
+import 'extrnal_di.dart';
+import 'services_di.dart';
 import '../../src/home/di/home_di.dart';
 import '../../src/settings/di/settings_di.dart';
 import 'radio_di.dart';

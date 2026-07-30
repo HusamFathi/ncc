@@ -4,8 +4,8 @@ import 'package:flutter_popup/flutter_popup.dart';
 import 'package:gap/gap.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import '../../../../core/di/init_di.dart';
 import '../../../../core/extensions/string.dart';
+import '../../../../core/injection/init_di.dart';
 import '../../../../core/locale/app_language.dart';
 import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../../core/src/entities/language.dart';

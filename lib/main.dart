@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'core/app/app.dart';
-import 'core/di/init_di.dart';
+import 'core/injection/init_di.dart';
 import 'core/route/routes_config.dart';
 // Updated conditional import
 import 'core/utils/configure_non_web.dart'

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../../core/di/init_di.dart';
+import '../../../../core/injection/init_di.dart';
 import '../../../../core/route/routes_config.dart';
 import '../../../../core/utils/constants.dart';
 import '../../domain/entities/intro_slide_data.dart';
