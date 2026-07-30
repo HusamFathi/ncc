@@ -14,7 +14,7 @@ class DarkTheme {
         tertiary: kNCCThirdColor,
         brightness: Brightness.dark,
       ),
-      fontFamily: 'LBC',
+      fontFamily: 'Tajawal',
 
       cardTheme: CardThemeComponent.data,
       appBarTheme: AppBarTheme(
