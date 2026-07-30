@@ -12,7 +12,7 @@ part 'list_intro_data_state.dart';
 
 class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
   final ListIntroDataUsecase listIntroData;
-final  PageController pageController= PageController();
+  final PageController pageController = PageController();
   ListIntroDataBloc({required this.listIntroData})
     : super(ListIntroDataInitialState()) {
     on<ListIntroDataStarted>((event, emit) async {
@@ -46,8 +46,11 @@ final  PageController pageController= PageController();
     });
 
     on<ListIntroDataChangeIndex>((event, emit) {
-      pageController.jumpToPage(event.index);
-      
-    },);
+      pageController.animateToPage(
+        event.index,
+        duration: Duration(milliseconds: 500),
+        curve: Curves.decelerate,
+      );
+    });
   }
 }

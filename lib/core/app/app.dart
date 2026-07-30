@@ -66,6 +66,7 @@ class _AppState extends State<App> {
             // Build localized MaterialApp first!
             return MaterialApp.router(
               onGenerateTitle: (context) => Tr.of(context).appName.toTitle(),
+              
               debugShowCheckedModeBanner: false,
               theme: sl<AppTheme>()
                   .getThemeByCode(code: 2, context: context)

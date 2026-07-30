@@ -61,6 +61,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get notionRadioForHeritage => 'nation heritage radio';
 
   @override
+  String get backgroundPlaybackTitle => 'Keep Listening in the Background';
+
+  @override
+  String get notNow => 'Not Now';
+
+  @override
+  String get backgroundPlaybackDescription =>
+      'Allow notifications so our app can keep your radio playing while you use other apps or lock your device. Playback controls will also appear in your notification panel.';
+
+  @override
+  String get kContinue => 'Continue';
+
+  @override
   String get play => 'play';
 
   @override

@@ -36,8 +36,8 @@ class _WelcomeIntroPageState extends State<WelcomeIntroPage> {
 
   @override
   Widget build(BuildContext context) {
-    final Color textColor = Theme.of(context).colorScheme.onPrimary;
-    final Color bgColor = Theme.of(context).colorScheme.primary;
+    final Color textColor = Colors.white;
+    final Color bgColor = kNCCPrimaryColor;
     final AppLanguage appLanguage = sl<AppLanguage>();
     final List<Language> languages = appLanguage.getAppLocals(context: context);
     final Language current = appLanguage.getUserLanguageFromContext(
