@@ -1,7 +1,6 @@
 import 'package:go_router/go_router.dart';
 
 import '../../src/home/presentation/pages/home_page.dart';
-import '../../src/main/presentation/pages/main_page.dart';
 import '../../src/main/presentation/pages/main_shell_page.dart';
 import '../../src/settings/presentation/pages/settings_page.dart';
 import 'routes_config.dart';
@@ -21,22 +20,31 @@ class RoutesList {
       //   path: RoutesService.settingsRoute,
       //   builder: (context, state) => const SettingsPage(),
       // ),
-      ShellRoute(
-        navigatorKey: RoutesService.homeShellNavigatorKey,
-        builder: (context, state, child) {
-          return MainShellPage(child: child);
+      StatefulShellRoute.indexedStack(
+        builder: (context, state, navigationShell) {
+          return MainShellPage(navigationShell: navigationShell);
         },
-
-        routes: [
-          GoRoute(
-            path: RoutesService.mainRoute,
-            pageBuilder: (context, state) =>
-                NoTransitionPage(child: const MainPage()),
+        branches: [
+          StatefulShellBranch(
+            navigatorKey: RoutesService.homeShellNavigatorKey,
+            routes: [
+              GoRoute(
+                path: RoutesService.homeRoute,
+                pageBuilder: (context, state) =>
+                    NoTransitionPage(child: const HomePage()),
+              ),
+            ],
           ),
-          GoRoute(
-            path: RoutesService.settingsRoute,
-            pageBuilder: (context, state) =>
-                NoTransitionPage(child: const SettingsPage()),
+
+          StatefulShellBranch(
+            navigatorKey: RoutesService.settingsNavigatorKey,
+            routes: [
+              GoRoute(
+                path: RoutesService.settingsRoute,
+                pageBuilder: (context, state) =>
+                    NoTransitionPage(child: const SettingsPage()),
+              ),
+            ],
           ),
         ],
       ),
