@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../di/init_di.dart';
-import '../extensions/string.dart';
-import '../locale/app_localizations_helper.dart';
 import '../src/entities/go_route_url_data.dart';
 import 'routes_list.dart';
 
@@ -20,6 +18,8 @@ class RoutesService {
       GlobalKey<NavigatorState>(debugLabel: 'homeShellNavigatorKey');
   static GlobalKey<NavigatorState> mainShellNavigatorKey =
       GlobalKey<NavigatorState>(debugLabel: 'mainShellNavigatorKey');
+  static GlobalKey<NavigatorState> settingsNavigatorKey =
+      GlobalKey<NavigatorState>(debugLabel: 'settingsNavigatorKey');
 
   //* landing page
   static const String homeRoute = '/';
