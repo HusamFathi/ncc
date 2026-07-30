@@ -59,6 +59,8 @@ dependencies:
   concentric_transition: ^1.0.3
   encrypt_shared_preferences: ^1.0.1
   internet_connection_checker_plus: ^3.1.1
+  language_code: ^0.7.1
+  flutter_animate: ^4.5.2
 
 dev_dependencies:
   flutter_test:

@@ -52,6 +52,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dark => 'dark mode';
 
   @override
+  String get hello => 'hello';
+
+  @override
+  String get tabtocontinue => 'Tab To Continue';
+
+  @override
   String get notionRadioForHeritage => 'nation heritage radio';
 
   @override

@@ -182,6 +182,18 @@ abstract class AppLocalizations {
   /// **'dark mode'**
   String get dark;
 
+  /// No description provided for @hello.
+  ///
+  /// In en, this message translates to:
+  /// **'hello'**
+  String get hello;
+
+  /// No description provided for @tabtocontinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Tab To Continue'**
+  String get tabtocontinue;
+
   /// No description provided for @notionRadioForHeritage.
   ///
   /// In en, this message translates to:
