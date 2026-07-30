@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:encrypt_shared_preferences/provider.dart';
 
 import '../../../../../core/exceptions/exceptions.dart';
 import '../../models/device_settings_model.dart';
@@ -21,11 +21,9 @@ abstract class DeviceSettingsLocalDataSource {
 
 class DeviceSettingsLocalDataSourceImpl
     implements DeviceSettingsLocalDataSource {
-  final SharedPreferences _sharedPreferences;
+  final EncryptedSharedPreferences _sharedPreferences;
   final String _deviceSettingsKey = 'device_settings';
-  DeviceSettingsLocalDataSourceImpl({
-    required SharedPreferences sharedPreferences,
-  }) : _sharedPreferences = sharedPreferences;
+  DeviceSettingsLocalDataSourceImpl({required this._sharedPreferences});
 
   @override
   Future<DeviceSettingsModel> getDeviceSettings() {
