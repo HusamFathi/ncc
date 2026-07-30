@@ -57,6 +57,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get play => 'تشغيل';
 
   @override
+  String get next => 'next';
+
+  @override
   String get pause => 'إيقاف';
 
   @override

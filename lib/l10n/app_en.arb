@@ -15,6 +15,7 @@
   "dark": "dark mode",
   "notionRadioForHeritage": "nation heritage radio",
   "play": "play",
+  "next":"next",
   "pause": "pause",
   "close": "close",
   "versionInfo": "version {version}+{build}",

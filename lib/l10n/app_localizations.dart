@@ -194,6 +194,12 @@ abstract class AppLocalizations {
   /// **'play'**
   String get play;
 
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'next'**
+  String get next;
+
   /// No description provided for @pause.
   ///
   /// In en, this message translates to:
