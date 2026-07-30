@@ -14,7 +14,7 @@ class LightTheme {
         tertiary: kNCCThirdColor,
         brightness: Brightness.light,
       ),
-      fontFamily: 'LBC',
+      fontFamily: 'Tajawal',
 
       cardTheme: CardThemeComponent.data,
       appBarTheme: AppBarTheme(
