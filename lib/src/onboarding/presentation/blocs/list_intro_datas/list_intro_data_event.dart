@@ -4,22 +4,20 @@ sealed class ListIntroDataEvent extends Equatable {
   const ListIntroDataEvent();
 }
 
-// Initial load event
+// Initial Go event
 final class ListIntroDataStarted extends ListIntroDataEvent {
-  final Map<String, dynamic> pathParams;
-
-  const ListIntroDataStarted({required this.pathParams});
+  const ListIntroDataStarted();
 
   @override
-  List<Object?> get props => [pathParams];
+  List<Object?> get props => [];
 }
 
-// Load next page event
-final class ListIntroDataLoadNextPage extends ListIntroDataEvent {
-  final int page;
+// Go next page event
+final class ListIntroDataChangeIndex extends ListIntroDataEvent {
+  final int index;
 
-  const ListIntroDataLoadNextPage({required this.page});
+  const ListIntroDataChangeIndex({required this.index});
 
   @override
-  List<Object?> get props => [page];
+  List<Object?> get props => [index];
 }
