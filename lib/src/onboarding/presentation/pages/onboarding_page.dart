@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:concentric_transition/concentric_transition.dart';
 
 class OnboardingPage extends StatelessWidget {
   final Map<String, dynamic> query;
@@ -6,6 +7,15 @@ class OnboardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: ConcentricPageView(
+        colors: <Color>[Colors.white, Colors.blue, Colors.red],
+        itemCount: 10, // null = infinity
+        physics: NeverScrollableScrollPhysics(),
+        itemBuilder: (int index) {
+          return Center(child: Text('Page $index'));
+        },
+      ),
+    );
   }
 }

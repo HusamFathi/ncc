@@ -13,8 +13,8 @@ class DeviceSettings extends Equatable {
   List<Object?> get props => [language, themeMode];
   factory DeviceSettings.empty() {
     return DeviceSettings(
-      language: sl<AppLanguage>().getCurrentAppLang().languageCode,
-      themeMode: 0,
+      language: sl<AppLanguage>().getCurrentLanguage().localCode,
+      themeMode: 0
     );
   }
   DeviceSettings copyWith({String? language, int? themeMode}) {

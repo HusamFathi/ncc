@@ -31,10 +31,4 @@ class AppLanguage {
       );
     }
   }
-
-  Locale getCurrentAppLang() {
-    final deviceLanguageCode =
-        WidgetsBinding.instance.platformDispatcher.locale.languageCode;
-    return Locale.fromSubtags(languageCode: deviceLanguageCode);
-  }
 }
