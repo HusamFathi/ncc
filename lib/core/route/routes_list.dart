@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:ncc/src/main/presentation/pages/main_page.dart';
 
 import '../../src/home/presentation/pages/home_page.dart';
 import '../../src/main/presentation/pages/main_shell_page.dart';
@@ -29,9 +30,9 @@ class RoutesList {
             navigatorKey: RoutesService.homeShellNavigatorKey,
             routes: [
               GoRoute(
-                path: RoutesService.homeRoute,
+                path: RoutesService.mainRoute,
                 pageBuilder: (context, state) =>
-                    NoTransitionPage(child: const HomePage()),
+                    NoTransitionPage(child: const MainPage()),
               ),
             ],
           ),
