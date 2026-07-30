@@ -58,6 +58,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get play => 'play';
 
   @override
+  String get next => 'next';
+
+  @override
   String get pause => 'pause';
 
   @override
