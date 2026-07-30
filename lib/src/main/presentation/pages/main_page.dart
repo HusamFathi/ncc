@@ -31,9 +31,7 @@ class MainPage extends StatelessWidget {
               create: (context) =>
                   sl<IntroSlidesBloc>()..add(IntroSlidesStarted()),
               child: BlocConsumer<IntroSlidesBloc, IntroSlidesState>(
-                listener: (context, state) {
-                  // TODO: implement listener
-                },
+                listener: (context, state) {},
                 builder: (context, state) {
                   final List<IntroSlideData> introSlides =
                       state is IntroSlidesLoaded ? state.slides : [];
