@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:concentric_transition/concentric_transition.dart';
+import 'package:flutter/material.dart';
 
 class OnboardingPage extends StatelessWidget {
   final Map<String, dynamic> query;
