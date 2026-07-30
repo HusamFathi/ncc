@@ -4,21 +4,21 @@ import '../../../../../core/src/usecases/base_usecase.dart';
 import '../../entities/intro_data.dart';
 import '../../repositories/intro_data_repository.dart';
 
-class ListIntroDatasUsecaseParams extends Equatable {
-  const ListIntroDatasUsecaseParams();
+class ListIntroDataUsecaseParams extends Equatable {
+  const ListIntroDataUsecaseParams();
 
   @override
   List<Object?> get props => [];
 }
 
-class ListIntroDatasUsecase
-    extends BaseUseCase<List<IntroData>, ListIntroDatasUsecaseParams> {
+class ListIntroDataUsecase
+    extends BaseUseCase<IntroData, ListIntroDataUsecaseParams> {
   final IntroDataRepository _repository;
 
-  ListIntroDatasUsecase({required this._repository});
+  ListIntroDataUsecase({required this._repository});
 
   @override
-  Future<List<IntroData>> execute(ListIntroDatasUsecaseParams params) {
-    return _repository.listIntroDatas();
+  Future<IntroData> execute(ListIntroDataUsecaseParams params) {
+    return _repository.listIntroData();
   }
 }

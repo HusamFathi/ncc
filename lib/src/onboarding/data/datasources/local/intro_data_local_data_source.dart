@@ -2,7 +2,7 @@ import '../../../../../core/services/local_storage_service.dart';
 import '../../models/intro_data_model.dart';
 
 abstract class IntroDataLocalDataSource {
-  Future<List<IntroDataModel>> listIntroDatas();
+  Future<IntroDataModel> listIntroData();
 }
 
 class IntroDataLocalDataSourceImpl implements IntroDataLocalDataSource {
@@ -12,7 +12,7 @@ class IntroDataLocalDataSourceImpl implements IntroDataLocalDataSource {
   IntroDataLocalDataSourceImpl({required this._localStorageService});
 
   @override
-  Future<List<IntroDataModel>> listIntroDatas() async {
-    return [];
+  Future<IntroDataModel> listIntroData() async {
+    return IntroDataModel(id: '', slides: []);
   }
 }
