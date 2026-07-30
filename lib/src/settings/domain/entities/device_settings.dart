@@ -14,7 +14,7 @@ class DeviceSettings extends Equatable {
   factory DeviceSettings.empty() {
     return DeviceSettings(
       language: sl<AppLanguage>().getCurrentLanguage().localCode,
-      themeMode: 0
+      themeMode: 0,
     );
   }
   DeviceSettings copyWith({String? language, int? themeMode}) {
