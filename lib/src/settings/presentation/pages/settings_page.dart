@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/di/init_di.dart';
 import '../../../../core/extensions/string.dart';
+import '../../../../core/injection/init_di.dart';
 import '../../../../core/locale/app_language.dart';
 import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../../core/src/entities/language.dart';

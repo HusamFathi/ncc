@@ -56,6 +56,9 @@ dependencies:
   flutter_floating_bottom_bar: ^2.0.2
   intl: ^0.20.2
   liquid_glass_easy: ^3.4.0
+  concentric_transition: ^1.0.3
+  encrypt_shared_preferences: ^1.0.1
+  internet_connection_checker_plus: ^3.1.1
 
 dev_dependencies:
   flutter_test:

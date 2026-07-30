@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/di/init_di.dart';
+import '../../../../core/injection/init_di.dart';
 import '../../../../core/extensions/string.dart';
 import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../radio/presentation/widgets/radio_widget.dart';

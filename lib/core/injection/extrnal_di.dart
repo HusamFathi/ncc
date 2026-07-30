@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../core/di/init_di.dart';
+import 'init_di.dart';
 
 Future<void> externalDi() async {
   final sharedPreferences = await SharedPreferences.getInstance();

@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../../../core/di/init_di.dart';
+import '../../../../core/injection/init_di.dart';
 import '../../../../core/locale/app_language.dart';
 
 class DeviceSettings extends Equatable {
