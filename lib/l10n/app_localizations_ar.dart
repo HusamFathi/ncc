@@ -51,6 +51,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get dark => 'غامق';
 
   @override
+  String get hello => 'hello';
+
+  @override
+  String get tabtocontinue => 'Tab To Continue';
+
+  @override
   String get notionRadioForHeritage => 'راديو الأمة للتراث';
 
   @override

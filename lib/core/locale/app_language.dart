@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ncc/src/settings/presentation/blocs/device_settings/device_settings_bloc.dart';
 
 import '../src/entities/language.dart';
 import 'app_localizations_helper.dart';
@@ -30,5 +32,17 @@ class AppLanguage {
         localCode: deviceLanguageCode,
       );
     }
+  }
+
+  Language getUserLanguageFromContext({required BuildContext context}) {
+    // get setting bloc
+    final DeviceSettingsBloc bloc = context.read<DeviceSettingsBloc>();
+    String? code;
+    if (bloc.state is DeviceSettingsLoadedState) {
+      DeviceSettingsLoadedState deviceSettingsLoadedState =
+          bloc.state as DeviceSettingsLoadedState;
+      code = deviceSettingsLoadedState.deviceSettings.language;
+    }
+    return getCurrentLanguage(code: code);
   }
 }

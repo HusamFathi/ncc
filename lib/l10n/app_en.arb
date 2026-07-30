@@ -13,6 +13,8 @@
   "syncWithSystem": "sync with system settings",
   "light": "light mode",
   "dark": "dark mode",
+  "hello":"hello",
+  "tabtocontinue":"Tab To Continue",
   "notionRadioForHeritage": "nation heritage radio",
   "play": "play",
   "next":"next",

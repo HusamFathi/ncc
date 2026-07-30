@@ -25,7 +25,7 @@ class LanguageChangerWidget extends StatelessWidget {
       return ListTile(
         leading: const Icon(Icons.language),
         title: Text(
-          currentLanguageCode.getLanguageNativeName(context: context),
+          currentLanguageCode.getLanguageNativeName(),
         ),
         subtitle: Text(Tr.of(context).selectLanguage.toTitle()),
         onTap: () {
@@ -40,7 +40,7 @@ class LanguageChangerWidget extends StatelessWidget {
                     children: supportedLanguages.map((language) {
                       return ListTile(
                         title: Text(
-                          language.getLanguageNativeName(context: context),
+                          language.getLanguageNativeName(),
                         ),
                         onTap: () {
                           Navigator.of(context).pop();
@@ -62,7 +62,7 @@ class LanguageChangerWidget extends StatelessWidget {
         return supportedLanguages.map((language) {
           return PopupMenuItem<Language>(
             value: language,
-            child: Text(language.getLanguageNativeName(context: context)),
+            child: Text(language.getLanguageNativeName()),
           );
         }).toList();
       },
