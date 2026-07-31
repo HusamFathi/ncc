@@ -16,10 +16,7 @@ class IntroDataRepositoryImpl implements IntroDataRepository {
   });
 
   @override
-  Future<IntroData> listIntroData({
-        required BuildContext context
-
-  }) async {
+  Future<IntroData> listIntroData({required BuildContext context}) async {
     try {
       return await _localDataSource.listIntroData(context: context);
     } catch (e) {

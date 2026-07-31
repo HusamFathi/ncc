@@ -12,6 +12,5 @@ Future<void> externalDi() async {
   sl.registerSingleton<EncryptedSharedPreferences>(sharedPreferences);
   sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(sl()));
 
-    sl.registerLazySingleton(() => InternetConnection());
-
+  sl.registerLazySingleton(() => InternetConnection());
 }

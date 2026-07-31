@@ -6,7 +6,7 @@ sealed class ListIntroDataEvent extends Equatable {
 
 // Initial Go event
 final class ListIntroDataStarted extends ListIntroDataEvent {
-      final BuildContext context;
+  final BuildContext context;
 
   const ListIntroDataStarted({required this.context});
 
