@@ -170,6 +170,18 @@ abstract class AppLocalizations {
   /// **'sync with system settings'**
   String get syncWithSystem;
 
+  /// No description provided for @onboardingGoalsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Our Goals'**
+  String get onboardingGoalsTitle;
+
+  /// No description provided for @onboardingGoalsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Create meaningful content, strengthen media partnerships, and promote community awareness.'**
+  String get onboardingGoalsDescription;
+
   /// No description provided for @onboardingVisionTitle.
   ///
   /// In en, this message translates to:
@@ -181,6 +193,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'To be a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community.'**
   String get onboardingVisionDescription;
+
+  /// No description provided for @onboardingMissionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Our Mission'**
+  String get onboardingMissionTitle;
+
+  /// No description provided for @onboardingMissionDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Deliver trusted media that promotes transparency, supports institutions, and serves the public interest.'**
+  String get onboardingMissionDescription;
 
   /// No description provided for @light.
   ///

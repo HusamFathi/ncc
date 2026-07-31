@@ -46,11 +46,25 @@ class AppLocalizationsEn extends AppLocalizations {
   String get syncWithSystem => 'sync with system settings';
 
   @override
+  String get onboardingGoalsTitle => 'Our Goals';
+
+  @override
+  String get onboardingGoalsDescription =>
+      'Create meaningful content, strengthen media partnerships, and promote community awareness.';
+
+  @override
   String get onboardingVisionTitle => 'Our Vision';
 
   @override
   String get onboardingVisionDescription =>
       'To be a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community.';
+
+  @override
+  String get onboardingMissionTitle => 'Our Mission';
+
+  @override
+  String get onboardingMissionDescription =>
+      'Deliver trusted media that promotes transparency, supports institutions, and serves the public interest.';
 
   @override
   String get light => 'light mode';
