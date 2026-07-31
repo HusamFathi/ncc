@@ -3,8 +3,6 @@ import 'dart:developer';
 import 'package:concentric_transition/concentric_transition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ncc/core/extensions/string.dart';
-import 'package:ncc/core/locale/app_localizations_helper.dart';
 import 'package:ncc/core/route/routes_config.dart';
 import 'package:ncc/src/onboarding/presentation/pages/welcome_intro_page.dart'
     show WelcomeIntroPage;
@@ -51,16 +49,19 @@ class OnboardingPage extends StatelessWidget {
                       itemCount: 4, // null = infinity
                       nextButtonBuilder: (context) {
                         return Center(
-                          child: Text(
-                            Tr.of(context).next.capitalizeFirstLetter(),
-                            style: Theme.of(context).textTheme.bodyLarge,
+                          child: RotatedBox(
+                            quarterTurns: 2,
+                            child: Icon(Icons.arrow_back_ios_new),
                           ),
                         );
                       },
                       physics: NeverScrollableScrollPhysics(),
                       onFinish: () {
                         log('we just finished');
-                        sl<RoutesService>().goTo(context: context, path: RoutesService.mainRoute) ;
+                        sl<RoutesService>().goTo(
+                          context: context,
+                          path: RoutesService.mainRoute,
+                        );
                       },
                       itemBuilder: (int index) {
                         return Center(child: Text('Page $index'));
