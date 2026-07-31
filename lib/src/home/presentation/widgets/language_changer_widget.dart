@@ -24,9 +24,7 @@ class LanguageChangerWidget extends StatelessWidget {
     if (style == LanguageChangerStyle.listTile) {
       return ListTile(
         leading: const Icon(Icons.language),
-        title: Text(
-          currentLanguageCode.getLanguageNativeName(),
-        ),
+        title: Text(currentLanguageCode.getLanguageNativeName()),
         subtitle: Text(Tr.of(context).selectLanguage.toTitle()),
         onTap: () {
           // Show language selection dialog
@@ -39,9 +37,7 @@ class LanguageChangerWidget extends StatelessWidget {
                   child: ListBody(
                     children: supportedLanguages.map((language) {
                       return ListTile(
-                        title: Text(
-                          language.getLanguageNativeName(),
-                        ),
+                        title: Text(language.getLanguageNativeName()),
                         onTap: () {
                           Navigator.of(context).pop();
                           onLanguageChanged(language);

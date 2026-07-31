@@ -14,5 +14,5 @@ class OnboardingSlide extends Equatable {
     required this.image,
   });
   @override
-  List<Object?> get props => [color, description, image,title];
+  List<Object?> get props => [color, description, image, title];
 }

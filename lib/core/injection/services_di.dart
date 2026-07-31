@@ -12,9 +12,9 @@ void servicesDi() async {
   sl.registerLazySingleton<AppLanguage>(() => AppLanguage());
   sl.registerLazySingleton<AppTheme>(() => AppTheme());
   sl.registerLazySingleton<RoutesService>(() => RoutesService());
-  sl.registerLazySingleton<LocalStorageService>(() => LocalStorageServiceImpl(
-    sharedPreferences: sl()
-  ));
+  sl.registerLazySingleton<LocalStorageService>(
+    () => LocalStorageServiceImpl(sharedPreferences: sl()),
+  );
 
   // final talker = TalkerFlutter.init(settings: TalkerSettings());
 

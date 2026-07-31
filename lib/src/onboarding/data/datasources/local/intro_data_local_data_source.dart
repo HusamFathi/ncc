@@ -21,7 +21,7 @@ class IntroDataLocalDataSourceImpl implements IntroDataLocalDataSource {
     return IntroDataModel(
       id: 'xyz',
       slides: [
-       OnboardingSlide(
+        OnboardingSlide(
           color: const Color(0xFF7C3AED), // Welcome - Rich Purple
           title: Tr.of(context).appName,
           description: Tr.of(context).onboardingWelcomeDescription,

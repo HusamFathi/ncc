@@ -29,9 +29,7 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
               message: failure.message,
               code: failure.code,
               onRetry: () {
-                add(ListIntroDataStarted(context: event.context
-
-                ));
+                add(ListIntroDataStarted(context: event.context));
               },
             ),
           );
