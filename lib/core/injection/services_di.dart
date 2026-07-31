@@ -1,4 +1,4 @@
-import 'package:ncc/core/services/local_storage_service.dart';
+import '../services/local_storage_service.dart';
 
 import '../locale/app_language.dart';
 import '../route/routes_config.dart';

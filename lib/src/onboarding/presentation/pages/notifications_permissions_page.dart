@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:ncc/core/utils/constants.dart';
+import '../../../../core/utils/constants.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import '../../../../core/locale/app_localizations_helper.dart';
