@@ -46,6 +46,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get syncWithSystem => 'sync with system settings';
 
   @override
+  String get msfSlideTitle => 'Powered by';
+
+  @override
   String get onboardingGoalsTitle => 'Our Goals';
 
   @override
@@ -68,6 +71,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get light => 'light mode';
+
+  @override
+  String get msfSlideDescription =>
+      'Media Services Foundation of the Libyan House of Representatives';
+
+  @override
+  String get onboardingNotionRadioTitle => 'Notion Radio';
+
+  @override
+  String get onboardingNotionRadioDescription =>
+      'A radio platform delivering news, talk shows, and meaningful programs to keep you connected with your community.';
+
+  @override
+  String get onboardingHeritageRadioTitle => 'Al-Ummah Heritage Radio';
+
+  @override
+  String get onboardingHeritageRadioDescription =>
+      'Discover Libya\'s rich heritage through programs that celebrate national identity and preserve stories for future generations.';
 
   @override
   String get dark => 'dark mode';
