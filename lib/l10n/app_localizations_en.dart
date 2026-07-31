@@ -9,10 +9,10 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appName => 'nation communication center';
+  String get appName => 'The Nation\'s Platform';
 
   @override
-  String get appNameShort => 'nation center';
+  String get appNameShort => 'The Nation\'s Platform';
 
   @override
   String get emptyHistoryRoutes => 'no route history available';
@@ -46,6 +46,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get syncWithSystem => 'sync with system settings';
 
   @override
+  String get onboardingVisionTitle => 'Our Vision';
+
+  @override
+  String get onboardingVisionDescription =>
+      'To be a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community.';
+
+  @override
   String get light => 'light mode';
 
   @override
@@ -53,6 +60,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get hello => 'hello';
+
+  @override
+  String get onboardingWelcomeDescription =>
+      'A national media platform delivering professional content that strengthens communication and reflects the aspirations of the Libyan community.';
 
   @override
   String get tabtocontinue => 'Tab To Continue';

@@ -9,10 +9,10 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appName => 'مركز الأمة للتواصل';
+  String get appName => 'منصة الامة';
 
   @override
-  String get appNameShort => 'مركز الأمة';
+  String get appNameShort => 'منصة الامة';
 
   @override
   String get emptyHistoryRoutes => 'لا يوجد سجلات للمسارات';
@@ -45,6 +45,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get syncWithSystem => 'مزامنة مع النظام';
 
   @override
+  String get onboardingVisionTitle => 'رؤيتنا';
+
+  @override
+  String get onboardingVisionDescription =>
+      'أن نكون منصة إعلامية وطنية رائدة تعزز التواصل، وتنشر الوعي، وتخدم المجتمع الليبي.';
+
+  @override
   String get light => 'فاتح';
 
   @override
@@ -52,6 +59,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get hello => 'hello';
+
+  @override
+  String get onboardingWelcomeDescription =>
+      'منصة إعلامية وطنية تقدم محتوى مهنيًا يعزز التواصل ويواكب تطلعات المجتمع الليبي.';
 
   @override
   String get tabtocontinue => 'Tab To Continue';

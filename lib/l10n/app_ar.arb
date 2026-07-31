@@ -1,6 +1,7 @@
 {
-  "appName": "مركز الأمة للتواصل",
-  "appNameShort": "مركز الأمة",
+  "appName": "منصة الامة",
+  "appNameShort": "منصة الامة",
+  "onboardingWelcomeDescription": "منصة إعلامية وطنية تقدم محتوى مهنيًا يعزز التواصل ويواكب تطلعات المجتمع الليبي.",
   "emptyHistoryRoutes": "لا يوجد سجلات للمسارات",
   "badRequestException": "طلب غير صالح",
   "netWorkConnectionErrorMessage": "خطأ في الاتصال بالشبكة",
@@ -9,7 +10,8 @@
   "cacheFailure": "فشل في التخزين المؤقت",
   "metaAuthErrorMessage": "خطأ في المصادقة",
   "unKnownErrorMessage": "خطأ غير معروف",
-  "unableToLoadLocalData": "تعذر تحميل البيانات المحلية",
+  "unableToLoadLocalData": "تعذر تحميل البيانات المحلية", "onboardingVisionTitle": "رؤيتنا",
+  "onboardingVisionDescription": "أن نكون منصة إعلامية وطنية رائدة تعزز التواصل، وتنشر الوعي، وتخدم المجتمع الليبي.",
   "syncWithSystem": "مزامنة مع النظام",
   "light": "فاتح",
   "close": "إغلاق",
@@ -43,7 +45,6 @@
   "nccGoals": "• إنتاج محتوى إعلامي توعوي وتفاعلي يخدم الصالح العام.\n• دعم جهود الاستقرار والتنمية من خلال الإعلام الوطني الهادف.\n• تعزيز الشراكات الإعلامية مع الجهات الرسمية والمجتمعية.",
   "msfhor": "مؤسسة الخدمات الإعلامية لمجلس النواب",
   "autobotsCopyRights": "جميع الحقوق محفوظة © {appName} {year}.",
-  
-  "powerBy":"مقدمة من :{orgName}",
+  "powerBy": "مقدمة من :{orgName}",
   "madeInMessage": "صُنع في بنغازي"
 }
