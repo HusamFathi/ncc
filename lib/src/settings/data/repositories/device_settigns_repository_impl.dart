@@ -7,8 +7,8 @@ import '../mappers/device_settings_mapper.dart';
 class DeviceSettingsRepositoryImpl implements DeviceSettingsRepository {
   final DeviceSettingsLocalDataSourceImpl _localDataSource;
   DeviceSettingsRepositoryImpl({
-    required DeviceSettingsLocalDataSourceImpl localDataSource,
-  }) : _localDataSource = localDataSource;
+    required this._localDataSource,
+  });
 
   @override
   Future<DeviceSettings> getDeviceSettings() {

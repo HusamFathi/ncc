@@ -7,8 +7,7 @@ class GetIntroSlidesUsecase
     extends BaseUseCase<List<IntroSlideData>, NoParams> {
   final MainRepository _mainRepository;
 
-  GetIntroSlidesUsecase({required MainRepository mainRepository})
-    : _mainRepository = mainRepository;
+  GetIntroSlidesUsecase({required this._mainRepository});
 
   @override
   Future<List<IntroSlideData>> execute(NoParams params) {
