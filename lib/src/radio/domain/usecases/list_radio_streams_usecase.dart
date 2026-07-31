@@ -8,8 +8,8 @@ class ListRadioStreamsUsecase
   final RadioStreamRepository _radioStreamRepository;
 
   ListRadioStreamsUsecase({
-    required RadioStreamRepository radioStreamRepository,
-  }) : _radioStreamRepository = radioStreamRepository;
+    required this._radioStreamRepository,
+  });
 
   @override
   Future<List<RadioStreamData>> execute(NoParams params) {

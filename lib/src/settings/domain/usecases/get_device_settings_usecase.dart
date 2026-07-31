@@ -6,8 +6,7 @@ import '../repositories/device_settings_repository.dart';
 class GetDeviceSettingsUseCase extends BaseUseCase<DeviceSettings, NoParams> {
   final DeviceSettingsRepository _repository;
 
-  GetDeviceSettingsUseCase({required DeviceSettingsRepository repository})
-    : _repository = repository;
+  GetDeviceSettingsUseCase({required this._repository});
 
   @override
   Future<DeviceSettings> execute(NoParams params) {

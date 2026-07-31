@@ -907,12 +907,12 @@ class FooterWavePainter extends CustomPainter {
     Paint paintP2 = Paint()..style = PaintingStyle.fill;
     List<Color> waveColorsLayer2 = waveColors
         .map(
-          (c) => c.withOpacity(math.min(1.0, c.opacity * 0.85)),
+          (c) => c.withValues(alpha: math.min(1.0, c.a * 0.85)),
         ) // Slightly less opaque or different tint
         .toList();
     if (waveColors.length > 1 && waveColorsLayer2.length > 1) {
-      waveColorsLayer2[0] = waveColors[0].withOpacity(
-        math.min(1.0, waveColors[0].opacity * 0.6),
+      waveColorsLayer2[0] = waveColors[0].withValues(
+        alpha: math.min(1.0, waveColors[0].a * 0.6),
       );
     }
 

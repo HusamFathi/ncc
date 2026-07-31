@@ -9,8 +9,7 @@ import '../repositories/device_settings_repository.dart';
 class UpdateDeviceSettingsUseCase {
   final DeviceSettingsRepository _repository;
 
-  UpdateDeviceSettingsUseCase({required DeviceSettingsRepository repository})
-    : _repository = repository;
+  UpdateDeviceSettingsUseCase({required this._repository});
 
   Future<Either<Failure, DeviceSettings>> call({
     required DeviceSettings settings,
