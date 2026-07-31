@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/locale/app_localizations_helper.dart';
-import '../../../../../core/utils/constants.dart';
 
+import '../../../../../core/locale/app_localizations_helper.dart';
 import '../../../../../core/services/local_storage_service.dart';
 import '../../../domain/entities/onboarding_slide.dart';
 import '../../models/intro_data_model.dart';
@@ -13,12 +12,16 @@ abstract class IntroDataLocalDataSource {
 class IntroDataLocalDataSourceImpl implements IntroDataLocalDataSource {
   final LocalStorageService _localStorageService;
   static const String _storageKey = 'intro_data';
+  static const String _onboardingIsSeenKey = 'onboarding_isSeen';
 
   IntroDataLocalDataSourceImpl({required this._localStorageService});
 
   @override
   Future<IntroDataModel> listIntroData({required BuildContext context}) async {
+    final bool isSeen =
+        await _localStorageService.getBool(_onboardingIsSeenKey) ?? false;
     return IntroDataModel(
+      isSeen: isSeen,
       id: 'xyz',
       slides: [
         OnboardingSlide(
