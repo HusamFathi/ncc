@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ncc/core/locale/app_localizations_helper.dart';
-import 'package:ncc/core/utils/constants.dart';
+import '../../../../../core/locale/app_localizations_helper.dart';
+import '../../../../../core/utils/constants.dart';
 
 import '../../../../../core/services/local_storage_service.dart';
 import '../../../domain/entities/onboarding_slide.dart';

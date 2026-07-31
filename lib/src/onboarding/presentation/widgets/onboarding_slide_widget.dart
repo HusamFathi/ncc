@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:ncc/core/src/widgets/base_animator_widget.dart';
-import 'package:ncc/core/utils/constants.dart';
+import '../../../../core/src/widgets/base_animator_widget.dart';
+import '../../../../core/utils/constants.dart';
 
 class OnboardingSlideWidget extends StatelessWidget {
   final String image;

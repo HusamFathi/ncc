@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:ncc/src/settings/presentation/blocs/device_settings/device_settings_bloc.dart';
+import '../../../settings/presentation/blocs/device_settings/device_settings_bloc.dart';
 
 import '../../../../../core/injection/init_di.dart';
 import '../../../../../core/locale/app_language.dart';

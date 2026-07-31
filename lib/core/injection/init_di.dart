@@ -1,5 +1,5 @@
 import 'package:get_it/get_it.dart';
-import 'package:ncc/core/injection/entity_injections/intro_data_di.dart';
+import 'entity_injections/intro_data_di.dart';
 
 import '../../src/home/di/home_di.dart';
 import '../../src/settings/di/settings_di.dart';

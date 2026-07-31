@@ -3,9 +3,9 @@ import 'dart:developer';
 import 'package:concentric_transition/concentric_transition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ncc/core/route/routes_config.dart';
-import 'package:ncc/core/src/widgets/loading_widget.dart';
-import 'package:ncc/src/onboarding/domain/entities/onboarding_slide.dart';
+import '../../../../core/route/routes_config.dart';
+import '../../../../core/src/widgets/loading_widget.dart';
+import '../../domain/entities/onboarding_slide.dart';
 import 'package:ncc/src/onboarding/presentation/pages/welcome_intro_page.dart'
     show WelcomeIntroPage;
 import 'package:responsive_builder/responsive_builder.dart';
