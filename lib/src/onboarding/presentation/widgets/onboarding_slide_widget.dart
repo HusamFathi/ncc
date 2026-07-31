@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ncc/core/src/widgets/base_animator_widget.dart';
 import 'package:ncc/core/utils/constants.dart';
 
 class OnboardingSlideWidget extends StatelessWidget {
@@ -15,17 +16,45 @@ class OnboardingSlideWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    final theme = Theme.of(context);
+
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(
+        kSmallPadding,
+        kLargePadding * 3,
+        kSmallPadding,
+        kSmallPadding,
+      ),
       child: Column(
-        mainAxisAlignment: .center,
+        mainAxisAlignment: .start,
         crossAxisAlignment: .center,
         mainAxisSize: .min,
         children: [
-          Image.asset(image, height: 100, width: 100),
+          ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(kRoundedCorners)),
+            child: Image.asset(image, height: 200, width: 200),
+          ),
           Gap(kMediumGap),
-          Text(title),
+          BaseAnimatorWidget(
+            child: Text(
+              title,
+              textAlign: TextAlign.center,
+              style: theme.textTheme.headlineMedium?.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.w800,
+                height: 1.15,
+              ),
+            ),
+          ),
           Gap(kSmallGap),
-          Text(description),
+          Text(
+            description,
+            textAlign: TextAlign.center,
+            style: theme.textTheme.titleMedium?.copyWith(
+              color: Colors.white.withValues(alpha: .88),
+              height: 1.6,
+            ),
+          ),
         ],
       ),
     );

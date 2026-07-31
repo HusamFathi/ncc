@@ -45,6 +45,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get syncWithSystem => 'مزامنة مع النظام';
 
   @override
+  String get msfSlideTitle => 'مدعوم من';
+
+  @override
   String get onboardingGoalsTitle => 'أهدافنا';
 
   @override
@@ -67,6 +70,24 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get light => 'فاتح';
+
+  @override
+  String get msfSlideDescription =>
+      'مؤسسة الخدمات الإعلامية بمجلس النواب الليبي';
+
+  @override
+  String get onboardingNotionRadioTitle => 'راديو الأمة';
+
+  @override
+  String get onboardingNotionRadioDescription =>
+      'منصة إذاعية تنقل الأخبار والبرامج الحوارية والمحتوى الهادف، لتبقى قريبًا من نبض المجتمع.';
+
+  @override
+  String get onboardingHeritageRadioTitle => 'راديو الأمة للتراث';
+
+  @override
+  String get onboardingHeritageRadioDescription =>
+      'اكتشف التراث الليبي الأصيل من خلال برامج تحتفي بالهوية الوطنية، وتروي قصص الماضي للأجيال.';
 
   @override
   String get dark => 'غامق';

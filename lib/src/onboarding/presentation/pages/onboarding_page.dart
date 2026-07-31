@@ -60,12 +60,15 @@ class OnboardingPage extends StatelessWidget {
                             colors: slides.map((e) {
                               return e.color;
                             }).toList(),
-                            itemCount: 4, // null = infinity
+                            itemCount: slides.length,
                             nextButtonBuilder: (context) {
                               return Center(
                                 child: RotatedBox(
                                   quarterTurns: 2,
-                                  child: Icon(Icons.arrow_back_ios_new),
+                                  child: Icon(
+                                    Icons.arrow_back_ios_new,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               );
                             },

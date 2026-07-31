@@ -170,6 +170,12 @@ abstract class AppLocalizations {
   /// **'sync with system settings'**
   String get syncWithSystem;
 
+  /// No description provided for @msfSlideTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Powered by'**
+  String get msfSlideTitle;
+
   /// No description provided for @onboardingGoalsTitle.
   ///
   /// In en, this message translates to:
@@ -211,6 +217,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'light mode'**
   String get light;
+
+  /// No description provided for @msfSlideDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Media Services Foundation of the Libyan House of Representatives'**
+  String get msfSlideDescription;
+
+  /// No description provided for @onboardingNotionRadioTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Notion Radio'**
+  String get onboardingNotionRadioTitle;
+
+  /// No description provided for @onboardingNotionRadioDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A radio platform delivering news, talk shows, and meaningful programs to keep you connected with your community.'**
+  String get onboardingNotionRadioDescription;
+
+  /// No description provided for @onboardingHeritageRadioTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Al-Ummah Heritage Radio'**
+  String get onboardingHeritageRadioTitle;
+
+  /// No description provided for @onboardingHeritageRadioDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover Libya\'s rich heritage through programs that celebrate national identity and preserve stories for future generations.'**
+  String get onboardingHeritageRadioDescription;
 
   /// No description provided for @dark.
   ///
