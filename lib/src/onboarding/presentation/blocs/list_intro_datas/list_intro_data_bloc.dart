@@ -19,7 +19,7 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
       emit(ListIntroDataLoadingState());
 
       Either<Failure, IntroData> resultsOrError = await listIntroData(
-        params: ListIntroDataUsecaseParams(),
+        params: ListIntroDataUsecaseParams(context: event.context),
       );
 
       resultsOrError.fold(
@@ -29,7 +29,9 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
               message: failure.message,
               code: failure.code,
               onRetry: () {
-                add(ListIntroDataStarted());
+                add(ListIntroDataStarted(context: event.context
+
+                ));
               },
             ),
           );

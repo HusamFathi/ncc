@@ -101,13 +101,13 @@ abstract class AppLocalizations {
   /// No description provided for @appName.
   ///
   /// In en, this message translates to:
-  /// **'nation communication center'**
+  /// **'The Nation\'s Platform'**
   String get appName;
 
   /// No description provided for @appNameShort.
   ///
   /// In en, this message translates to:
-  /// **'nation center'**
+  /// **'The Nation\'s Platform'**
   String get appNameShort;
 
   /// No description provided for @emptyHistoryRoutes.
@@ -170,6 +170,18 @@ abstract class AppLocalizations {
   /// **'sync with system settings'**
   String get syncWithSystem;
 
+  /// No description provided for @onboardingVisionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Our Vision'**
+  String get onboardingVisionTitle;
+
+  /// No description provided for @onboardingVisionDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'To be a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community.'**
+  String get onboardingVisionDescription;
+
   /// No description provided for @light.
   ///
   /// In en, this message translates to:
@@ -187,6 +199,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'hello'**
   String get hello;
+
+  /// No description provided for @onboardingWelcomeDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'A national media platform delivering professional content that strengthens communication and reflects the aspirations of the Libyan community.'**
+  String get onboardingWelcomeDescription;
 
   /// No description provided for @tabtocontinue.
   ///

@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/exceptions/exceptions.dart';
 import '../../../../core/network/network_info.dart';
 import '../../domain/entities/intro_data.dart';
@@ -14,9 +16,12 @@ class IntroDataRepositoryImpl implements IntroDataRepository {
   });
 
   @override
-  Future<IntroData> listIntroData() async {
+  Future<IntroData> listIntroData({
+        required BuildContext context
+
+  }) async {
     try {
-      return await _localDataSource.listIntroData();
+      return await _localDataSource.listIntroData(context: context);
     } catch (e) {
       throw NoInternetConnectionException();
     }

@@ -6,10 +6,12 @@ sealed class ListIntroDataEvent extends Equatable {
 
 // Initial Go event
 final class ListIntroDataStarted extends ListIntroDataEvent {
-  const ListIntroDataStarted();
+      final BuildContext context;
+
+  const ListIntroDataStarted({required this.context});
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [context];
 }
 
 // Go next page event
