@@ -10,9 +10,13 @@
   "metaAuthErrorMessage": "authentication failed",
   "unKnownErrorMessage": "unexpected error occurred",
   "unableToLoadLocalData": "failed to load local data",
-  "syncWithSystem": "sync with system settings","onboardingVisionTitle": "Our Vision",
-  "onboardingVisionDescription": "To be a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community."
+  "syncWithSystem": "sync with system settings", "onboardingGoalsTitle": "Our Goals",
+  "onboardingGoalsDescription": "Create meaningful content, strengthen media partnerships, and promote community awareness."
 ,
+  "onboardingVisionTitle": "Our Vision",
+  "onboardingVisionDescription": "To be a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community.",
+  "onboardingMissionTitle": "Our Mission",
+  "onboardingMissionDescription": "Deliver trusted media that promotes transparency, supports institutions, and serves the public interest.",
   "light": "light mode",
   "dark": "dark mode",
   "hello": "hello",

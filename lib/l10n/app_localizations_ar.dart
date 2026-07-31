@@ -45,11 +45,25 @@ class AppLocalizationsAr extends AppLocalizations {
   String get syncWithSystem => 'مزامنة مع النظام';
 
   @override
+  String get onboardingGoalsTitle => 'أهدافنا';
+
+  @override
+  String get onboardingGoalsDescription =>
+      'إنتاج محتوى هادف، وتعزيز الشراكات الإعلامية، ودعم الوعي المجتمعي.';
+
+  @override
   String get onboardingVisionTitle => 'رؤيتنا';
 
   @override
   String get onboardingVisionDescription =>
       'أن نكون منصة إعلامية وطنية رائدة تعزز التواصل، وتنشر الوعي، وتخدم المجتمع الليبي.';
+
+  @override
+  String get onboardingMissionTitle => 'رسالتنا';
+
+  @override
+  String get onboardingMissionDescription =>
+      'تقديم محتوى إعلامي موثوق يعزز الشفافية، ويدعم المؤسسات، ويخدم الصالح العام.';
 
   @override
   String get light => 'فاتح';

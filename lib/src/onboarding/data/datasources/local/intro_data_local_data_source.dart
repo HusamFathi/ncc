@@ -28,10 +28,22 @@ class IntroDataLocalDataSourceImpl implements IntroDataLocalDataSource {
           image: 'assets/images/onboarding/ncc.png',
         ),
         OnboardingSlide(
-          color: kNCCPrimaryColor,
+          color: kNCCSecondaryColor,
           title: Tr.of(context).onboardingVisionTitle,
           description: Tr.of(context).onboardingVisionDescription,
           image: 'assets/images/onboarding/our-vision.png',
+        ),
+        OnboardingSlide(
+          color: kNCCThirdColor,
+          title: Tr.of(context).onboardingMissionTitle,
+          description: Tr.of(context).onboardingMissionDescription,
+          image: 'assets/images/onboarding/our-mission.png',
+        ),
+        OnboardingSlide(
+          color: kNCCThirdColor,
+          title: Tr.of(context).onboardingGoalsTitle,
+          description: Tr.of(context).onboardingGoalsDescription,
+          image: 'assets/images/onboarding/goals.png',
         ),
       ],
     );
