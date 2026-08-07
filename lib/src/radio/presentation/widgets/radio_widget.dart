@@ -130,12 +130,10 @@ class _RadioWidgetState extends State<RadioWidget> {
                                         return ListTile(
                                           selected: isSelected,
 
-                                          // tileColor: Colors.transparent,
-                                          // selectedTileColor:
-                                          //     Theme.of(context)
-                                          //         .colorScheme
-                                          //         .primary
-                                          //         .withAlpha(30),
+                                          tileColor: Colors.transparent,
+                                          selectedTileColor: Theme.of(
+                                            context,
+                                          ).colorScheme.primary.withAlpha(30),
                                           leading: RotatingWidget(
                                             isRotating:
                                                 playing &&

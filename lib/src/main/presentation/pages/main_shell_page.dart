@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../core/extensions/string.dart';
 import '../../../../core/locale/app_localizations_helper.dart';
+import '../../../radio/presentation/widgets/radio_stream_controller_widget.dart';
 
 class MainShellPage extends StatelessWidget {
   final StatefulNavigationShell navigationShell;
@@ -11,7 +12,15 @@ class MainShellPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: navigationShell,
+      body: Stack(
+        children: [
+          navigationShell,
+          Align(
+            alignment: AlignmentDirectional.bottomCenter,
+            child: RadioStreamControllerWidget(),
+          ),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 12,
         currentIndex: navigationShell.currentIndex,

@@ -50,7 +50,7 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
                   id: stream.id,
                   title: stream.name,
                   artist: stream.description,
-                  // artUri: Uri.parse(artUriString),
+                  artUri: Uri.parse(artUriString),
                 ),
               ),
             );
@@ -66,20 +66,21 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
     });
     on<RadioStreamSelectedEvent>((event, emit) async {
       if (state is RadioStreamLoadedState) {
+        final RadioStreamLoadedState loadedState =
+            state as RadioStreamLoadedState;
+        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.inProgress));
         final int currentStreamId = (audioPlayer.currentIndex ?? 1);
         final int newTargetIndex = int.parse(event.radioStreamData.id);
 
         if (currentStreamId != newTargetIndex) {
           audioPlayer.pause();
           await audioPlayer.seek(Duration.zero, index: newTargetIndex);
-        }
-
-        if (audioPlayer.playing) {
+        } else if (audioPlayer.playing) {
           audioPlayer.pause();
         } else {
           await audioPlayer.play();
         }
-        emit(state);
+        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));
       }
     });
   }
