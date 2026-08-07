@@ -20,3 +20,17 @@ final class RadioStreamSelectedEvent extends RadioStreamEvent {
   @override
   List<Object?> get props => [radioStreamData];
 }
+
+final class RadioStreamSkipNextEvent extends RadioStreamEvent {
+  const RadioStreamSkipNextEvent();
+
+  @override
+  List<Object?> get props => [];
+}
+
+final class RadioStreamSkipPreviousEvent extends RadioStreamEvent {
+  const RadioStreamSkipPreviousEvent();
+
+  @override
+  List<Object?> get props => [];
+}
