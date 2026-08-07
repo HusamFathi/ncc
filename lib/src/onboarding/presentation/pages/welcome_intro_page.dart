@@ -49,12 +49,12 @@ class _WelcomeIntroPageState extends State<WelcomeIntroPage> {
       body: Stack(
         children: [
           Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color(0xFFBA4493), // Primary
+                  kNCCPrimaryColor, // Primary
                   Colors.white, // Secondary
                 ],
               ),

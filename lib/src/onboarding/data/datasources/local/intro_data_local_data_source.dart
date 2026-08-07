@@ -7,19 +7,20 @@ import '../../models/intro_data_model.dart';
 
 abstract class IntroDataLocalDataSource {
   Future<IntroDataModel> listIntroData({required BuildContext context});
+  Future<void> toggleOnboardingIsSeenKey();
 }
 
 class IntroDataLocalDataSourceImpl implements IntroDataLocalDataSource {
   final LocalStorageService _localStorageService;
   static const String _storageKey = 'intro_data';
-  static const String _onboardingIsSeenKey = 'onboarding_isSeen';
+  static const String onboardingIsSeenKey = 'onboarding_isSeen';
 
   IntroDataLocalDataSourceImpl({required this._localStorageService});
 
   @override
   Future<IntroDataModel> listIntroData({required BuildContext context}) async {
     final bool isSeen =
-        await _localStorageService.getBool(_onboardingIsSeenKey) ?? false;
+        await _localStorageService.getBool(onboardingIsSeenKey) ?? false;
     return IntroDataModel(
       isSeen: isSeen,
       id: 'xyz',
@@ -74,5 +75,14 @@ class IntroDataLocalDataSourceImpl implements IntroDataLocalDataSource {
         ),
       ],
     );
+  }
+
+  @override
+  Future<void> toggleOnboardingIsSeenKey() async {
+    final bool isSeen =
+        await _localStorageService.getBool(onboardingIsSeenKey) ?? false;
+    final bool newIsSeen = !isSeen;
+    //save the new key
+    await _localStorageService.setBool(onboardingIsSeenKey, newIsSeen);
   }
 }

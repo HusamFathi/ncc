@@ -23,3 +23,11 @@ final class ListIntroDataChangeIndex extends ListIntroDataEvent {
   @override
   List<Object?> get props => [index];
 }
+
+// ToggleOnboardingIsSeenKeyUsecase
+final class ListIntroDataToggleOnboardingIsSeenKey extends ListIntroDataEvent {
+  const ListIntroDataToggleOnboardingIsSeenKey();
+
+  @override
+  List<Object?> get props => [];
+}

@@ -3,16 +3,18 @@ import '../../../../src/onboarding/data/mappers/intro_data_mapper.dart';
 import '../../../../src/onboarding/data/repositories/intro_data_repository_impl.dart';
 import '../../../../src/onboarding/domain/repositories/intro_data_repository.dart';
 import '../../../../src/onboarding/domain/usecases/intro_data/list_intro_datas_usecase.dart';
+import '../../../src/onboarding/domain/usecases/toggle_onboarding_is_seen_key_usecase.dart';
 import '../../../src/onboarding/presentation/blocs/list_intro_datas/list_intro_data_bloc.dart';
 import '../init_di.dart';
 
 void introDataDI() {
   //*===========blocs====================================================
 
-  sl.registerFactory(() => ListIntroDataBloc(listIntroData: sl()));
+  sl.registerFactory(() => ListIntroDataBloc(listIntroData: sl(),toggleOnboardingIsSeenKey: sl()));
 
   //*===========usecases====================================================
   sl.registerLazySingleton(() => ListIntroDataUsecase(repository: sl()));
+  sl.registerLazySingleton(() => ToggleOnboardingIsSeenKeyUsecase(repository: sl()));
 
   //*===========repositories====================================================
   sl.registerLazySingleton<IntroDataRepository>(

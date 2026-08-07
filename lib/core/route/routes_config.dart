@@ -3,7 +3,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../src/onboarding/data/datasources/local/intro_data_local_data_source.dart';
 import '../injection/init_di.dart';
+import '../services/local_storage_service.dart';
 import '../src/entities/go_route_url_data.dart';
 import 'routes_list.dart';
 
@@ -26,12 +28,20 @@ class RoutesService {
   static const String oboardingRoute = '/oboarding';
   static const String mainRoute = '/app';
   static const String settingsRoute = '/settings';
-
+bool _isOnboardingSeen=false;
   /// route for control
   List<RouteBase> routes = [];
+String getInitRoute(){
+  if (_isOnboardingSeen){return mainRoute;}else {
+    return oboardingRoute;
+  }
 
-  void init() {
+}
+  Future<void> init() async {
     routes = RoutesList.getRoutes();
+    _isOnboardingSeen=   
+        await sl<LocalStorageService>().getBool(
+          IntroDataLocalDataSourceImpl.onboardingIsSeenKey) ?? false;
   }
 
   void goBack({required BuildContext context}) {
@@ -75,7 +85,7 @@ class RoutesService {
     ).toString();
     log('goTo $finalUrl');
 
-    context.go(finalUrl, extra: extra);
+    context.push(finalUrl, extra: extra);
   }
 
   void addNewRoute(RouteBase route) {

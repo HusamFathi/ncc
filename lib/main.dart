@@ -18,7 +18,7 @@ Future<void> main() async {
   configureApp();
 
   await initDi();
-  sl<RoutesService>().init();
+  await sl<RoutesService>().init();
 
   runApp(const App());
 }
