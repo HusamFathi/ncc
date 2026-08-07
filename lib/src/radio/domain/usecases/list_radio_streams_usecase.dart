@@ -7,9 +7,7 @@ class ListRadioStreamsUsecase
     extends BaseUseCase<List<RadioStreamData>, NoParams> {
   final RadioStreamRepository _radioStreamRepository;
 
-  ListRadioStreamsUsecase({
-    required this._radioStreamRepository,
-  });
+  ListRadioStreamsUsecase({required this._radioStreamRepository});
 
   @override
   Future<List<RadioStreamData>> execute(NoParams params) {

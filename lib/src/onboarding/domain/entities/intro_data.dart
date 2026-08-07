@@ -6,7 +6,11 @@ class IntroData extends Equatable {
   final String? id;
   final bool isSeen;
   final List<OnboardingSlide> slides;
-  const IntroData({required this.id, required this.slides, required this.isSeen});
+  const IntroData({
+    required this.id,
+    required this.slides,
+    required this.isSeen,
+  });
   @override
   List<Object?> get props => [id, slides, isSeen];
 
