@@ -15,7 +15,7 @@ class RadioStreamControllerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     RadioStreamBloc radioStreamBloc = context.read<RadioStreamBloc>();
-
+    final bool isRtl = Directionality.of(context) == TextDirection.rtl;
     return BlocProvider.value(
       value: radioStreamBloc,
       child: BlocConsumer<RadioStreamBloc, RadioStreamState>(
@@ -81,7 +81,10 @@ class RadioStreamControllerWidget extends StatelessWidget {
                                       );
                                     }
                                   : null,
-                              icon: Icon(Icons.skip_previous),
+                              icon: Transform.flip(
+                                flipX: isRtl,
+                                child: Icon(Icons.skip_previous),
+                              ),
                             ),
                             playing
                                 ? IconButton(
@@ -111,7 +114,10 @@ class RadioStreamControllerWidget extends StatelessWidget {
                                       );
                                     }
                                   : null,
-                              icon: Icon(Icons.skip_next),
+                              icon: Transform.flip(
+                                flipX: isRtl,
+                                child: Icon(Icons.skip_next),
+                              ),
                             ),
                           ],
                         ),
