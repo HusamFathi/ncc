@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../src/settings/presentation/blocs/device_settings/device_settings_bloc.dart';
 
+import '../../src/settings/presentation/blocs/device_settings/device_settings_bloc.dart';
 import '../src/entities/language.dart';
 import 'app_localizations_helper.dart';
 

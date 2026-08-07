@@ -3,14 +3,14 @@ import 'dart:developer';
 import 'package:concentric_transition/concentric_transition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/route/routes_config.dart';
-import '../../../../core/src/widgets/loading_widget.dart';
-import '../../domain/entities/onboarding_slide.dart';
 import 'package:ncc/src/onboarding/presentation/pages/welcome_intro_page.dart'
     show WelcomeIntroPage;
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../../core/injection/init_di.dart';
+import '../../../../core/route/routes_config.dart';
+import '../../../../core/src/widgets/loading_widget.dart';
+import '../../domain/entities/onboarding_slide.dart';
 import '../blocs/list_intro_datas/list_intro_data_bloc.dart';
 import '../widgets/onboarding_slide_widget.dart';
 import 'notifications_permissions_page.dart';
@@ -44,6 +44,7 @@ class OnboardingPage extends StatelessWidget {
                           state.introData.slides;
                       return PageView(
                         controller: bloc.pageController,
+                        physics: NeverScrollableScrollPhysics(),
                         children: [
                           WelcomeIntroPage(
                             goNext: () {
