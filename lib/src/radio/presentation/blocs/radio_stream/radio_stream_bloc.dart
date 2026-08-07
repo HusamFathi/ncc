@@ -75,7 +75,55 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
         if (currentStreamId != newTargetIndex) {
           audioPlayer.pause();
           await audioPlayer.seek(Duration.zero, index: newTargetIndex);
-        } else if (audioPlayer.playing) {
+        }
+        if (audioPlayer.playing) {
+          audioPlayer.pause();
+        } else {
+          await audioPlayer.play();
+        }
+        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));
+      }
+    });
+    on<RadioStreamSkipNextEvent>((event, emit) async {
+      log('RadioStreamSkipNextEvent $RadioStreamSkipNextEvent');
+
+      if (state is RadioStreamLoadedState) {
+        final RadioStreamLoadedState loadedState =
+            state as RadioStreamLoadedState;
+        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.inProgress));
+        final int currentStreamId = (audioPlayer.currentIndex ?? 1);
+        log('currentStreamId $currentStreamId');
+
+        if (currentStreamId + 1 == loadedState.radioStreams.length) return;
+
+        final int newTargetIndex = currentStreamId + 1;
+        log('newTargetIndex $newTargetIndex');
+        if (currentStreamId != newTargetIndex) {
+          audioPlayer.pause();
+          await audioPlayer.seek(Duration.zero, index: newTargetIndex);
+        }
+        if (audioPlayer.playing) {
+          audioPlayer.pause();
+        } else {
+          await audioPlayer.play();
+        }
+        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));
+      }
+    });
+    on<RadioStreamSkipPreviousEvent>((event, emit) async {
+      if (state is RadioStreamLoadedState) {
+        final RadioStreamLoadedState loadedState =
+            state as RadioStreamLoadedState;
+        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.inProgress));
+        final int currentStreamId = (audioPlayer.currentIndex ?? 1);
+        if (currentStreamId == 0) return;
+        final int newTargetIndex = currentStreamId - 1;
+
+        if (currentStreamId != newTargetIndex) {
+          audioPlayer.pause();
+          await audioPlayer.seek(Duration.zero, index: newTargetIndex);
+        }
+        if (audioPlayer.playing) {
           audioPlayer.pause();
         } else {
           await audioPlayer.play();

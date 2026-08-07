@@ -27,9 +27,7 @@ class RadioStreamControllerWidget extends StatelessWidget {
               stream: audioPlayer.playerStateStream,
               builder: (context, asyncSnapshot) {
                 final List<RadioStreamData> radioStreams = state.radioStreams;
-                final int? currentId = radioStreamBloc
-                    .audioPlayer
-                    .currentIndex; // Get the current index or default to 0
+                final int? currentId = radioStreamBloc.audioPlayer.currentIndex;
                 if (currentId == null) {
                   return SizedBox();
                 }
@@ -48,18 +46,19 @@ class RadioStreamControllerWidget extends StatelessWidget {
                     audioPlayer.playerState.processingState ==
                     ProcessingState.loading;
                 bool isNotLoadingAndNotReady = !isReady && !isLoading;
+
                 return LiquidGlassLens(
                   useImpellerBackdrop: true,
                   style: LiquidGlassStyle(),
                   child: ConstrainedBox(
                     constraints: BoxConstraints(
                       maxWidth: math.min(
-                        500,
+                        300,
                         MediaQuery.sizeOf(context).width - 20,
                       ),
-                      maxHeight: 75,
-                      minHeight: 70,
-                      minWidth: 300,
+                      maxHeight: 70,
+                      minHeight: 65,
+                      minWidth: 280,
                     ),
                     child: Center(
                       child: ListTile(
@@ -71,9 +70,51 @@ class RadioStreamControllerWidget extends StatelessWidget {
                             ),
                           ),
                         ),
-                        title: Row(children: [
+                        title: Row(
+                          mainAxisAlignment: .spaceEvenly,
+                          children: [
+                            IconButton(
+                              onPressed: currentId != 0
+                                  ? () {
+                                      radioStreamBloc.add(
+                                        RadioStreamSkipPreviousEvent(),
+                                      );
+                                    }
+                                  : null,
+                              icon: Icon(Icons.skip_previous),
+                            ),
+                            playing
+                                ? IconButton(
+                                    onPressed: () {
+                                      audioPlayer.pause();
+                                    },
+                                    icon: Icon(Icons.pause),
+                                  )
+                                : IconButton(
+                                    onPressed: () {
+                                      audioPlayer.play();
+                                    },
+                                    icon: Icon(Icons.play_arrow),
+                                  ),
 
-                        ],),
+                            IconButton(
+                              onPressed: () {
+                                audioPlayer.stop();
+                              },
+                              icon: Icon(Icons.stop, color: Colors.red),
+                            ),
+                            IconButton(
+                              onPressed: currentId + 2 == radioStreams.length
+                                  ? () {
+                                      radioStreamBloc.add(
+                                        RadioStreamSkipNextEvent(),
+                                      );
+                                    }
+                                  : null,
+                              icon: Icon(Icons.skip_next),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
