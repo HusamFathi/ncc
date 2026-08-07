@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import '../../../../core/utils/constants.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../../core/src/widgets/base_animator_widget.dart';
+import '../../../../core/utils/constants.dart';
 
 class NotificationsPermissionsPage extends StatefulWidget {
   final VoidCallback goNext;

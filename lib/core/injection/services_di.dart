@@ -1,7 +1,6 @@
-import '../services/local_storage_service.dart';
-
 import '../locale/app_language.dart';
 import '../route/routes_config.dart';
+import '../services/local_storage_service.dart';
 import '../theme/app_theme.dart';
 import 'init_di.dart' show sl;
 
