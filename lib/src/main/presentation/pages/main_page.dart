@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ncc/core/utils/constants.dart';
 
-import '../../../../core/injection/init_di.dart';
 import '../../../../core/extensions/string.dart';
+import '../../../../core/injection/init_di.dart';
 import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../radio/presentation/widgets/radio_widget.dart';
 import '../../domain/entities/intro_slide_data.dart';
@@ -15,15 +16,21 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //child: RadioWidget()
+    final double expandedHeight = 300;
+    final double collapsedHeight = 100;
+    final Color baseBgColor = Theme.of(context).scaffoldBackgroundColor;
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            automaticallyImplyActions: false,
+            automaticallyImplyLeading: false,
             // floating: true,
             centerTitle: true,
             // snap: true,
-            expandedHeight: 300,
-            collapsedHeight: 100,
+            expandedHeight: expandedHeight,
+            collapsedHeight: collapsedHeight,
             primary: true,
 
             backgroundColor: Theme.of(context).colorScheme.secondary,
@@ -43,14 +50,27 @@ class MainPage extends StatelessWidget {
                     title: Text(Tr.of(context).appName.toTitle()),
                     centerTitle: true,
                     titlePadding: EdgeInsets.all(10),
-                    expandedTitleScale: 1,
+                    expandedTitleScale: 1.2,
                   );
                 },
               ),
             ),
           ),
-          SliverToBoxAdapter(child: RadioWidget()),
-          SliverToBoxAdapter(child: SizedBox(height: 150)),
+          SliverToBoxAdapter(
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.only(
+                topLeft: Radius.circular(kRoundedCorners),
+                topRight: Radius.circular(kRoundedCorners),
+              ),
+              child: Material(color: baseBgColor, child: RadioWidget()),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              color: baseBgColor,
+              height: MediaQuery.sizeOf(context).height - expandedHeight,
+            ),
+          ),
         ],
       ),
     );
