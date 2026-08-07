@@ -41,9 +41,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     final GoRouter router = GoRouter(
-      initialLocation: kIsWeb
-          ? RoutesService.homeRoute
-          : RoutesService.oboardingRoute,
+      initialLocation: sl<RoutesService>().getInitRoute(),
       navigatorKey: RoutesService.navigatorKey,
       routes: sl<RoutesService>().routes,
     );

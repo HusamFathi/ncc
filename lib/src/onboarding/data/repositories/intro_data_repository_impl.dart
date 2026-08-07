@@ -23,4 +23,13 @@ class IntroDataRepositoryImpl implements IntroDataRepository {
       throw NoInternetConnectionException();
     }
   }
+
+  @override
+  Future<void> toggleOnboardingIsSeenKey() async {
+    try {
+      return await _localDataSource.toggleOnboardingIsSeenKey();
+    } catch (e) {
+      throw NoInternetConnectionException();
+    }
+  }
 }

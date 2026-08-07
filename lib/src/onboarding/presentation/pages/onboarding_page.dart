@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:concentric_transition/concentric_transition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:ncc/src/onboarding/presentation/pages/welcome_intro_page.dart'
     show WelcomeIntroPage;
 import 'package:responsive_builder/responsive_builder.dart';
@@ -26,7 +27,9 @@ class OnboardingPage extends StatelessWidget {
           sl<ListIntroDataBloc>()..add(ListIntroDataStarted(context: context)),
       child: BlocConsumer<ListIntroDataBloc, ListIntroDataState>(
         listener: (context, state) {
-          // TODO: implement listener
+          if (state is ListIntroDataLoadedState) {
+           
+          }
         },
         builder: (context, state) {
           return ResponsiveBuilder(
@@ -76,6 +79,7 @@ class OnboardingPage extends StatelessWidget {
                             physics: NeverScrollableScrollPhysics(),
                             onFinish: () {
                               log('we just finished');
+                              bloc.add(ListIntroDataToggleOnboardingIsSeenKey());
                               sl<RoutesService>().goTo(
                                 context: context,
                                 path: RoutesService.mainRoute,
