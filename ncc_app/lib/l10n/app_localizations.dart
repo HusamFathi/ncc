@@ -113,61 +113,61 @@ abstract class AppLocalizations {
   /// No description provided for @emptyHistoryRoutes.
   ///
   /// In en, this message translates to:
-  /// **'no route history available'**
+  /// **'No route history available'**
   String get emptyHistoryRoutes;
 
   /// No description provided for @badRequestException.
   ///
   /// In en, this message translates to:
-  /// **'invalid request format'**
+  /// **'Invalid request format'**
   String get badRequestException;
 
   /// No description provided for @netWorkConnectionErrorMessage.
   ///
   /// In en, this message translates to:
-  /// **'network connection failed'**
+  /// **'Network connection failed'**
   String get netWorkConnectionErrorMessage;
 
   /// No description provided for @sessionExpiredFailureMessage.
   ///
   /// In en, this message translates to:
-  /// **'session expired - please login again'**
+  /// **'Session expired - please log in again'**
   String get sessionExpiredFailureMessage;
 
   /// No description provided for @forbiddenFailureMessage.
   ///
   /// In en, this message translates to:
-  /// **'unauthorized access'**
+  /// **'Unauthorized access'**
   String get forbiddenFailureMessage;
 
   /// No description provided for @cacheFailure.
   ///
   /// In en, this message translates to:
-  /// **'cache operation failed'**
+  /// **'Cache operation failed'**
   String get cacheFailure;
 
   /// No description provided for @metaAuthErrorMessage.
   ///
   /// In en, this message translates to:
-  /// **'authentication failed'**
+  /// **'Authentication failed'**
   String get metaAuthErrorMessage;
 
   /// No description provided for @unKnownErrorMessage.
   ///
   /// In en, this message translates to:
-  /// **'unexpected error occurred'**
+  /// **'Unexpected error occurred'**
   String get unKnownErrorMessage;
 
   /// No description provided for @unableToLoadLocalData.
   ///
   /// In en, this message translates to:
-  /// **'failed to load local data'**
+  /// **'Failed to load local data'**
   String get unableToLoadLocalData;
 
   /// No description provided for @syncWithSystem.
   ///
   /// In en, this message translates to:
-  /// **'sync with system settings'**
+  /// **'Sync with system settings'**
   String get syncWithSystem;
 
   /// No description provided for @msfSlideTitle.
@@ -181,6 +181,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Our Goals'**
   String get onboardingGoalsTitle;
+
+  /// No description provided for @radioVolume.
+  ///
+  /// In en, this message translates to:
+  /// **'Radio Volume'**
+  String get radioVolume;
+
+  /// No description provided for @ok.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get ok;
+
+  /// No description provided for @setUpRadioVolumeLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Set Up Radio Volume Level'**
+  String get setUpRadioVolumeLevel;
+
+  /// No description provided for @setUpRadioVolumeLevelMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'You can set up the radio volume without affecting your device volume level'**
+  String get setUpRadioVolumeLevelMessage;
 
   /// No description provided for @onboardingGoalsDescription.
   ///
@@ -215,7 +239,7 @@ abstract class AppLocalizations {
   /// No description provided for @light.
   ///
   /// In en, this message translates to:
-  /// **'light mode'**
+  /// **'Light mode'**
   String get light;
 
   /// No description provided for @msfSlideDescription.
@@ -251,13 +275,13 @@ abstract class AppLocalizations {
   /// No description provided for @dark.
   ///
   /// In en, this message translates to:
-  /// **'dark mode'**
+  /// **'Dark mode'**
   String get dark;
 
   /// No description provided for @hello.
   ///
   /// In en, this message translates to:
-  /// **'hello'**
+  /// **'Hello'**
   String get hello;
 
   /// No description provided for @onboardingWelcomeDescription.
@@ -266,16 +290,16 @@ abstract class AppLocalizations {
   /// **'A national media platform delivering professional content that strengthens communication and reflects the aspirations of the Libyan community.'**
   String get onboardingWelcomeDescription;
 
-  /// No description provided for @tabtocontinue.
+  /// No description provided for @tapToContinue.
   ///
   /// In en, this message translates to:
-  /// **'Tab To Continue'**
-  String get tabtocontinue;
+  /// **'Tap To Continue'**
+  String get tapToContinue;
 
   /// No description provided for @notionRadioForHeritage.
   ///
   /// In en, this message translates to:
-  /// **'nation heritage radio'**
+  /// **'Nation Heritage Radio'**
   String get notionRadioForHeritage;
 
   /// No description provided for @backgroundPlaybackTitle.
@@ -305,61 +329,61 @@ abstract class AppLocalizations {
   /// No description provided for @play.
   ///
   /// In en, this message translates to:
-  /// **'play'**
+  /// **'Play'**
   String get play;
 
   /// No description provided for @next.
   ///
   /// In en, this message translates to:
-  /// **'next'**
+  /// **'Next'**
   String get next;
 
   /// No description provided for @pause.
   ///
   /// In en, this message translates to:
-  /// **'pause'**
+  /// **'Pause'**
   String get pause;
 
   /// No description provided for @close.
   ///
   /// In en, this message translates to:
-  /// **'close'**
+  /// **'Close'**
   String get close;
 
   /// No description provided for @versionInfo.
   ///
   /// In en, this message translates to:
-  /// **'version {version}+{build}'**
+  /// **'Version {version}+{build}'**
   String versionInfo(Object build, Object version);
 
   /// No description provided for @mobileApps.
   ///
   /// In en, this message translates to:
-  /// **'mobile apps'**
+  /// **'Mobile apps'**
   String get mobileApps;
 
-  /// No description provided for @commingSoon.
+  /// No description provided for @comingSoon.
   ///
   /// In en, this message translates to:
-  /// **'coming soon'**
-  String get commingSoon;
+  /// **'Coming soon'**
+  String get comingSoon;
 
   /// No description provided for @notionRadio.
   ///
   /// In en, this message translates to:
-  /// **'notion radio'**
+  /// **'Notion Radio'**
   String get notionRadio;
 
   /// No description provided for @notionRadioInfo.
   ///
   /// In en, this message translates to:
-  /// **'radio Al-Umma is the first unified shortwave radio (93.9 FM) and its broadcast was launched in the city of Benghazi on 1/1/2020, in most Libyan cities to be the voice of Libyans who find in it spaces to express their opinions with complete freedom and independence, and to scatter fragments of their creativity in the spaces of knowledge and literature, where the free, unique and purposeful word is. And as the Media Services Institution of the House of Representatives has always been with its audience on the path of creativity, the launch of Radio Al-Umma is an embodiment of its goals to create bridges of communication and love between creators who were separated by the hand of fate here and there, so that they may find in the gardens of Radio Al-Umma, adorned with their presence, a pleasure and delight from the harvest of knowledge and the delicate pulse.'**
+  /// **'Radio Al-Umma is the first unified shortwave radio (93.9 FM), and its broadcast was launched in the city of Benghazi on 1/1/2020, in most Libyan cities, to be the voice of Libyans who find in it spaces to express their opinions with complete freedom and independence, and to scatter fragments of their creativity in the spaces of knowledge and literature, where the free, unique, and purposeful word is. And as the Media Services Foundation of the House of Representatives has always been with its audience on the path of creativity, the launch of Radio Al-Umma is an embodiment of its goals to create bridges of communication and love between creators who were separated by the hand of fate here and there, so that they may find in the gardens of Radio Al-Umma, adorned with their presence, a pleasure and delight from the harvest of knowledge and the delicate pulse.'**
   String get notionRadioInfo;
 
   /// No description provided for @errorCode.
   ///
   /// In en, this message translates to:
-  /// **'error code {code}!'**
+  /// **'Error code {code}!'**
   String errorCode(Object code);
 
   /// No description provided for @channelRadioName.
@@ -377,121 +401,121 @@ abstract class AppLocalizations {
   /// No description provided for @retry.
   ///
   /// In en, this message translates to:
-  /// **'retry'**
+  /// **'Retry'**
   String get retry;
 
   /// No description provided for @cancel.
   ///
   /// In en, this message translates to:
-  /// **'cancel'**
+  /// **'Cancel'**
   String get cancel;
 
   /// No description provided for @selectLanguage.
   ///
   /// In en, this message translates to:
-  /// **'select language'**
+  /// **'Select language'**
   String get selectLanguage;
 
   /// No description provided for @menu.
   ///
   /// In en, this message translates to:
-  /// **'menu'**
+  /// **'Menu'**
   String get menu;
 
   /// No description provided for @home.
   ///
   /// In en, this message translates to:
-  /// **'home'**
+  /// **'Home'**
   String get home;
 
-  /// No description provided for @notionRadioSlogaan.
+  /// No description provided for @notionRadioSlogan.
   ///
   /// In en, this message translates to:
-  /// **'notion radio... the pulse of the nation'**
-  String get notionRadioSlogaan;
+  /// **'Notion Radio... The Pulse of the Nation'**
+  String get notionRadioSlogan;
 
   /// No description provided for @notionRadioForHeritageSlogan.
   ///
   /// In en, this message translates to:
-  /// **'echoing the past... resonating with the present'**
+  /// **'Echoing the past... Resonating with the present'**
   String get notionRadioForHeritageSlogan;
 
   /// No description provided for @notionRadioForHeritageInfo.
   ///
   /// In en, this message translates to:
-  /// **'nation heritage radio is a cultural broadcasting initiative dedicated to preserving Libyan heritage through programs exploring national history, traditional arts, and regional customs. operated by the nation communication center, it bridges generations by promoting awareness of Libya\'s rich cultural legacy. \n\navailable on multiple platforms:\n• live streaming via official website\n• Android mobile app\n• social media platforms (Facebook/YouTube)'**
+  /// **'Nation Heritage Radio is a cultural broadcasting initiative dedicated to preserving Libyan heritage through programs exploring national history, traditional arts, and regional customs. Operated by the Nation Communication Center, it bridges generations by promoting awareness of Libya\'s rich cultural legacy.\n\nAvailable on multiple platforms:\n• Live streaming via the official website\n• Android mobile app\n• Social media platforms (Facebook/YouTube)'**
   String get notionRadioForHeritageInfo;
 
   /// No description provided for @appSlogan.
   ///
   /// In en, this message translates to:
-  /// **'official media platform of the parliamentary media services foundation - delivering professional content that aligns with national aspirations while maintaining institutional transparency.'**
+  /// **'Official media platform of the Parliamentary Media Services Foundation - delivering professional content that aligns with national aspirations while maintaining institutional transparency.'**
   String get appSlogan;
 
   /// No description provided for @ourVision.
   ///
   /// In en, this message translates to:
-  /// **'strategic vision'**
+  /// **'Strategic vision'**
   String get ourVision;
 
   /// No description provided for @ourMessage.
   ///
   /// In en, this message translates to:
-  /// **'core mission'**
+  /// **'Core mission'**
   String get ourMessage;
 
   /// No description provided for @ourGoals.
   ///
   /// In en, this message translates to:
-  /// **'strategic objectives'**
+  /// **'Strategic objectives'**
   String get ourGoals;
 
   /// No description provided for @settings.
   ///
   /// In en, this message translates to:
-  /// **'settings'**
+  /// **'Settings'**
   String get settings;
 
   /// No description provided for @nccVision.
   ///
   /// In en, this message translates to:
-  /// **'to become Libya\'s premier institution for governmental communication and public awareness'**
+  /// **'To become Libya\'s premier institution for governmental communication and public awareness'**
   String get nccVision;
 
   /// No description provided for @nccMessage.
   ///
   /// In en, this message translates to:
-  /// **'delivering trusted media that fosters transparency, national unity, and institutional governance'**
+  /// **'Delivering trusted media that fosters transparency, national unity, and institutional governance'**
   String get nccMessage;
 
   /// No description provided for @nccGoals.
   ///
   /// In en, this message translates to:
-  /// **'• development of public-service media content\n• support for national development through strategic communication\n• fostering media collaboration between government and civil entities'**
+  /// **'• Development of public-service media content\n• Support for national development through strategic communication\n• Fostering media collaboration between government and civil entities'**
   String get nccGoals;
 
   /// No description provided for @msfhor.
   ///
   /// In en, this message translates to:
-  /// **'parliamentary media services foundation'**
+  /// **'Parliamentary Media Services Foundation'**
   String get msfhor;
 
   /// No description provided for @autobotsCopyRights.
   ///
   /// In en, this message translates to:
-  /// **'© {appName} {year} - all rights reserved'**
+  /// **'© {appName} {year} - All rights reserved'**
   String autobotsCopyRights(Object appName, Object year);
 
   /// No description provided for @powerBy.
   ///
   /// In en, this message translates to:
-  /// **'provided by : {orgName}'**
+  /// **'Provided by: {orgName}'**
   String powerBy(Object orgName);
 
   /// No description provided for @madeInMessage.
   ///
   /// In en, this message translates to:
-  /// **'made in benghazi'**
+  /// **'Made in Benghazi'**
   String get madeInMessage;
 }
 

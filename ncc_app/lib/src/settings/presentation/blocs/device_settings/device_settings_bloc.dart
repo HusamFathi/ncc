@@ -22,15 +22,20 @@ class DeviceSettingsBloc
     required this.getDeviceSettingsUseCase,
   }) : super(DeviceSettingsInitialState()) {
     on<DeviceSettingsStarted>((event, emit) async {
+      log('DeviceSettingsStarted $event');
+
       emit(DeviceSettingsLoadingState());
       final Either<Failure, DeviceSettings> resultrOrError =
           await getDeviceSettingsUseCase(params: NoParams());
       resultrOrError.fold(
-        (error) => emit(
-          DeviceSettingsLoadedState(deviceSettings: DeviceSettings.empty()),
-        ),
-        (deviceSettings) =>
-            emit(DeviceSettingsLoadedState(deviceSettings: deviceSettings)),
+        (error) {
+          emit(
+            DeviceSettingsLoadedState(deviceSettings: DeviceSettings.empty()),
+          );
+        },
+        (deviceSettings) {
+          emit(DeviceSettingsLoadedState(deviceSettings: deviceSettings));
+        },
       );
     });
     on<DeviceSettingsUpdated>((event, emit) async {

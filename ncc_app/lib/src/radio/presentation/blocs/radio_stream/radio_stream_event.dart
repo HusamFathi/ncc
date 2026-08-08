@@ -6,10 +6,13 @@ sealed class RadioStreamEvent extends Equatable {
 
 // load config
 final class RadioStreamStarted extends RadioStreamEvent {
-  const RadioStreamStarted();
+  final double initVolume;
+  const RadioStreamStarted({required
+    this.initVolume
+  });
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [initVolume];
 }
 
 final class RadioStreamSelectedEvent extends RadioStreamEvent {

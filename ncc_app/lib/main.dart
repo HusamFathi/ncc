@@ -1,6 +1,7 @@
 import 'package:encrypt_shared_preferences/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 
 import 'core/app/app.dart';
 import 'core/injection/init_di.dart';
@@ -16,6 +17,13 @@ Future<void> main() async {
   // This will call the correct version of configureApp
   // based on the platform (web or non-web)
   configureApp();
+   await JustAudioBackground.init(
+    androidNotificationChannelId: 'ncc_radios_channel',
+    androidNotificationChannelName: 'البث الإذاعي',
+    androidNotificationChannelDescription:
+        'قناة إشعارات لتشغيل البث الإذاعي في الخلفية والتحكم في التشغيل.',
+    androidNotificationOngoing: true,
+  );
 
   await initDi();
   await sl<RoutesService>().init();
