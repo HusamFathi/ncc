@@ -88,9 +88,9 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
           audioPlayer.pause();
           await audioPlayer.seek(Duration.zero, index: newTargetIndex);
         }
-        if (audioPlayer.playing) {
-          audioPlayer.pause();
-        } else {
+        if (!audioPlayer.playing) {
+        //   audioPlayer.pause();
+        // } else {
           await audioPlayer.play();
         }
         emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));
@@ -114,9 +114,7 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
           audioPlayer.pause();
           await audioPlayer.seek(Duration.zero, index: newTargetIndex);
         }
-        if (audioPlayer.playing) {
-          audioPlayer.pause();
-        } else {
+        if (!audioPlayer.playing) {
           await audioPlayer.play();
         }
         emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));
@@ -135,9 +133,7 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
           audioPlayer.pause();
           await audioPlayer.seek(Duration.zero, index: newTargetIndex);
         }
-        if (audioPlayer.playing) {
-          audioPlayer.pause();
-        } else {
+        if (!audioPlayer.playing) {
           await audioPlayer.play();
         }
         emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));

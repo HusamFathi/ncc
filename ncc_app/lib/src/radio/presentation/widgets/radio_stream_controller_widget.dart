@@ -68,7 +68,7 @@ class RadioStreamControllerWidget extends StatelessWidget {
                           leading: RotatingWidget(
                             isRotating: playing && !isNotLoadingAndNotReady,
                             child: CircleAvatar(
-                              backgroundImage: AssetImage(
+                              backgroundImage: NetworkImage(
                                 currentStreamData.imageUrl,
                               ),
                             ),
