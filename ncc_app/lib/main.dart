@@ -23,6 +23,7 @@ Future<void> main() async {
     androidNotificationChannelDescription:
         'قناة إشعارات لتشغيل البث الإذاعي في الخلفية والتحكم في التشغيل.',
     androidNotificationOngoing: true,
+    androidNotificationIcon: 'drawable/ic_radio_notification',
   );
 
   await initDi();
