@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:fpdart/fpdart.dart';
-import 'package:ncc/core/src/entities/no_params.dart';
+import '../../../../../core/src/entities/no_params.dart';
 
 import '../../../../../core/failures/failures.dart';
 import '../../../../../core/route/routes_config.dart';

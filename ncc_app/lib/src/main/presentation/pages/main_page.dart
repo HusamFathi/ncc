@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ncc/core/utils/constants.dart';
+import '../../../../core/utils/constants.dart';
 
 import '../../../../core/extensions/string.dart';
 import '../../../../core/injection/init_di.dart';

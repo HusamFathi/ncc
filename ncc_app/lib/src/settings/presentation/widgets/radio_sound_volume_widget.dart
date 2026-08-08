@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:ncc/core/locale/app_localizations_helper.dart';
-import 'package:ncc/core/utils/constants.dart';
-import 'package:ncc/src/radio/presentation/blocs/radio_stream/radio_stream_bloc.dart';
-import 'package:ncc/src/settings/presentation/blocs/device_settings/device_settings_bloc.dart';
+import '../../../../core/locale/app_localizations_helper.dart';
+import '../../../../core/utils/constants.dart';
+import '../../../radio/presentation/blocs/radio_stream/radio_stream_bloc.dart';
+import '../blocs/device_settings/device_settings_bloc.dart';
 
 import '../../domain/entities/device_settings.dart';
 
