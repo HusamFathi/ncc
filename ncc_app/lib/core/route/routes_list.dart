@@ -10,10 +10,10 @@ import 'routes_config.dart';
 class RoutesList {
   static List<RouteBase> getRoutes() {
     return [
-      GoRoute(
-        path: RoutesService.homeRoute,
-        builder: (context, state) => const HomePage(),
-      ),
+      // GoRoute(
+      //   path: RoutesService.homeRoute,
+      //   builder: (context, state) => const HomePage(),
+      // ),
       GoRoute(
         path: RoutesService.oboardingRoute,
         builder: (context, state) =>

@@ -16,7 +16,7 @@ abstract class RadioStreamLocalDataSource {
 class RadioStreamLocalDataSourceImpl implements RadioStreamLocalDataSource {
   @override
   Future<List<RadioStreamDataModel>> getRadioStreams() {
-    final List<Map<String, dynamic>> mockData = [
+    final List<Map<String, dynamic>> data = [
       {
         'id': '0',
         'name': Tr.current.notionRadioForHeritage.toTitle(),
@@ -35,7 +35,7 @@ class RadioStreamLocalDataSourceImpl implements RadioStreamLocalDataSource {
         'id': '1',
         'name': Tr.current.notionRadio.toTitle(),
         'stream_url': 'https://gaber.radioca.st/stream',
-        'subtitle': Tr.current.notionRadioSlogaan.capitalizeFirstLetter(),
+        'subtitle': Tr.current.notionRadioSlogan.capitalizeFirstLetter(),
         "image_url": "assets/images/notion-radio.png",
         "background_lesson_image_url":
             "assets/images/notion-radio-background-less.png",
@@ -45,7 +45,7 @@ class RadioStreamLocalDataSourceImpl implements RadioStreamLocalDataSource {
     ];
 
     return Future.value(
-      mockData.map((e) => RadioStreamDataModel.fromJson(e)).toList(),
+      data.map((e) => RadioStreamDataModel.fromJson(e)).toList(),
     );
   }
 }

@@ -6,7 +6,11 @@ class DeviceSettingsMapper
     extends DataMapper<DeviceSettings, DeviceSettingsModel> {
   @override
   DeviceSettings mapToEntity({required DeviceSettingsModel model}) {
-    return DeviceSettings(language: model.language, themeMode: model.themeMode);
+    return DeviceSettings(
+      language: model.language,
+      themeMode: model.themeMode,
+      radioVolume: model.radioVolume,
+    );
   }
 
   @override
@@ -14,6 +18,7 @@ class DeviceSettingsMapper
     return DeviceSettingsModel(
       language: entity.language,
       themeMode: entity.themeMode,
+      radioVolume: entity.radioVolume,
     );
   }
 }

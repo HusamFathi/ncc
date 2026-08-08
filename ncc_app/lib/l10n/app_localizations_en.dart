@@ -15,41 +15,54 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appNameShort => 'The Nation\'s Platform';
 
   @override
-  String get emptyHistoryRoutes => 'no route history available';
+  String get emptyHistoryRoutes => 'No route history available';
 
   @override
-  String get badRequestException => 'invalid request format';
+  String get badRequestException => 'Invalid request format';
 
   @override
-  String get netWorkConnectionErrorMessage => 'network connection failed';
+  String get netWorkConnectionErrorMessage => 'Network connection failed';
 
   @override
   String get sessionExpiredFailureMessage =>
-      'session expired - please login again';
+      'Session expired - please log in again';
 
   @override
-  String get forbiddenFailureMessage => 'unauthorized access';
+  String get forbiddenFailureMessage => 'Unauthorized access';
 
   @override
-  String get cacheFailure => 'cache operation failed';
+  String get cacheFailure => 'Cache operation failed';
 
   @override
-  String get metaAuthErrorMessage => 'authentication failed';
+  String get metaAuthErrorMessage => 'Authentication failed';
 
   @override
-  String get unKnownErrorMessage => 'unexpected error occurred';
+  String get unKnownErrorMessage => 'Unexpected error occurred';
 
   @override
-  String get unableToLoadLocalData => 'failed to load local data';
+  String get unableToLoadLocalData => 'Failed to load local data';
 
   @override
-  String get syncWithSystem => 'sync with system settings';
+  String get syncWithSystem => 'Sync with system settings';
 
   @override
   String get msfSlideTitle => 'Powered by';
 
   @override
   String get onboardingGoalsTitle => 'Our Goals';
+
+  @override
+  String get radioVolume => 'Radio Volume';
+
+  @override
+  String get ok => 'OK';
+
+  @override
+  String get setUpRadioVolumeLevel => 'Set Up Radio Volume Level';
+
+  @override
+  String get setUpRadioVolumeLevelMessage =>
+      'You can set up the radio volume without affecting your device volume level';
 
   @override
   String get onboardingGoalsDescription =>
@@ -70,7 +83,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Deliver trusted media that promotes transparency, supports institutions, and serves the public interest.';
 
   @override
-  String get light => 'light mode';
+  String get light => 'Light mode';
 
   @override
   String get msfSlideDescription =>
@@ -91,20 +104,20 @@ class AppLocalizationsEn extends AppLocalizations {
       'Discover Libya\'s rich heritage through programs that celebrate national identity and preserve stories for future generations.';
 
   @override
-  String get dark => 'dark mode';
+  String get dark => 'Dark mode';
 
   @override
-  String get hello => 'hello';
+  String get hello => 'Hello';
 
   @override
   String get onboardingWelcomeDescription =>
       'A national media platform delivering professional content that strengthens communication and reflects the aspirations of the Libyan community.';
 
   @override
-  String get tabtocontinue => 'Tab To Continue';
+  String get tapToContinue => 'Tap To Continue';
 
   @override
-  String get notionRadioForHeritage => 'nation heritage radio';
+  String get notionRadioForHeritage => 'Nation Heritage Radio';
 
   @override
   String get backgroundPlaybackTitle => 'Keep Listening in the Background';
@@ -120,38 +133,38 @@ class AppLocalizationsEn extends AppLocalizations {
   String get kContinue => 'Continue';
 
   @override
-  String get play => 'play';
+  String get play => 'Play';
 
   @override
-  String get next => 'next';
+  String get next => 'Next';
 
   @override
-  String get pause => 'pause';
+  String get pause => 'Pause';
 
   @override
-  String get close => 'close';
+  String get close => 'Close';
 
   @override
   String versionInfo(Object build, Object version) {
-    return 'version $version+$build';
+    return 'Version $version+$build';
   }
 
   @override
-  String get mobileApps => 'mobile apps';
+  String get mobileApps => 'Mobile apps';
 
   @override
-  String get commingSoon => 'coming soon';
+  String get comingSoon => 'Coming soon';
 
   @override
-  String get notionRadio => 'notion radio';
+  String get notionRadio => 'Notion Radio';
 
   @override
   String get notionRadioInfo =>
-      'radio Al-Umma is the first unified shortwave radio (93.9 FM) and its broadcast was launched in the city of Benghazi on 1/1/2020, in most Libyan cities to be the voice of Libyans who find in it spaces to express their opinions with complete freedom and independence, and to scatter fragments of their creativity in the spaces of knowledge and literature, where the free, unique and purposeful word is. And as the Media Services Institution of the House of Representatives has always been with its audience on the path of creativity, the launch of Radio Al-Umma is an embodiment of its goals to create bridges of communication and love between creators who were separated by the hand of fate here and there, so that they may find in the gardens of Radio Al-Umma, adorned with their presence, a pleasure and delight from the harvest of knowledge and the delicate pulse.';
+      'Radio Al-Umma is the first unified shortwave radio (93.9 FM), and its broadcast was launched in the city of Benghazi on 1/1/2020, in most Libyan cities, to be the voice of Libyans who find in it spaces to express their opinions with complete freedom and independence, and to scatter fragments of their creativity in the spaces of knowledge and literature, where the free, unique, and purposeful word is. And as the Media Services Foundation of the House of Representatives has always been with its audience on the path of creativity, the launch of Radio Al-Umma is an embodiment of its goals to create bridges of communication and love between creators who were separated by the hand of fate here and there, so that they may find in the gardens of Radio Al-Umma, adorned with their presence, a pleasure and delight from the harvest of knowledge and the delicate pulse.';
 
   @override
   String errorCode(Object code) {
-    return 'error code $code!';
+    return 'Error code $code!';
   }
 
   @override
@@ -162,72 +175,72 @@ class AppLocalizationsEn extends AppLocalizations {
       'Notification channel for Omma Radio Heritage - a station to revive Libyan cultural heritage and strengthen national identity with specialized programs and important audio updates.';
 
   @override
-  String get retry => 'retry';
+  String get retry => 'Retry';
 
   @override
-  String get cancel => 'cancel';
+  String get cancel => 'Cancel';
 
   @override
-  String get selectLanguage => 'select language';
+  String get selectLanguage => 'Select language';
 
   @override
-  String get menu => 'menu';
+  String get menu => 'Menu';
 
   @override
-  String get home => 'home';
+  String get home => 'Home';
 
   @override
-  String get notionRadioSlogaan => 'notion radio... the pulse of the nation';
+  String get notionRadioSlogan => 'Notion Radio... The Pulse of the Nation';
 
   @override
   String get notionRadioForHeritageSlogan =>
-      'echoing the past... resonating with the present';
+      'Echoing the past... Resonating with the present';
 
   @override
   String get notionRadioForHeritageInfo =>
-      'nation heritage radio is a cultural broadcasting initiative dedicated to preserving Libyan heritage through programs exploring national history, traditional arts, and regional customs. operated by the nation communication center, it bridges generations by promoting awareness of Libya\'s rich cultural legacy. \n\navailable on multiple platforms:\n• live streaming via official website\n• Android mobile app\n• social media platforms (Facebook/YouTube)';
+      'Nation Heritage Radio is a cultural broadcasting initiative dedicated to preserving Libyan heritage through programs exploring national history, traditional arts, and regional customs. Operated by the Nation Communication Center, it bridges generations by promoting awareness of Libya\'s rich cultural legacy.\n\nAvailable on multiple platforms:\n• Live streaming via the official website\n• Android mobile app\n• Social media platforms (Facebook/YouTube)';
 
   @override
   String get appSlogan =>
-      'official media platform of the parliamentary media services foundation - delivering professional content that aligns with national aspirations while maintaining institutional transparency.';
+      'Official media platform of the Parliamentary Media Services Foundation - delivering professional content that aligns with national aspirations while maintaining institutional transparency.';
 
   @override
-  String get ourVision => 'strategic vision';
+  String get ourVision => 'Strategic vision';
 
   @override
-  String get ourMessage => 'core mission';
+  String get ourMessage => 'Core mission';
 
   @override
-  String get ourGoals => 'strategic objectives';
+  String get ourGoals => 'Strategic objectives';
 
   @override
-  String get settings => 'settings';
+  String get settings => 'Settings';
 
   @override
   String get nccVision =>
-      'to become Libya\'s premier institution for governmental communication and public awareness';
+      'To become Libya\'s premier institution for governmental communication and public awareness';
 
   @override
   String get nccMessage =>
-      'delivering trusted media that fosters transparency, national unity, and institutional governance';
+      'Delivering trusted media that fosters transparency, national unity, and institutional governance';
 
   @override
   String get nccGoals =>
-      '• development of public-service media content\n• support for national development through strategic communication\n• fostering media collaboration between government and civil entities';
+      '• Development of public-service media content\n• Support for national development through strategic communication\n• Fostering media collaboration between government and civil entities';
 
   @override
-  String get msfhor => 'parliamentary media services foundation';
+  String get msfhor => 'Parliamentary Media Services Foundation';
 
   @override
   String autobotsCopyRights(Object appName, Object year) {
-    return '© $appName $year - all rights reserved';
+    return '© $appName $year - All rights reserved';
   }
 
   @override
   String powerBy(Object orgName) {
-    return 'provided by : $orgName';
+    return 'Provided by: $orgName';
   }
 
   @override
-  String get madeInMessage => 'made in benghazi';
+  String get madeInMessage => 'Made in Benghazi';
 }

@@ -67,12 +67,8 @@ class _RadioWidgetState extends State<RadioWidget> {
                           return FailureWidget(
                             error: state.message,
                             code: state.code,
-                            onRetry: () {
-                              radioStreamBloc.add(RadioStreamStarted());
-                            },
-                            onCancel: () {
-                              Navigator.of(context).pop();
-                            },
+                            onRetry: state.onRetry,
+                           
                           );
                         }
                         if (state is RadioStreamLoadedState) {

@@ -20,6 +20,8 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
   RadioStreamBloc({required this.listRadioStreamsUsecase})
     : super(RadioStreamInitialState()) {
     on<RadioStreamStarted>((event, emit) async {
+      log('DeviceSettingsStarted $RadioStreamStarted');
+
       audioPlayer = AudioPlayer();
       emit(RadioStreamLoadingState());
       Either<Failure, List<RadioStreamData>> resulsOrError =
@@ -31,7 +33,8 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
             RadioStreamErrorState(
               message: failure.message,
               code: failure.code,
-              onRetry: () => add(RadioStreamStarted()),
+              onRetry: () =>
+                  add(RadioStreamStarted(initVolume: event.initVolume)),
             ),
           );
         },
@@ -57,6 +60,7 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
           }
           try {
             audioPlayer.setAudioSources(audioSources);
+            audioPlayer.setVolume(event.initVolume);
           } catch (e) {
             log('error r 2$e');
           }

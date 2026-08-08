@@ -85,7 +85,7 @@ class _WelcomeIntroPageState extends State<WelcomeIntroPage> {
                         widget.goNext();
                       },
                       child: Text(
-                        Tr.of(context).tabtocontinue.toTitle(),
+                        Tr.of(context).tapToContinue.toTitle(),
                         style: Theme.of(
                           context,
                         ).textTheme.bodyLarge?.copyWith(color: textColor),

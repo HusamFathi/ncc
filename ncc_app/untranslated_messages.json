@@ -1,11 +1,8 @@
 {
   "ar": [
-    "hello",
-    "tabtocontinue",
-    "backgroundPlaybackTitle",
-    "notNow",
-    "backgroundPlaybackDescription",
-    "kContinue",
-    "next"
+    "onboardingNotionRadioTitle",
+    "onboardingNotionRadioDescription",
+    "onboardingHeritageRadioTitle",
+    "onboardingHeritageRadioDescription"
   ]
 }
