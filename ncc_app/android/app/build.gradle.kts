@@ -15,7 +15,7 @@ plugins {
 
 android {
     namespace = "org.msfhor.ncc"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 37
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

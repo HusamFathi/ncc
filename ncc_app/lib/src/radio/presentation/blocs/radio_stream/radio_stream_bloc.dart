@@ -1,13 +1,10 @@
 import 'dart:developer';
-import 'dart:io';
 
 import 'package:equatable/equatable.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import 'package:path_provider/path_provider.dart';
 
 import '../../../../../core/failures/failures.dart';
 import '../../../../../core/src/entities/no_params.dart';
@@ -19,13 +16,20 @@ part 'radio_stream_state.dart';
 
 class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
   final ListRadioStreamsUsecase listRadioStreamsUsecase;
-  late AudioPlayer audioPlayer;
+  AudioPlayer? _audioPlayer;
+  AudioPlayer get audioPlayer => _audioPlayer!;
   RadioStreamBloc({required this.listRadioStreamsUsecase})
     : super(RadioStreamInitialState()) {
     on<RadioStreamStarted>((event, emit) async {
       log('DeviceSettingsStarted $RadioStreamStarted');
 
-      audioPlayer = AudioPlayer();
+      // Dispose any existing player before creating a new one.
+      // just_audio_background only supports a single AudioPlayer instance.
+      if (_audioPlayer != null) {
+        await _audioPlayer!.dispose();
+        _audioPlayer = null;
+      }
+      _audioPlayer = AudioPlayer();
       emit(RadioStreamLoadingState());
       Either<Failure, List<RadioStreamData>> resulsOrError =
           await listRadioStreamsUsecase(params: NoParams());
@@ -47,7 +51,7 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
             // Resolve the artwork URI: copy asset images to a temp file so
             // just_audio_background can serve them via a file:// URI without
             // needing HTTP. Remote URLs are used directly.
-            final Uri? artUri = await _resolveArtUri(stream.imageUrl);
+            final Uri artUri = Uri.parse(stream.imageUrl);
             audioSources.add(
               AudioSource.uri(
                 Uri.parse(stream.streamUrl),
@@ -141,32 +145,9 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
     });
   }
 
-  /// Resolves an artwork URI for [just_audio_background]:
-  /// - Asset paths  → copied to a temp file and returned as a `file://` URI
-  ///   so the notification system can load them without HTTP.
-  /// - Remote URLs  → returned as-is.
-  /// - On any error → returns null (notification shows without artwork).
-  Future<Uri?> _resolveArtUri(String imageUrl) async {
-    try {
-      if (imageUrl.startsWith('assets/')) {
-        // Build a stable temp-file name based on the asset path so we only
-        // write the file once per app session (subsequent calls reuse it).
-        final tempDir = await getTemporaryDirectory();
-        final fileName = imageUrl.replaceAll('/', '_').replaceAll(' ', '_');
-        final file = File('${tempDir.path}/$fileName');
-
-        if (!await file.exists()) {
-          final byteData = await rootBundle.load(imageUrl);
-          await file.writeAsBytes(byteData.buffer.asUint8List());
-        }
-
-        return Uri.file(file.path);
-      } else {
-        return Uri.tryParse(imageUrl);
-      }
-    } catch (e) {
-      log('Failed to resolve artUri for "$imageUrl": $e');
-      return null;
-    }
+  @override
+  Future<void> close() async {
+    await _audioPlayer?.dispose();
+    return super.close();
   }
 }

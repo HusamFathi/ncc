@@ -4,10 +4,14 @@ import 'package:flutter/material.dart';
 Color kHeritageRadioColorPrimary = Color(0xfffbaf3f);
 Color kHeritageRadioColorSecondary = Color(0xfffdcf7e);
 // center colors
-Color kNCCPrimaryColor = Color(0xffba4493);
-Color kNCCSecondaryColor = Color(0xff842ad8);
-Color kNCCThirdColor = Color(0xfff5b2d1);
+// The vibrant purple from the top-left of the logo
+Color kNCCPrimaryColor = const Color(0xff842ad8);
 
+// The magenta from the center of the logo
+Color kNCCSecondaryColor = const Color(0xffba4493);
+
+// The warm coral/orange-red from the bottom-right of the logo
+Color kNCCThirdColor = const Color(0xffF25C65);
 /// this value will be u`sed for all widgets that will need rounded corners
 const double kRoundedCorners = 12;
 
