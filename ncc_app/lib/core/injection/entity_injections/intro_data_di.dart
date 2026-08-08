@@ -10,11 +10,16 @@ import '../init_di.dart';
 void introDataDI() {
   //*===========blocs====================================================
 
-  sl.registerFactory(() => ListIntroDataBloc(listIntroData: sl(),toggleOnboardingIsSeenKey: sl()));
+  sl.registerFactory(
+    () =>
+        ListIntroDataBloc(listIntroData: sl(), toggleOnboardingIsSeenKey: sl()),
+  );
 
   //*===========usecases====================================================
   sl.registerLazySingleton(() => ListIntroDataUsecase(repository: sl()));
-  sl.registerLazySingleton(() => ToggleOnboardingIsSeenKeyUsecase(repository: sl()));
+  sl.registerLazySingleton(
+    () => ToggleOnboardingIsSeenKeyUsecase(repository: sl()),
+  );
 
   //*===========repositories====================================================
   sl.registerLazySingleton<IntroDataRepository>(

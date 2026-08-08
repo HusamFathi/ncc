@@ -28,20 +28,25 @@ class RoutesService {
   static const String oboardingRoute = '/oboarding';
   static const String mainRoute = '/app';
   static const String settingsRoute = '/settings';
-bool _isOnboardingSeen=false;
+  bool _isOnboardingSeen = false;
+
   /// route for control
   List<RouteBase> routes = [];
-String getInitRoute(){
-  if (_isOnboardingSeen){return mainRoute;}else {
-    return oboardingRoute;
+  String getInitRoute() {
+    if (_isOnboardingSeen) {
+      return mainRoute;
+    } else {
+      return oboardingRoute;
+    }
   }
 
-}
   Future<void> init() async {
     routes = RoutesList.getRoutes();
-    _isOnboardingSeen=   
+    _isOnboardingSeen =
         await sl<LocalStorageService>().getBool(
-          IntroDataLocalDataSourceImpl.onboardingIsSeenKey) ?? false;
+          IntroDataLocalDataSourceImpl.onboardingIsSeenKey,
+        ) ??
+        false;
   }
 
   void goBack({required BuildContext context}) {

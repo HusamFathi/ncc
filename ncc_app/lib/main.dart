@@ -17,7 +17,7 @@ Future<void> main() async {
   // This will call the correct version of configureApp
   // based on the platform (web or non-web)
   configureApp();
-   await JustAudioBackground.init(
+  await JustAudioBackground.init(
     androidNotificationChannelId: 'ncc_radios_channel',
     androidNotificationChannelName: 'البث الإذاعي',
     androidNotificationChannelDescription:

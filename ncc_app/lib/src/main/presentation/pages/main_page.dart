@@ -34,7 +34,7 @@ class MainPage extends StatelessWidget {
                 expandedHeight: expandedHeight,
                 collapsedHeight: collapsedHeight,
                 primary: true,
-        
+
                 backgroundColor: Theme.of(context).colorScheme.secondary,
                 flexibleSpace: BlocProvider(
                   create: (context) =>
