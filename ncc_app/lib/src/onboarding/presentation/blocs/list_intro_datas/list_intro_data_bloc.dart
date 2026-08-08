@@ -1,12 +1,10 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:fpdart/fpdart.dart';
 import '../../../../../core/src/entities/no_params.dart';
 
 import '../../../../../core/failures/failures.dart';
-import '../../../../../core/route/routes_config.dart';
 import '../../../domain/entities/intro_data.dart';
 import '../../../domain/usecases/intro_data/list_intro_datas_usecase.dart';
 import '../../../domain/usecases/toggle_onboarding_is_seen_key_usecase.dart';
