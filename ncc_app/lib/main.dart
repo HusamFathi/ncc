@@ -2,6 +2,7 @@ import 'package:encrypt_shared_preferences/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:just_audio_background/just_audio_background.dart';
+import 'package:ncc/core/utils/constants.dart';
 
 import 'core/app/app.dart';
 import 'core/injection/init_di.dart';
@@ -19,6 +20,8 @@ Future<void> main() async {
   configureApp();
   await JustAudioBackground.init(
     androidNotificationChannelId: 'ncc_radios_channel',
+    androidShowNotificationBadge: true,
+    notificationColor: kNCCSecondaryColor,
     androidNotificationChannelName: 'البث الإذاعي',
     androidNotificationChannelDescription:
         'قناة إشعارات لتشغيل البث الإذاعي في الخلفية والتحكم في التشغيل.',

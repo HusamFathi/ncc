@@ -26,7 +26,7 @@ class RadioStreamLocalDataSourceImpl implements RadioStreamLocalDataSource {
         'stream_url': 'https://ncc1.radioca.st/stream',
         'subtitle': Tr.current.notionRadioForHeritageSlogan
             .capitalizeFirstLetter(),
-        "image_url": "assets/images/heritage-radio.jpg",
+        "image_url": "https://www.image2url.com/r2/default/images/1786226701251-1b437b09-2bc5-4f78-a6a9-bc528a9ef431.jpg",
         "background_lesson_image_url":
             "assets/images/heritage-radio-background-less.png",
         "description": Tr.current.notionRadioForHeritageInfo
@@ -39,7 +39,7 @@ class RadioStreamLocalDataSourceImpl implements RadioStreamLocalDataSource {
         'name': Tr.current.notionRadio.toTitle(),
         'stream_url': 'https://gaber.radioca.st/stream',
         'subtitle': Tr.current.notionRadioSlogan.capitalizeFirstLetter(),
-        "image_url": "assets/images/notion-radio.png",
+        "image_url": "https://www.image2url.com/r2/default/images/1786227395287-aca393eb-ed29-4691-8e44-a109e17013be.png",
         "background_lesson_image_url":
             "assets/images/notion-radio-background-less.png",
         "description": Tr.current.notionRadioInfo.capitalizeFirstLetter(),

@@ -135,7 +135,7 @@ class _RadioWidgetState extends State<RadioWidget> {
                                                 !isNotLoadingAndNotReady &&
                                                 currentId == index,
                                             child: CircleAvatar(
-                                              backgroundImage: AssetImage(
+                                              backgroundImage: NetworkImage(
                                                 e.imageUrl,
                                               ),
                                             ),
