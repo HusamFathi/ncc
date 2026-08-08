@@ -27,9 +27,7 @@ class OnboardingPage extends StatelessWidget {
           sl<ListIntroDataBloc>()..add(ListIntroDataStarted(context: context)),
       child: BlocConsumer<ListIntroDataBloc, ListIntroDataState>(
         listener: (context, state) {
-          if (state is ListIntroDataLoadedState) {
-           
-          }
+          if (state is ListIntroDataLoadedState) {}
         },
         builder: (context, state) {
           return ResponsiveBuilder(
@@ -79,7 +77,9 @@ class OnboardingPage extends StatelessWidget {
                             physics: NeverScrollableScrollPhysics(),
                             onFinish: () {
                               log('we just finished');
-                              bloc.add(ListIntroDataToggleOnboardingIsSeenKey());
+                              bloc.add(
+                                ListIntroDataToggleOnboardingIsSeenKey(),
+                              );
                               sl<RoutesService>().goTo(
                                 context: context,
                                 path: RoutesService.mainRoute,

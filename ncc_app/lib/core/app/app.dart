@@ -14,7 +14,6 @@ import '../route/routes_config.dart';
 import '../src/widgets/loading_widget.dart';
 import '../theme/app_theme.dart';
 
-
 class App extends StatefulWidget {
   const App({super.key});
 

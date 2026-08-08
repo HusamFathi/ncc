@@ -68,7 +68,6 @@ class _RadioWidgetState extends State<RadioWidget> {
                             error: state.message,
                             code: state.code,
                             onRetry: state.onRetry,
-                           
                           );
                         }
                         if (state is RadioStreamLoadedState) {

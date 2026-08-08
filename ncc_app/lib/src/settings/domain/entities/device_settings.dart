@@ -20,13 +20,13 @@ class DeviceSettings extends Equatable {
     return DeviceSettings(
       language: sl<AppLanguage>().getCurrentLanguage().localCode,
       themeMode: 0,
-      radioVolume:1
+      radioVolume: 1,
     );
   }
-  DeviceSettings copyWith({String? language, int? themeMode,
-  double? radioVolume
-  
-  
+  DeviceSettings copyWith({
+    String? language,
+    int? themeMode,
+    double? radioVolume,
   }) {
     return DeviceSettings(
       language: language ?? this.language,
