@@ -1,7 +1,8 @@
-import '../../../../../core/utils/constants.dart';
+import 'dart:developer';
 
 import '../../../../../core/extensions/string.dart';
 import '../../../../../core/locale/app_localizations_helper.dart';
+import '../../../../../core/utils/constants.dart';
 import '../../models/radio_stream_data_model.dart';
 
 abstract class RadioStreamLocalDataSource {
@@ -16,6 +17,8 @@ abstract class RadioStreamLocalDataSource {
 class RadioStreamLocalDataSourceImpl implements RadioStreamLocalDataSource {
   @override
   Future<List<RadioStreamDataModel>> getRadioStreams() {
+    log('getRadioStreams### ');
+
     final List<Map<String, dynamic>> data = [
       {
         'id': '0',
@@ -43,9 +46,11 @@ class RadioStreamLocalDataSourceImpl implements RadioStreamLocalDataSource {
         "radio_primary_color": '#59456e', // Default color if not provided
       },
     ];
+    List<RadioStreamDataModel> radios = data
+        .map((e) => RadioStreamDataModel.fromJson(e))
+        .toList();
+    log('radios### $radios');
 
-    return Future.value(
-      data.map((e) => RadioStreamDataModel.fromJson(e)).toList(),
-    );
+    return Future.value(radios);
   }
 }

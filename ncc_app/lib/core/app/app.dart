@@ -25,7 +25,6 @@ class _AppState extends State<App> {
   @override
   void initState() {
     super.initState();
-    // Splash will be removed only after radio is ready
   }
 
   @override
@@ -69,24 +68,7 @@ class _AppState extends State<App> {
                   supportedLocales: AppLocalizations.supportedLocales,
                   routerConfig: router,
                   builder: (context, child) {
-                    // Only init audio background once, after localization ready!
-                    return BlocConsumer<
-                      DeviceSettingsBloc,
-                      DeviceSettingsState
-                    >(
-                      listener: (context, state) {
-                        if (state is DeviceSettingsLoadedState) {
-                          context.read<RadioStreamBloc>().add(
-                            RadioStreamStarted(
-                              initVolume: state.deviceSettings.radioVolume,
-                            ),
-                          );
-                        }
-                      },
-                      builder: (context, state) {
-                        return child!;
-                      },
-                    );
+                    return child!;
                   },
                 );
               } else {
