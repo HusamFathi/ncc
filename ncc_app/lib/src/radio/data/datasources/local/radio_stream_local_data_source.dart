@@ -1,4 +1,4 @@
-import 'package:ncc/core/utils/constants.dart';
+import '../../../../../core/utils/constants.dart';
 
 import '../../../../../core/extensions/string.dart';
 import '../../../../../core/locale/app_localizations_helper.dart';
