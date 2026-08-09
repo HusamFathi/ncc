@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+
 import '../../../../core/src/widgets/base_animator_widget.dart';
 import '../../../../core/utils/constants.dart';
 

@@ -1,4 +1,4 @@
-import 'package:ncc/core/utils/constants.dart';
+import '../../../../../core/utils/constants.dart';
 
 import '../../../../../core/route/routes_config.dart';
 import '../../models/intro_slide_data_model.dart';
