@@ -58,6 +58,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get radioVolume => 'Radio Volume';
 
   @override
+  String get live => 'live';
+
+  @override
   String get ok => 'OK';
 
   @override

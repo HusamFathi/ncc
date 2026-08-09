@@ -15,6 +15,7 @@
   "msfSlideTitle": "Powered by",
   "onboardingGoalsTitle": "Our Goals",
   "radioVolume": "Radio Volume",
+  "live":"live",
   "ok": "OK",
   "setUpRadioVolumeLevel": "Set Up Radio Volume Level",
   "setUpRadioVolumeLevelMessage": "You can set up the radio volume without affecting your device volume level",

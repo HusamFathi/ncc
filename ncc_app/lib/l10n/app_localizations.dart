@@ -194,6 +194,12 @@ abstract class AppLocalizations {
   /// **'Radio Volume'**
   String get radioVolume;
 
+  /// No description provided for @live.
+  ///
+  /// In en, this message translates to:
+  /// **'live'**
+  String get live;
+
   /// No description provided for @ok.
   ///
   /// In en, this message translates to:

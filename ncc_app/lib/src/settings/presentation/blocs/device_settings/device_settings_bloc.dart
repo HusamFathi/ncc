@@ -39,7 +39,6 @@ class DeviceSettingsBloc
       );
     });
     on<DeviceSettingsUpdated>((event, emit) async {
-      emit(DeviceSettingsLoadingState());
       final Either<Failure, DeviceSettings> resultrOrError =
           await updateDeviceSettingsUseCase(settings: event.updatedSettings);
       resultrOrError.fold(
