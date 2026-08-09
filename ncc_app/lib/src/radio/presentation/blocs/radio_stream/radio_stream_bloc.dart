@@ -30,6 +30,7 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
         _audioPlayer = null;
       }
       _audioPlayer = AudioPlayer();
+      await _audioPlayer!.setVolume(event.initVolume);
       emit(RadioStreamLoadingState());
       Either<Failure, List<RadioStreamData>> resulsOrError =
           await listRadioStreamsUsecase(params: NoParams());
@@ -63,7 +64,6 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
           }
           try {
             await audioPlayer.setAudioSources(audioSources);
-            await audioPlayer.setVolume(event.initVolume);
           } catch (e) {
             // Gracefully handle network errors (e.g. 502 Bad Gateway) so the
             // app stays functional; the user can retry playback manually.
