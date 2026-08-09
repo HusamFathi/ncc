@@ -39,11 +39,10 @@ export default function Hero() {
 
         {/* Android Mockup with Blob */}
         <div className="relative w-full flex justify-center items-center py-8">
-          <div className="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-signal-purple/20 blob-backing animate-[pulse_6s_infinite] -z-10 translate-x-4 -translate-y-4"></div>
-          <div className="absolute w-[280px] h-[280px] md:w-[420px] md:h-[420px] bg-signal-magenta/25 blob-backing animate-[pulse_8s_infinite] -z-10 -translate-x-6 translate-y-6"></div>
+          <div className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px] bg-gradient-to-br from-signal-purple to-signal-magenta blob-backing animate-[pulse_8s_infinite] shadow-xl shadow-signal-purple/30"></div>
 
           {/* Android Mockup Frame */}
-          <div className="relative w-[280px] h-[570px] md:w-[310px] md:h-[630px] bg-ink-black rounded-[36px] p-[8px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] border-[4px] border-ink-black ring-[1px] ring-ink-black/20">
+          <div className="relative z-10 w-[280px] h-[570px] md:w-[310px] md:h-[630px] bg-ink-black rounded-[36px] p-[8px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] border-[4px] border-ink-black ring-[1px] ring-ink-black/20">
             <div className="w-full h-full rounded-[28px] overflow-hidden bg-zinc-900 relative">
               <Image
                 src="/app_screenshot.png"
