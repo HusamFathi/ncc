@@ -19,9 +19,7 @@ class NccInfoWidget extends StatelessWidget {
             icon: Icons.remove_red_eye,
             description: Tr.of(context).nccVision,
           ),
-
           Gap(kSmallGap),
-
           InfoCardWidget(
             title: Tr.of(context).ourMessage,
             icon: Icons.message,
