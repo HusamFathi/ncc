@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "appName": "The Nation's Platform",
+    "home": "Home",
+    "features": "Features",
+    "about": "About"
+  },
+  "hero": {
+    "title": "The Nation's Platform.",
+    "description": "A unified media streaming platform built for the Libyan community. Listen to live radio, follow national broadcasts, and stay connected to the news and content that matters to you — anytime, anywhere.",
+    "exploreFeatures": "Explore Features",
+    "learnMore": "Learn More",
+    "screenshotAlt": "App Screenshot"
+  },
+  "features": {
+    "tag": "App Features",
+    "title": "Designed for the Community",
+    "description": "The Nation's Platform is built with modern, user-first tools that ensure you stay connected with your community seamlessly.",
+    "backgroundPlayback": {
+      "title": "Keep Listening in the Background",
+      "description": "Allow notifications so our app can keep your radio playing while you use other apps or lock your device. Playback controls appear right in your notification panel."
+    },
+    "volumeLevel": {
+      "title": "Set Up Radio Volume Level",
+      "description": "Tune the radio playback volume independently within the app without affecting your main Android system volume level."
+    },
+    "broadcasting": {
+      "title": "Unified Broadcasting",
+      "description": "Stream diverse content, talk shows, Libyan heritage programs, and news channels simultaneously on multiple platforms with our official applications."
+    },
+    "optimizedStreaming": {
+      "title": "Optimized Streaming",
+      "description": "Enjoy crystal-clear audio streams with minimal data usage, built for reliable connections across all regions."
+    }
+  },
+  "about": {
+    "tag": "About the Platform",
+    "title": "Our Vision, Mission & Goals",
+    "description": "A national media platform delivering professional content that strengthens communication and reflects the aspirations of the Libyan community.",
+    "vision": {
+      "label": "V",
+      "title": "Our Vision",
+      "description": "To be a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community.",
+      "link": "Vision Statement"
+    },
+    "mission": {
+      "label": "M",
+      "title": "Our Mission",
+      "description": "Deliver trusted media that promotes transparency, supports institutions, and serves the public interest.",
+      "link": "Mission Statement"
+    },
+    "goals": {
+      "label": "G",
+      "title": "Our Goals",
+      "description": "Create meaningful content, strengthen media partnerships, and promote community awareness.",
+      "link": "Objectives"
+    }
+  },
+  "footer": {
+    "appName": "The Nation's Platform",
+    "description": "A national media platform delivering professional content that strengthens communication and reflects the aspirations of the Libyan community.",
+    "legalSupport": "Legal & Support",
+    "termsOfUse": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "supportEmail": "Support Email",
+    "connect": "Connect",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "rights": "All rights reserved",
+    "madeIn": "Made in Benghazi"
+  }
+}
