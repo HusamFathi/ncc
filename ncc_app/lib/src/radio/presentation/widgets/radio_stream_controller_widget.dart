@@ -9,6 +9,9 @@ import 'package:ncc/src/radio/presentation/widgets/radio_image_rotation_widget.d
 import '../../../../core/utils/constants.dart';
 import '../../domain/entities/radio_stream_data.dart';
 import '../blocs/radio_stream/radio_stream_bloc.dart';
+import '../pages/radio_details_page.dart';
+
+const String radioTagString = "radio_icon";
 
 class RadioStreamControllerWidget extends StatelessWidget {
   const RadioStreamControllerWidget({super.key});
@@ -50,75 +53,112 @@ class RadioStreamControllerWidget extends StatelessWidget {
 
                 return Padding(
                   padding: const EdgeInsets.only(bottom: kSmallPadding),
-                  child: LiquidGlassLens(
-                    useImpellerBackdrop: true,
-                    style: LiquidGlassStyle(),
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        maxWidth: math.min(
-                          300,
-                          MediaQuery.sizeOf(context).width - 20,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        PageRouteBuilder(
+                          transitionDuration: const Duration(milliseconds: 300),
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) {
+                                return RadioDetailsPage(
+                                  radio: currentStreamData,
+                                );
+                              },
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                                final tween = Tween(
+                                  begin: const Offset(0, 0.05),
+                                  end: Offset.zero,
+                                ).chain(CurveTween(curve: Curves.easeOut));
+                                return FadeTransition(
+                                  opacity: animation,
+                                  child: SlideTransition(
+                                    position: animation.drive(tween),
+                                    child: child,
+                                  ),
+                                );
+                              },
                         ),
-                        maxHeight: 70,
-                        minHeight: 65,
-                        minWidth: 280,
-                      ),
-                      child: Center(
-                        child: ListTile(
-                          leading: RadioImageRotationWidget(
-                            isRotating: playing && !isNotLoadingAndNotReady,
-                            imageUrl: currentStreamData.imageUrl,
+                      );
+                    },
+                    child: LiquidGlassLens(
+                      useImpellerBackdrop: true,
+                      style: LiquidGlassStyle(),
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          maxWidth: math.min(
+                            300,
+                            MediaQuery.sizeOf(context).width - 20,
                           ),
-                          title: Row(
-                            mainAxisAlignment: .spaceEvenly,
-                            children: [
-                              IconButton(
-                                onPressed: currentId != 0
-                                    ? () {
-                                        radioStreamBloc.add(
-                                          RadioStreamGoToEvent(index: currentId - 1),
-                                        );
-                                      }
-                                    : null,
-                                icon: Transform.flip(
-                                  flipX: isRtl,
-                                  child: Icon(Icons.skip_previous),
-                                ),
+                          maxHeight: 70,
+                          minHeight: 65,
+                          minWidth: 280,
+                        ),
+                        child: Center(
+                          child: ListTile(
+                            leading: Hero(
+                              tag: radioTagString,
+                              child: RadioImageRotationWidget(
+                                isRotating: playing && !isNotLoadingAndNotReady,
+                                imageUrl: currentStreamData.imageUrl,
                               ),
-                              playing
-                                  ? IconButton(
-                                      onPressed: () {
-                                        audioPlayer.pause();
-                                      },
-                                      icon: Icon(Icons.pause),
-                                    )
-                                  : IconButton(
-                                      onPressed: () {
-                                        audioPlayer.play();
-                                      },
-                                      icon: Icon(Icons.play_arrow),
-                                    ),
+                            ),
+                            title: Row(
+                              mainAxisAlignment: .spaceEvenly,
+                              children: [
+                                IconButton(
+                                  onPressed: currentId != 0
+                                      ? () {
+                                          radioStreamBloc.add(
+                                            RadioStreamGoToEvent(
+                                              index: currentId - 1,
+                                            ),
+                                          );
+                                        }
+                                      : null,
+                                  icon: Transform.flip(
+                                    flipX: isRtl,
+                                    child: Icon(Icons.skip_previous),
+                                  ),
+                                ),
+                                playing
+                                    ? IconButton(
+                                        onPressed: () {
+                                          audioPlayer.pause();
+                                        },
+                                        icon: Icon(Icons.pause),
+                                      )
+                                    : IconButton(
+                                        onPressed: () {
+                                          audioPlayer.play();
+                                        },
+                                        icon: Icon(Icons.play_arrow),
+                                      ),
 
-                              IconButton(
-                                onPressed: () {
-                                  audioPlayer.stop();
-                                },
-                                icon: Icon(Icons.stop, color: Colors.red),
-                              ),
-                              IconButton(
-                                onPressed: currentId + 1 < radioStreams.length
-                                    ? () {
-                                        radioStreamBloc.add(
-                                          RadioStreamGoToEvent(index: currentId + 1),
-                                        );
-                                      }
-                                    : null,
-                                icon: Transform.flip(
-                                  flipX: isRtl,
-                                  child: Icon(Icons.skip_next),
+                                IconButton(
+                                  onPressed: () {
+                                    audioPlayer.stop();
+                                  },
+                                  icon: Icon(Icons.stop, color: Colors.red),
                                 ),
-                              ),
-                            ],
+                                IconButton(
+                                  onPressed: currentId + 1 < radioStreams.length
+                                      ? () {
+                                          radioStreamBloc.add(
+                                            RadioStreamGoToEvent(
+                                              index: currentId + 1,
+                                            ),
+                                          );
+                                        }
+                                      : null,
+                                  icon: Transform.flip(
+                                    flipX: isRtl,
+                                    child: Icon(Icons.skip_next),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

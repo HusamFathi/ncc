@@ -58,6 +58,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get radioVolume => 'مستوى صوت الراديو';
 
   @override
+  String get live => 'مباشر';
+
+  @override
   String get ok => 'حسنًا';
 
   @override

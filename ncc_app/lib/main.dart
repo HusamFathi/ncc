@@ -15,8 +15,6 @@ Future<void> main() async {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await EncryptedSharedPreferences.initialize('9UwbWAJo8elUBZFg');
 
-  // This will call the correct version of configureApp
-  // based on the platform (web or non-web)
   configureApp();
   await JustAudioBackground.init(
     androidNotificationChannelId: 'ncc_radios_channel',
