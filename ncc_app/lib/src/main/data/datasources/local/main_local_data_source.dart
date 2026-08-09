@@ -1,3 +1,5 @@
+import 'package:ncc/core/utils/constants.dart';
+
 import '../../../../../core/route/routes_config.dart';
 import '../../models/intro_slide_data_model.dart';
 
@@ -14,18 +16,29 @@ class MainLocalDataSourceImpl implements MainLocalDataSource {
     final List<Map<String, dynamic>> slidesJson = [
       {
         'image': 'assets/images/slides/1.png',
-        'url': 'https://ncc.com.ly/',
-        'type': 'external',
+        'url': RoutesService.mainRoute,
+        'type': 'internal',
       },
       {
         'image': 'assets/images/slides/2.png',
-        'url': 'https://www.facebook.com/profile.php?id=61576664882231',
-        'type': 'external',
+        'url': RoutesService.mainRoute,
+
+        'type': 'internal',
       },
       {
         'image': 'assets/images/slides/3.png',
         'url': RoutesService.mainRoute,
         'type': 'internal',
+      },
+      {
+        'image': 'assets/images/slides/4.png',
+        'url': RoutesService.mainRoute,
+        'type': 'internal',
+      },
+      {
+        'image': 'assets/images/slides/5.png',
+        'url': kFacebookPageLink,
+        'type': 'external',
       },
     ];
 
