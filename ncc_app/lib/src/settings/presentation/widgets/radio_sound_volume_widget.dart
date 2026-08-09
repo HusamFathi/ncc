@@ -22,14 +22,11 @@ class RadioSoundVolumeWidget extends StatelessWidget {
         BlocProvider.value(value: radioStreamBloc),
       ],
       child: BlocConsumer<DeviceSettingsBloc, DeviceSettingsState>(
-        listener: (context, state) {
-          // TODO: implement listener
-        },
+        listener: (context, state) {},
         builder: (context, state) {
           return ListTile(
             leading: Icon(Icons.volume_up),
             title: Text(Tr.of(context).radioVolume),
-
             trailing: Builder(
               builder: (context) {
                 if (state is DeviceSettingsLoadedState) {
@@ -61,6 +58,8 @@ class RadioSoundVolumeWidget extends StatelessWidget {
                           children: [
                             Text(Tr.of(context).setUpRadioVolumeLevelMessage),
                             Gap(kMediumGap),
+                            Text(asyncSnapshot.data.toString()),
+
                             Slider(
                               value: radioStreamBloc.audioPlayer.volume,
                               onChanged: (value) {

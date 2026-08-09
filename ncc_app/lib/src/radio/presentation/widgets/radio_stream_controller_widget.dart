@@ -76,7 +76,7 @@ class RadioStreamControllerWidget extends StatelessWidget {
                                 onPressed: currentId != 0
                                     ? () {
                                         radioStreamBloc.add(
-                                          RadioStreamSkipPreviousEvent(),
+                                          RadioStreamGoToEvent(index: currentId - 1),
                                         );
                                       }
                                     : null,
@@ -106,10 +106,10 @@ class RadioStreamControllerWidget extends StatelessWidget {
                                 icon: Icon(Icons.stop, color: Colors.red),
                               ),
                               IconButton(
-                                onPressed: currentId + 2 == radioStreams.length
+                                onPressed: currentId + 1 < radioStreams.length
                                     ? () {
                                         radioStreamBloc.add(
-                                          RadioStreamSkipNextEvent(),
+                                          RadioStreamGoToEvent(index: currentId + 1),
                                         );
                                       }
                                     : null,
