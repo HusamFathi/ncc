@@ -46,6 +46,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get syncWithSystem => 'مزامنة مع إعدادات النظام';
 
   @override
+  String get aboutPlatform => 'حول المنصة';
+
+  @override
   String get msfSlideTitle => 'بدعم من';
 
   @override

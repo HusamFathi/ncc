@@ -11,6 +11,7 @@
   "unKnownErrorMessage": "Unexpected error occurred",
   "unableToLoadLocalData": "Failed to load local data",
   "syncWithSystem": "Sync with system settings",
+  "aboutPlatform":"About the Platform",
   "msfSlideTitle": "Powered by",
   "onboardingGoalsTitle": "Our Goals",
   "radioVolume": "Radio Volume",

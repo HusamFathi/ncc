@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+
 import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../../core/utils/constants.dart';
 import '../../../radio/presentation/blocs/radio_stream/radio_stream_bloc.dart';
-import '../blocs/device_settings/device_settings_bloc.dart';
-
 import '../../domain/entities/device_settings.dart';
+import '../blocs/device_settings/device_settings_bloc.dart';
 
 class RadioSoundVolumeWidget extends StatelessWidget {
   const RadioSoundVolumeWidget({super.key});
@@ -29,6 +29,20 @@ class RadioSoundVolumeWidget extends StatelessWidget {
           return ListTile(
             leading: Icon(Icons.volume_up),
             title: Text(Tr.of(context).radioVolume),
+
+            trailing: Builder(
+              builder: (context) {
+                if (state is DeviceSettingsLoadedState) {
+                  DeviceSettings deviceSettings = state.deviceSettings;
+                  double volume = deviceSettings.radioVolume;
+                  return Text(
+                    '${(volume * 100).toStringAsFixed(2)}%',
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  );
+                }
+                return SizedBox();
+              },
+            ),
             onTap: () {
               if (state is DeviceSettingsLoadedState) {
                 DeviceSettings deviceSettings = state.deviceSettings;

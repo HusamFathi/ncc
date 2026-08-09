@@ -46,6 +46,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get syncWithSystem => 'Sync with system settings';
 
   @override
+  String get aboutPlatform => 'About the Platform';
+
+  @override
   String get msfSlideTitle => 'Powered by';
 
   @override
