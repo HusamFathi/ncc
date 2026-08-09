@@ -77,21 +77,21 @@ class RadioSoundVolumeWidget extends StatelessWidget {
                                   child: Slider(
                                     value: radioStreamBloc.audioPlayer.volume,
                                     onChanged: (value) {
-                                      radioStreamBloc.audioPlayer.setVolume(value);
+                                      radioStreamBloc.audioPlayer.setVolume(
+                                        value,
+                                      );
                                     },
                                     onChangeEnd: (value) {
                                       deviceSettingsBloc.add(
                                         DeviceSettingsUpdated(
-                                          updatedSettings: deviceSettings.copyWith(
-                                            radioVolume: value,
-                                          ),
+                                          updatedSettings: deviceSettings
+                                              .copyWith(radioVolume: value),
                                         ),
                                       );
                                     },
                                   ),
                                 ),
                                 Icon(Icons.volume_up_sharp),
-
                               ],
                             ),
                           ],

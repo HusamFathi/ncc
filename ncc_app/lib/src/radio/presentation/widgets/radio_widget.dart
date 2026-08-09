@@ -157,8 +157,7 @@ class _RadioWidgetState extends State<RadioWidget> {
                               isRotating: false,
 
                               isSelected: false,
-                              radio: RadioStreamData.loading()
-                              
+                              radio: RadioStreamData.loading(),
                             ),
                           ),
                         );

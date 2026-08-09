@@ -9,7 +9,8 @@ class InfoCardWidget extends StatelessWidget {
   const InfoCardWidget({
     super.key,
     required this.title,
-    required this.description, required this.icon,
+    required this.description,
+    required this.icon,
   });
   final String title;
   final String description;
