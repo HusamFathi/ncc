@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { useTranslations, useLocale } from "next-intl";
-import { Link, useRouter, usePathname } from "@/i18n/navigation";
+import { Locale, localeDir, localeLabels } from "@/i18n/locales";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { localeLabels, localeDir, Locale } from "@/i18n/locales";
+import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Navbar() {
   const t = useTranslations("nav");
@@ -58,7 +58,7 @@ export default function Navbar() {
           {t("about")}
         </Link>
 
-        {/* Language Switcher — cycles through all available locales */}
+        {/* Language Switcher - cycles through all available locales */}
         <div className="flex items-center gap-2 ms-2">
           {otherLocales.map((targetLocale) => (
             <button

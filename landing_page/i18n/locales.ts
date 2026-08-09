@@ -1,4 +1,4 @@
-// Centralized locale type — add new locales here
+// Centralized locale type - add new locales here
 export type Locale = "ar" | "en";
 
 // Human-readable locale labels for the language switcher
