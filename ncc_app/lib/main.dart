@@ -2,7 +2,7 @@ import 'package:encrypt_shared_preferences/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import 'package:ncc/core/utils/constants.dart';
+import 'core/utils/constants.dart';
 
 import 'core/app/app.dart';
 import 'core/injection/init_di.dart';
