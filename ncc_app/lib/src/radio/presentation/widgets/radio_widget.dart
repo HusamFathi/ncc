@@ -132,9 +132,8 @@ class _RadioWidgetState extends State<RadioWidget> {
                                           radio: radioStreamData,
                                           onTap: (radioStreamData) {
                                             radioStreamBloc.add(
-                                              RadioStreamSelectedEvent(
-                                                radioStreamData:
-                                                    radioStreamData,
+                                              RadioStreamGoToEvent(
+                                                index: index,
                                               ),
                                             );
                                           },

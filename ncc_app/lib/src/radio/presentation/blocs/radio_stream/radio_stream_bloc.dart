@@ -48,9 +48,6 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
         (List<RadioStreamData> radioStreams) async {
           List<AudioSource> audioSources = [];
           for (RadioStreamData stream in radioStreams) {
-            // Resolve the artwork URI: copy asset images to a temp file so
-            // just_audio_background can serve them via a file:// URI without
-            // needing HTTP. Remote URLs are used directly.
             final Uri artUri = Uri.parse(stream.imageUrl);
             audioSources.add(
               AudioSource.uri(
@@ -76,58 +73,18 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
         },
       );
     });
-    on<RadioStreamSelectedEvent>((event, emit) async {
+    on<RadioStreamGoToEvent>((event, emit) async {
       if (state is RadioStreamLoadedState) {
         final RadioStreamLoadedState loadedState =
             state as RadioStreamLoadedState;
         emit(loadedState.copyWith(status: RadioStreamLoadedStatus.inProgress));
         final int currentStreamId = (audioPlayer.currentIndex ?? 1);
-        final int newTargetIndex = int.parse(event.radioStreamData.id);
+        final int newTargetIndex = event.index;
 
-        if (currentStreamId != newTargetIndex) {
-          audioPlayer.pause();
-          await audioPlayer.seek(Duration.zero, index: newTargetIndex);
+        if (newTargetIndex < 0 || newTargetIndex >= loadedState.radioStreams.length) {
+          emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));
+          return;
         }
-        if (!audioPlayer.playing) {
-        //   audioPlayer.pause();
-        // } else {
-          await audioPlayer.play();
-        }
-        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));
-      }
-    });
-    on<RadioStreamSkipNextEvent>((event, emit) async {
-      log('RadioStreamSkipNextEvent $RadioStreamSkipNextEvent');
-
-      if (state is RadioStreamLoadedState) {
-        final RadioStreamLoadedState loadedState =
-            state as RadioStreamLoadedState;
-        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.inProgress));
-        final int currentStreamId = (audioPlayer.currentIndex ?? 1);
-        log('currentStreamId $currentStreamId');
-
-        if (currentStreamId + 1 == loadedState.radioStreams.length) return;
-
-        final int newTargetIndex = currentStreamId + 1;
-        log('newTargetIndex $newTargetIndex');
-        if (currentStreamId != newTargetIndex) {
-          audioPlayer.pause();
-          await audioPlayer.seek(Duration.zero, index: newTargetIndex);
-        }
-        if (!audioPlayer.playing) {
-          await audioPlayer.play();
-        }
-        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));
-      }
-    });
-    on<RadioStreamSkipPreviousEvent>((event, emit) async {
-      if (state is RadioStreamLoadedState) {
-        final RadioStreamLoadedState loadedState =
-            state as RadioStreamLoadedState;
-        emit(loadedState.copyWith(status: RadioStreamLoadedStatus.inProgress));
-        final int currentStreamId = (audioPlayer.currentIndex ?? 1);
-        if (currentStreamId == 0) return;
-        final int newTargetIndex = currentStreamId - 1;
 
         if (currentStreamId != newTargetIndex) {
           audioPlayer.pause();

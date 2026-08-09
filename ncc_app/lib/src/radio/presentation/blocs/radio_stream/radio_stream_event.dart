@@ -13,25 +13,11 @@ final class RadioStreamStarted extends RadioStreamEvent {
   List<Object?> get props => [initVolume];
 }
 
-final class RadioStreamSelectedEvent extends RadioStreamEvent {
-  final RadioStreamData radioStreamData;
+final class RadioStreamGoToEvent extends RadioStreamEvent {
+  final int index;
 
-  const RadioStreamSelectedEvent({required this.radioStreamData});
-
-  @override
-  List<Object?> get props => [radioStreamData];
-}
-
-final class RadioStreamSkipNextEvent extends RadioStreamEvent {
-  const RadioStreamSkipNextEvent();
+  const RadioStreamGoToEvent({required this.index});
 
   @override
-  List<Object?> get props => [];
-}
-
-final class RadioStreamSkipPreviousEvent extends RadioStreamEvent {
-  const RadioStreamSkipPreviousEvent();
-
-  @override
-  List<Object?> get props => [];
+  List<Object?> get props => [index];
 }

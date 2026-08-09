@@ -48,8 +48,8 @@ class RadiosPlayerButtonWidget extends StatelessWidget {
                   onPressed: () {
                     // Handle button press
                     bloc.add(
-                      RadioStreamSelectedEvent(
-                        radioStreamData: currentRadioStream,
+                      RadioStreamGoToEvent(
+                        index: audioPlayer.currentIndex ?? 0,
                       ),
                     );
                     onGoToRadioWidget();
