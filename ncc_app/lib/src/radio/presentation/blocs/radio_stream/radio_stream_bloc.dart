@@ -81,7 +81,8 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
         final int currentStreamId = (audioPlayer.currentIndex ?? 1);
         final int newTargetIndex = event.index;
 
-        if (newTargetIndex < 0 || newTargetIndex >= loadedState.radioStreams.length) {
+        if (newTargetIndex < 0 ||
+            newTargetIndex >= loadedState.radioStreams.length) {
           emit(loadedState.copyWith(status: RadioStreamLoadedStatus.initial));
           return;
         }
