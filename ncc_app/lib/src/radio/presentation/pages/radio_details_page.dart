@@ -32,125 +32,131 @@ class RadioDetailsPage extends StatelessWidget {
     RadioStreamBloc radioStreamBloc = context.read<RadioStreamBloc>();
     final bool isRtl = Directionality.of(context) == TextDirection.rtl;
     final AudioPlayer audioPlayer = radioStreamBloc.audioPlayer;
-    final int? currentId = radioStreamBloc.audioPlayer.currentIndex;
-    if (currentId == null) {
-      return SizedBox();
-    }
-    RadioStreamData radio = radioStreams[currentId];
-    bool playing = audioPlayer.playerState.playing;
+    return StreamBuilder<int?>(
+      stream: audioPlayer.currentIndexStream,
+      builder: (context, indexSnapshot) {
+        final currentId = indexSnapshot.data ?? audioPlayer.currentIndex;
+        if (currentId == null) {
+          return const SizedBox();
+        }
+        RadioStreamData radio = radioStreams[currentId];
 
-    return StreamBuilder(
-      stream: audioPlayer.playerStateStream,
-      builder: (context, asyncSnapshot) {
-        return Scaffold(
-          appBar: AppBar(centerTitle: true, title: Text(radio.name)),
-          body: Padding(
-            padding: const EdgeInsets.all(kSmallPadding),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Center(
-                    child: SizedBox(
-                      width: imageDimension,
-                      height: imageDimension,
-                      child: Hero(
-                        tag: radioTagString,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(kRoundedCorners),
-                          child: CachedNetworkImage(
-                            imageUrl: radio.imageUrl,
-                            fit: BoxFit.fitWidth,
+        return StreamBuilder(
+          stream: audioPlayer.playerStateStream,
+          builder: (context, asyncSnapshot) {
+            bool playing = audioPlayer.playerState.playing;
+
+            return Scaffold(
+              appBar: AppBar(centerTitle: true, title: Text(radio.name)),
+              body: Padding(
+                padding: const EdgeInsets.all(kSmallPadding),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Center(
+                        child: SizedBox(
+                          width: imageDimension,
+                          height: imageDimension,
+                          child: Hero(
+                            tag: radioTagString,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(kRoundedCorners),
+                              child: CachedNetworkImage(
+                                imageUrl: radio.imageUrl,
+                                fit: BoxFit.fitWidth,
+                              ),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ),
-                  Gap(kMediumGap),
-                  Text(
-                    radio.name,
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: radio.radioPrimaryColor,
-                    ),
-                  ),
-                  Gap(kSmallGap),
-                  Text(
-                    radio.subtitle,
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: radio.radioPrimaryColor,
-                    ),
-                  ),
-                  Gap(kMediumGap),
-                  Row(
-                    mainAxisAlignment: .spaceEvenly,
-                    children: [
-                      IconButton(
-                        onPressed: currentId != 0
-                            ? () {
-                                radioStreamBloc.add(
-                                  RadioStreamGoToEvent(index: currentId - 1),
-                                );
-                              }
-                            : null,
-                        icon: Transform.flip(
-                          flipX: isRtl,
-                          child: Icon(Icons.skip_previous),
+                      Gap(kMediumGap),
+                      Text(
+                        radio.name,
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: radio.radioPrimaryColor,
                         ),
                       ),
-                      playing
-                          ? IconButton(
-                              onPressed: () {
-                                audioPlayer.pause();
-                              },
-                              icon: Icon(Icons.pause),
-                            )
-                          : IconButton(
-                              onPressed: () {
-                                audioPlayer.play();
-                              },
-                              icon: Icon(Icons.play_arrow),
-                            ),
-
-                      IconButton(
-                        onPressed: () {
-                          audioPlayer.stop();
-                        },
-                        icon: Icon(Icons.stop, color: Colors.red),
-                      ),
-                      IconButton(
-                        onPressed: currentId + 1 < radioStreams.length
-                            ? () {
-                                radioStreamBloc.add(
-                                  RadioStreamGoToEvent(index: currentId + 1),
-                                );
-                              }
-                            : null,
-                        icon: Transform.flip(
-                          flipX: isRtl,
-                          child: Icon(Icons.skip_next),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Gap(kMediumGap),
-                  Row(
-                    children: [
-                      LiveBlinkingDotWidget(),
                       Gap(kSmallGap),
-                      Text(Tr.of(context).live),
+                      Text(
+                        radio.subtitle,
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: radio.radioPrimaryColor,
+                        ),
+                      ),
+                      Gap(kMediumGap),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          IconButton(
+                            onPressed: currentId != 0
+                                ? () {
+                                    radioStreamBloc.add(
+                                      RadioStreamGoToEvent(index: currentId - 1),
+                                    );
+                                  }
+                                : null,
+                            icon: Transform.flip(
+                              flipX: isRtl,
+                              child: Icon(Icons.skip_previous),
+                            ),
+                          ),
+                          playing
+                              ? IconButton(
+                                  onPressed: () {
+                                    audioPlayer.pause();
+                                  },
+                                  icon: Icon(Icons.pause),
+                                )
+                              : IconButton(
+                                  onPressed: () {
+                                    audioPlayer.play();
+                                  },
+                                  icon: Icon(Icons.play_arrow),
+                                ),
+
+                          IconButton(
+                            onPressed: () {
+                              audioPlayer.stop();
+                            },
+                            icon: Icon(Icons.stop, color: Colors.red),
+                          ),
+                          IconButton(
+                            onPressed: currentId + 1 < radioStreams.length
+                                ? () {
+                                    radioStreamBloc.add(
+                                      RadioStreamGoToEvent(index: currentId + 1),
+                                    );
+                                  }
+                                : null,
+                            icon: Transform.flip(
+                              flipX: isRtl,
+                              child: Icon(Icons.skip_next),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Gap(kMediumGap),
+                      Row(
+                        children: [
+                          LiveBlinkingDotWidget(),
+                          Gap(kSmallGap),
+                          Text(Tr.of(context).live),
+                        ],
+                      ),
+                      Gap(kMediumGap),
+                      Card.filled(
+                        child: Padding(
+                          padding: const EdgeInsets.all(kMediumPadding),
+                          child: Text(radio.description),
+                        ),
+                      ),
+                      Gap(kLargeGap),
                     ],
                   ),
-                  Gap(kMediumGap),
-                  Card.filled(
-                    child: Padding(
-                      padding: const EdgeInsets.all(kMediumPadding),
-                      child: Text(radio.description),
-                    ),
-                  ),
-                  Gap(kLargeGap),
-                ],
+                ),
               ),
-            ),
-          ),
+            );
+          },
         );
       },
     );
