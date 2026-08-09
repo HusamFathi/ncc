@@ -77,6 +77,17 @@ export async function generateMetadata({
     keywords: meta.keywords,
     authors: [{ name: "The Nation's Platform" }],
     creator: "NCC - Nation's Communication Channel",
+    icons: {
+      icon: [
+        { url: "/images/app-icon.png", type: "image/png", sizes: "512x512" },
+        { url: "/images/app-icon.png", type: "image/png", sizes: "192x192" },
+        { url: "/images/app-icon.png", type: "image/png", sizes: "32x32" },
+      ],
+      apple: [
+        { url: "/images/app-icon.png", sizes: "180x180", type: "image/png" },
+      ],
+      shortcut: "/images/app-icon.png",
+    },
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: canonicalUrl,
