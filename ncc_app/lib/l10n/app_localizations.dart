@@ -170,6 +170,12 @@ abstract class AppLocalizations {
   /// **'Sync with system settings'**
   String get syncWithSystem;
 
+  /// No description provided for @aboutPlatform.
+  ///
+  /// In en, this message translates to:
+  /// **'About the Platform'**
+  String get aboutPlatform;
+
   /// No description provided for @msfSlideTitle.
   ///
   /// In en, this message translates to:

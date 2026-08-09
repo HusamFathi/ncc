@@ -14,9 +14,9 @@ class NccInfoWidget extends StatelessWidget {
       width: 650,
       child: Column(
         children: [
-          Gap(kLargeGap),
           InfoCardWidget(
             title: Tr.of(context).ourVision,
+            icon: Icons.remove_red_eye,
             description: Tr.of(context).nccVision,
           ),
 
@@ -24,12 +24,14 @@ class NccInfoWidget extends StatelessWidget {
 
           InfoCardWidget(
             title: Tr.of(context).ourMessage,
+            icon: Icons.message,
             description: Tr.of(context).nccMessage,
           ),
           Gap(kSmallGap),
 
           InfoCardWidget(
             title: Tr.of(context).ourGoals,
+            icon: Icons.task,
             description: Tr.of(context).nccGoals,
           ),
         ],

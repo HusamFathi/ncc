@@ -9,10 +9,11 @@ class InfoCardWidget extends StatelessWidget {
   const InfoCardWidget({
     super.key,
     required this.title,
-    required this.description,
+    required this.description, required this.icon,
   });
   final String title;
   final String description;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +27,14 @@ class InfoCardWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title.toTitle(),
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.bold),
+                ListTile(
+                  leading: Icon(icon),
+                  title: Text(
+                    title.toTitle(),
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
                 Gap(kMediumGap),
                 Text(description.capitalizeFirstLetter()),

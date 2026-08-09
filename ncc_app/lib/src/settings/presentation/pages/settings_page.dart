@@ -122,6 +122,8 @@ class SettingsPage extends StatelessWidget {
                         ),
                       ),
                       Gap(kMediumGap),
+                      Text(Tr.of(context).aboutPlatform.toTitle()),
+                      Gap(kTinyGap),
                       NccInfoWidget(),
                       Gap(kLargeGap),
                       Card(
@@ -129,29 +131,20 @@ class SettingsPage extends StatelessWidget {
                           padding: const EdgeInsets.all(kSmallPadding),
                           child: Column(
                             children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    Tr.of(context)
-                                        .powerBy(
-                                          Tr.of(context).msfhor.toTitle(),
-                                        )
-                                        .toTitle(),
-                                  ),
-                                  Gap(5),
-                                  Image.asset(
-                                    'assets/images/mof.png',
-                                    height: 20,
-                                    width: 20,
-                                  ),
-                                ],
-                              ),
-                              Gap(kTinyGap),
+                              ListTile(
+                                subtitle: AppVersionWidget(),
 
-                              Center(child: AppVersionWidget()),
+                                title: Text(
+                                  Tr.of(context)
+                                      .powerBy(Tr.of(context).msfhor.toTitle())
+                                      .toTitle(),
+                                ),
+                                leading: Image.asset(
+                                  'assets/images/mof.png',
+                                  height: 40,
+                                  width: 40,
+                                ),
+                              ),
                             ],
                           ),
                         ),
