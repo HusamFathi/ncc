@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:liquid_glass_easy/liquid_glass_easy.dart';
-import '../../../../core/utils/constants.dart';
-import '../blocs/radio_stream/radio_stream_bloc.dart';
+import 'package:ncc/src/radio/presentation/widgets/radio_image_rotation_widget.dart';
 
-import '../../../../core/src/widgets/rotating_widget.dart';
+import '../../../../core/utils/constants.dart';
 import '../../domain/entities/radio_stream_data.dart';
+import '../blocs/radio_stream/radio_stream_bloc.dart';
 
 class RadioStreamControllerWidget extends StatelessWidget {
   const RadioStreamControllerWidget({super.key});
@@ -65,13 +65,9 @@ class RadioStreamControllerWidget extends StatelessWidget {
                       ),
                       child: Center(
                         child: ListTile(
-                          leading: RotatingWidget(
+                          leading: RadioImageRotationWidget(
                             isRotating: playing && !isNotLoadingAndNotReady,
-                            child: CircleAvatar(
-                              backgroundImage: NetworkImage(
-                                currentStreamData.imageUrl,
-                              ),
-                            ),
+                            imageUrl: currentStreamData.imageUrl,
                           ),
                           title: Row(
                             mainAxisAlignment: .spaceEvenly,
