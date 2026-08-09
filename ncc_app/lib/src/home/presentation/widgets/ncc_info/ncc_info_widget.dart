@@ -31,7 +31,7 @@ class NccInfoWidget extends StatelessWidget {
 
           InfoCardWidget(
             title: Tr.of(context).ourGoals,
-            icon: Icons.task,
+            icon: Icons.check_circle,
             description: Tr.of(context).nccGoals,
           ),
         ],

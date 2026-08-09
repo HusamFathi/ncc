@@ -33,7 +33,7 @@ class RadioSoundVolumeWidget extends StatelessWidget {
                   DeviceSettings deviceSettings = state.deviceSettings;
                   double volume = deviceSettings.radioVolume;
                   return Text(
-                    '${(volume * 100).toStringAsFixed(2)}%',
+                    '${(volume * 100).toStringAsFixed(1)}%',
                     style: Theme.of(context).textTheme.bodyLarge,
                   );
                 }
@@ -48,8 +48,9 @@ class RadioSoundVolumeWidget extends StatelessWidget {
                   context: context,
                   builder: (context) => AlertDialog(
                     title: Text(Tr.of(context).setUpRadioVolumeLevel),
-                    content: StreamBuilder(
+                    content: StreamBuilder<double>(
                       stream: radioStreamBloc.audioPlayer.volumeStream,
+                      initialData: 0,
                       builder: (context, asyncSnapshot) {
                         return Column(
                           mainAxisSize: .min,
@@ -58,22 +59,40 @@ class RadioSoundVolumeWidget extends StatelessWidget {
                           children: [
                             Text(Tr.of(context).setUpRadioVolumeLevelMessage),
                             Gap(kMediumGap),
-                            Text(asyncSnapshot.data.toString()),
-
-                            Slider(
-                              value: radioStreamBloc.audioPlayer.volume,
-                              onChanged: (value) {
-                                radioStreamBloc.audioPlayer.setVolume(value);
-                              },
-                              onChangeEnd: (value) {
-                                deviceSettingsBloc.add(
-                                  DeviceSettingsUpdated(
-                                    updatedSettings: deviceSettings.copyWith(
-                                      radioVolume: value,
-                                    ),
+                            Text(
+                              '${((asyncSnapshot.data ?? 1) * 100).toStringAsFixed(1)}%',
+                              style: Theme.of(context).textTheme.headlineLarge
+                                  ?.copyWith(
+                                    color: Theme.of(
+                                      context,
+                                    ).colorScheme.primary,
                                   ),
-                                );
-                              },
+                            ),
+                            Gap(kSmallGap),
+
+                            Row(
+                              children: [
+                                Icon(Icons.volume_down),
+                                Expanded(
+                                  child: Slider(
+                                    value: radioStreamBloc.audioPlayer.volume,
+                                    onChanged: (value) {
+                                      radioStreamBloc.audioPlayer.setVolume(value);
+                                    },
+                                    onChangeEnd: (value) {
+                                      deviceSettingsBloc.add(
+                                        DeviceSettingsUpdated(
+                                          updatedSettings: deviceSettings.copyWith(
+                                            radioVolume: value,
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                                Icon(Icons.volume_up_sharp),
+
+                              ],
                             ),
                           ],
                         );
