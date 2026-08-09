@@ -1,4 +1,4 @@
-// Root layout — kept minimal. All locale-specific layout is in app/[locale]/layout.tsx
+// Root layout - kept minimal. All locale-specific layout is in app/[locale]/layout.tsx
 export default function RootLayout({
   children,
 }: {
