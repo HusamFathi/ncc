@@ -12,6 +12,7 @@ Color kNCCSecondaryColor = const Color(0xffba4493);
 
 // The warm coral/orange-red from the bottom-right of the logo
 Color kNCCThirdColor = const Color(0xffF25C65);
+
 /// this value will be u`sed for all widgets that will need rounded corners
 const double kRoundedCorners = 12;
 
@@ -90,12 +91,8 @@ double kMaxScreenWidth = 1000;
 TextStyle kLandingBlocTitleTextStyle(context) =>
     Theme.of(context).textTheme.headlineMedium!;
 const String kFacebookPageLink =
-    'https://www.facebook.com/profile.php?id=61572682074346';
-const String kInstagramPageLink = 'https://www.instagram.com/autobots.ly/';
-const String kLinkedInPageLink =
-    'https://www.linkedin.com/company/autobots-%D8%A3%D8%AA%D9%88%D8%A8%D9%88%D8%AA%D8%B3/?viewAsMember=true';
+    'https://www.facebook.com/p/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%A3%D9%85%D8%A9-%D9%84%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84-61576664882231/';
 const String kSupportEmail = '';
-const String termsOfUseLink = 'https://www.atheerio.com/terms-of-service';
 const String privacyPolicyLink = 'https://www.atheerio.com/privacy'; //
 
 const String kRadioHeritageId = 'radio_heritage';
