@@ -62,7 +62,8 @@ class RadioStreamControllerWidget extends StatelessWidget {
                           pageBuilder:
                               (context, animation, secondaryAnimation) {
                                 return RadioDetailsPage(
-                                  radio: currentStreamData,
+                                  currentId: currentId,
+                                  radioStreams: radioStreams,
                                 );
                               },
                           transitionsBuilder:
