@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../../../core/src/widgets/box_layout_widget.dart';
 import '../../../../core/src/widgets/errors/failure_widget.dart';
-import '../../../../core/src/widgets/loading_widget.dart';
-import '../../../../core/src/widgets/rotating_widget.dart';
 import '../../../../core/utils/constants.dart';
 import '../../domain/entities/radio_stream_data.dart';
 import '../blocs/radio_stream/radio_stream_bloc.dart';
+import 'radio_list_widget.dart';
 
 class RadioWidget extends StatefulWidget {
   const RadioWidget({super.key});
@@ -120,34 +120,21 @@ class _RadioWidgetState extends State<RadioWidget> {
                                       itemBuilder: (context, index) {
                                         final bool isSelected =
                                             currentId == index;
-                                        final RadioStreamData e =
+                                        final RadioStreamData radioStreamData =
                                             radioStreams[index];
-                                        return ListTile(
-                                          selected: isSelected,
+                                        return RadioListWidget(
+                                          isSelected: isSelected,
 
-                                          tileColor: Colors.transparent,
-                                          selectedTileColor: Theme.of(
-                                            context,
-                                          ).colorScheme.primary.withAlpha(30),
-                                          leading: RotatingWidget(
-                                            isRotating:
-                                                playing &&
-                                                !isNotLoadingAndNotReady &&
-                                                currentId == index,
-                                            child: CircleAvatar(
-                                              backgroundImage: NetworkImage(
-                                                e.imageUrl,
-                                              ),
-                                            ),
-                                          ),
-
-                                          title: Text(e.name),
-                                          subtitle: Text(e.subtitle),
-
-                                          onTap: () {
+                                          isRotating:
+                                              playing &&
+                                              !isNotLoadingAndNotReady &&
+                                              currentId == index,
+                                          radio: radioStreamData,
+                                          onTap: (radioStreamData) {
                                             radioStreamBloc.add(
                                               RadioStreamSelectedEvent(
-                                                radioStreamData: e,
+                                                radioStreamData:
+                                                    radioStreamData,
                                               ),
                                             );
                                           },
@@ -160,7 +147,22 @@ class _RadioWidgetState extends State<RadioWidget> {
                             },
                           );
                         }
-                        return LoadingWidget();
+                        return Skeletonizer(
+                          enabled: true,
+                          child: ListView.separated(
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            separatorBuilder: (context, index) => Divider(),
+                            itemCount: 5,
+                            itemBuilder: (context, index) => RadioListWidget(
+                              isRotating: false,
+
+                              isSelected: false,
+                              radio: RadioStreamData.loading()
+                              
+                            ),
+                          ),
+                        );
                       },
                     ),
                   ),

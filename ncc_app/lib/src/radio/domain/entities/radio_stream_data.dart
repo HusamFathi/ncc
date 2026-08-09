@@ -22,6 +22,39 @@ class RadioStreamData extends Equatable {
     required this.backgroundLessonImageUrl,
   });
 
+  const RadioStreamData.loading()
+      : streamUrl = '',
+        name = 'Loading.......',
+        subtitle = '"Loading................................',
+        imageUrl = 'https://www.image2url.com/r2/default/files/1786260663047-bc72c8e9-a80b-4fac-97da-10e79a719d3b.jpg',
+        radioPrimaryColor = Colors.transparent,
+        id = '',
+        description = '',
+        backgroundLessonImageUrl = '';
+
+  RadioStreamData copyWith({
+    String? streamUrl,
+    String? name,
+    String? subtitle,
+    String? imageUrl,
+    String? backgroundLessonImageUrl,
+    Color? radioPrimaryColor,
+    String? id,
+    String? description,
+  }) {
+    return RadioStreamData(
+      streamUrl: streamUrl ?? this.streamUrl,
+      name: name ?? this.name,
+      subtitle: subtitle ?? this.subtitle,
+      imageUrl: imageUrl ?? this.imageUrl,
+      radioPrimaryColor: radioPrimaryColor ?? this.radioPrimaryColor,
+      id: id ?? this.id,
+      description: description ?? this.description,
+      backgroundLessonImageUrl:
+          backgroundLessonImageUrl ?? this.backgroundLessonImageUrl,
+    );
+  }
+
   @override
   List<Object?> get props => [
     streamUrl,
@@ -33,4 +66,5 @@ class RadioStreamData extends Equatable {
     backgroundLessonImageUrl,
     description,
   ];
+
 }
