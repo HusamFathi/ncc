@@ -1,6 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:no_screenshot/no_screenshot.dart';
 
 import '../../l10n/app_localizations.dart';
 import '../../src/radio/presentation/blocs/radio_stream/radio_stream_bloc.dart';
@@ -22,9 +25,25 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+  final _noScreenshot = NoScreenshot.instance;
+
   @override
   void initState() {
     super.initState();
+    _handleScreenEvent();
+  }
+
+  Future<void> _handleScreenEvent() async {
+    await _noScreenshot.screenshotOff();
+    // 1. Subscribe to the stream
+    _noScreenshot.screenshotStream.listen((snapshot) {
+      log('Protection active: ${snapshot.isScreenshotProtectionOn}');
+      log('Screenshot taken: ${snapshot.wasScreenshotTaken}');
+      log('Path: ${snapshot.screenshotPath}');
+    });
+
+    // 2. Start monitoring
+    await _noScreenshot.startScreenshotListening();
   }
 
   @override
