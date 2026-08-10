@@ -5,19 +5,11 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/ar',
-        permanent: true,
-      },
-    ];
+    return [{ source: '/', destination: '/ar', permanent: true }];
   },
   webpack: (config, { webpack }) => {
     config.plugins.push(
-      new webpack.DefinePlugin({
-        __dirname: JSON.stringify('/'),
-      })
+      new webpack.DefinePlugin({ __dirname: JSON.stringify('/') })
     );
     return config;
   },
