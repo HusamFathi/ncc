@@ -147,6 +147,8 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const { setRequestLocale } = await import('next-intl/server');
+  setRequestLocale(locale);
 
   // Validate that the incoming `locale` parameter is valid
   if (!routing.locales.includes(locale as Locale)) {
