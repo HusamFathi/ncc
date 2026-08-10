@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useTranslations, useLocale } from "next-intl";
-import { localeDir, Locale } from "@/i18n/locales";
+import Image from 'next/image';
+import { useTranslations, useLocale } from 'next-intl';
+import { localeDir, Locale } from '@/i18n/locales';
 
 export default function Hero() {
-  const t = useTranslations("hero");
+  const t = useTranslations('hero');
   const locale = useLocale() as Locale;
   const dir = localeDir[locale];
-  const arrow = dir === "rtl" ? "←" : "→";
+  const arrow = dir === 'rtl' ? '←' : '→';
 
   return (
     <section className="w-full bg-paper-white py-12 md:py-24 px-6 md:px-12 max-w-[1200px] mx-auto overflow-hidden">
@@ -16,23 +16,23 @@ export default function Hero() {
         {/* Text & CTAs */}
         <div className="flex flex-col items-start space-y-8 max-w-[560px]">
           <h1 className="text-display text-ink-black tracking-tight uppercase">
-            {t("title")}
+            {t('title')}
           </h1>
           <p className="font-arial text-body text-graphite leading-relaxed">
-            {t("description")}
+            {t('description')}
           </p>
           <div className="flex flex-wrap gap-4 w-full">
             <a
               href="#features"
               className="bg-signal-purple hover:bg-signal-magenta text-paper-white font-sans text-sm md:text-base font-bold rounded-2xl py-3 px-6 transition-all duration-300 flex items-center gap-2"
             >
-              {t("exploreFeatures")} <span className="text-lg">{arrow}</span>
+              {t('exploreFeatures')} <span className="text-lg">{arrow}</span>
             </a>
             <a
               href="#about"
               className="border border-ink-black text-ink-black hover:bg-ink-black hover:text-paper-white font-sans text-sm md:text-base font-bold rounded-2xl py-3 px-6 transition-all duration-300"
             >
-              {t("learnMore")}
+              {t('learnMore')}
             </a>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function Hero() {
             <div className="w-full h-full rounded-[28px] overflow-hidden bg-zinc-900 relative">
               <Image
                 src="/app_screenshot.png"
-                alt={t("screenshotAlt")}
+                alt={t('screenshotAlt')}
                 fill
                 priority
                 sizes="(max-width: 768px) 280px, 310px"

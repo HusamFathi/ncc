@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { Locale, localeDir, localeLabels } from "@/i18n/locales";
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
-import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
+import { Locale, localeDir, localeLabels } from '@/i18n/locales';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { routing } from '@/i18n/routing';
+import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function Navbar() {
-  const t = useTranslations("nav");
+  const t = useTranslations('nav');
   const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
@@ -32,7 +32,7 @@ export default function Navbar() {
           className="w-[50px] h-[50px] rounded-2xl group-hover:scale-105 transition-transform duration-300 shrink-0"
         />
         <span className="font-sans text-sm md:text-base font-bold tracking-tight text-ink-black uppercase">
-          {t("appName")}
+          {t('appName')}
         </span>
       </Link>
 
@@ -42,20 +42,20 @@ export default function Navbar() {
           href="/#home"
           className="text-ink-black hover:underline underline-offset-4 decoration-graphite"
         >
-          {t("home")}
+          {t('home')}
         </Link>
         <Link
           href="/#features"
           className="text-ink-black relative hover:underline underline-offset-4 decoration-graphite"
         >
-          {t("features")}
+          {t('features')}
           <span className="absolute -top-1 -right-2 w-1.5 h-1.5 bg-alert-magenta rounded-full"></span>
         </Link>
         <Link
           href="/#about"
           className="text-ink-black hover:underline underline-offset-4 decoration-graphite"
         >
-          {t("about")}
+          {t('about')}
         </Link>
 
         {/* Language Switcher - cycles through all available locales */}

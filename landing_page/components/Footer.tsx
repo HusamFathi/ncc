@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 export default function Footer() {
-  const t = useTranslations("footer");
+  const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -22,43 +22,43 @@ export default function Footer() {
               className="w-[50px] h-[50px] rounded-2xl group-hover:scale-105 transition-transform duration-300 shrink-0"
             />
             <span className="font-sans text-base font-bold tracking-tight text-ink-black uppercase">
-              {t("appName")}
+              {t('appName')}
             </span>
           </Link>
           <p className="font-arial text-xs text-graphite leading-relaxed max-w-sm">
-            {t("description")}
+            {t('description')}
           </p>
         </div>
 
         {/* Legal & Support Links */}
         <div className="flex flex-col space-y-3 font-sans text-sm">
           <h4 className="font-extrabold uppercase text-ink-black text-xs tracking-wider">
-            {t("legalSupport")}
+            {t('legalSupport')}
           </h4>
           <Link
             href="/terms"
             className="text-graphite hover:text-ink-black transition-colors"
           >
-            {t("termsOfUse")}
+            {t('termsOfUse')}
           </Link>
           <Link
             href="/privacy"
             className="text-graphite hover:text-ink-black transition-colors"
           >
-            {t("privacyPolicy")}
+            {t('privacyPolicy')}
           </Link>
           <a
             href="mailto:info@msf-hor.org"
             className="text-graphite hover:text-ink-black transition-colors"
           >
-            {t("supportEmail")}
+            {t('supportEmail')}
           </a>
         </div>
 
         {/* Social */}
         <div className="flex flex-col space-y-3 font-sans text-sm">
           <h4 className="font-extrabold uppercase text-ink-black text-xs tracking-wider">
-            {t("connect")}
+            {t('connect')}
           </h4>
           <a
             href="https://www.facebook.com/p/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%A3%D9%85%D8%A9-%D9%84%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84-61576664882231/"
@@ -66,7 +66,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-graphite hover:text-ink-black transition-colors"
           >
-            {t("facebook")}
+            {t('facebook')}
           </a>
         </div>
       </div>
@@ -74,7 +74,7 @@ export default function Footer() {
       {/* Bottom info */}
       <div className="mt-12 pt-8 border-t border-ink-black/5 flex flex-col md:flex-row justify-center items-center gap-4 text-xs font-sans font-semibold text-graphite">
         <div>
-          © {t("appName")} {currentYear} - {t("rights")}
+          © {t('appName')} {currentYear} - {t('rights')}
         </div>
       </div>
     </footer>
