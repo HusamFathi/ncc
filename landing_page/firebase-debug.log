@@ -1,0 +1,86 @@
+[debug] [2026-08-10T08:16:44.758Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T08:16:44.768Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\husam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2026-08-10T08:16:44.769Z] CLI Version:   15.26.0
+[debug] [2026-08-10T08:16:44.769Z] Platform:      win32
+[debug] [2026-08-10T08:16:44.769Z] Node Version:  v24.16.0
+[debug] [2026-08-10T08:16:44.769Z] Detected Agent: unknown
+[debug] [2026-08-10T08:16:44.769Z] Time:          Mon Aug 10 2026 10:16:44 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-08-10T08:16:44.771Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-08-10T08:16:44.837Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[debug] [2026-08-10T08:16:45.561Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-08-10T08:16:45.562Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you. 
+[info] 
+[info] i  To change your preferences at any time, run `firebase logout` and `firebase login` again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=678310741&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2026-08-10T08:18:03.691Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2026-08-10T08:18:03.691Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2026-08-10T08:18:04.155Z] <<< [apiv2][status] POST https://accounts.google.com/o/oauth2/token 200
+[debug] [2026-08-10T08:18:04.156Z] <<< [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[info] 
+[info] +  Success! Logged in as libya.mustaqbal.app@gmail.com 
+[debug] [2026-08-10T08:19:35.551Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T08:19:35.556Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\husam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-08-10T08:19:35.556Z] CLI Version:   15.26.0
+[debug] [2026-08-10T08:19:35.557Z] Platform:      win32
+[debug] [2026-08-10T08:19:35.557Z] Node Version:  v24.16.0
+[debug] [2026-08-10T08:19:35.558Z] Detected Agent: unknown
+[debug] [2026-08-10T08:19:35.558Z] Time:          Mon Aug 10 2026 10:19:35 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-08-10T08:19:35.558Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\husam\MyProjects\ncc\landing_page
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-08-10T08:20:31.049Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-10T08:20:31.050Z] > authorizing via signed-in user (libya.mustaqbal.app@gmail.com)
+[debug] [2026-08-10T08:20:31.066Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:20:31.067Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:20:31.068Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2026-08-10T08:20:32.075Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-08-10T08:20:32.075Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== Hosting Setup
+[info] 
+[debug] [2026-08-10T08:21:21.953Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:21:21.953Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:21:21.953Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform [none]
+[debug] [2026-08-10T08:21:22.493Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform 200
+[debug] [2026-08-10T08:21:22.494Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform {"projectId":"the-nations-platform","projectNumber":"238796788431","displayName":"The Nations Platform","name":"projects/the-nations-platform","resources":{"hostingSite":"the-nations-platform"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_bb08770d-f892-4879-8858-cb610dc8a781"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2026-08-10T08:21:34.590Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2026-08-10T08:21:34.983Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2026-08-10T08:21:34.983Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"12.17.1","browserURL":"https://www.gstatic.com/firebasejs/12.17.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/12.17.1/firebase.tgz"},"live":{"version":"12.17","browserURL":"https://www.gstatic.com/firebasejs/live/12.17/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/12.17/firebase.tgz"},"components":{"ai":"https://www.gstatic.com/firebasejs/12.17.1/firebase-ai.js","analytics":"https://www.gstatic.com/firebasejs/12.17.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/12.17.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/12.17.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/12.17.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/12.17.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore/lite.js","firestore/pipelines":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore/pipelines.js","firestore/lite/pipelines":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore/lite/pipelines.js","installations":"https://www.gstatic.com/firebasejs/12.17.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/12.17.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/12.17.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/12.17.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/12.17.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/12.17.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/12.17.1/firebase-database.js","data-connect":"https://www.gstatic.com/firebasejs/12.17.1/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public\index.html 
+[info] 
+=== Agent Skills Setup
+[info] If you are using an AI coding agent, Firebase Agent Skills make it an expert at Firebase.
+[info] 
+[info] +  Wrote configuration info to firebase.json 
+[info] +  Wrote project information to .firebaserc 
+[info] 
+[info] +  Firebase initialization complete! 
