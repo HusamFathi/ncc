@@ -9,11 +9,18 @@ const nextConfig: NextConfig = {
       {
         source: '/',
         destination: '/ar',
-        permanent: true, // 301 Redirect (Cached by browsers & CDNs)
+        permanent: true,
       },
     ];
   },
-  /* config options here */
+  webpack: (config, { webpack }) => {
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        __dirname: JSON.stringify('/'),
+      })
+    );
+    return config;
+  },
 };
 
 export default withNextIntl(nextConfig);
