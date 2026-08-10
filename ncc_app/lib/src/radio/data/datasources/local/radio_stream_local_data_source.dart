@@ -17,7 +17,6 @@ abstract class RadioStreamLocalDataSource {
 class RadioStreamLocalDataSourceImpl implements RadioStreamLocalDataSource {
   @override
   Future<List<RadioStreamDataModel>> getRadioStreams() {
-    log('getRadioStreams### ');
 
     final List<Map<String, dynamic>> data = [
       {
@@ -51,7 +50,6 @@ class RadioStreamLocalDataSourceImpl implements RadioStreamLocalDataSource {
     List<RadioStreamDataModel> radios = data
         .map((e) => RadioStreamDataModel.fromJson(e))
         .toList();
-    log('radios### $radios');
 
     return Future.value(radios);
   }
