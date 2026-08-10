@@ -1,0 +1,12 @@
+[debug] [2026-08-10T06:49:46.316Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T06:49:46.326Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\husam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js logout
+[debug] [2026-08-10T06:49:46.328Z] CLI Version:   15.23.0
+[debug] [2026-08-10T06:49:46.328Z] Platform:      win32
+[debug] [2026-08-10T06:49:46.328Z] Node Version:  v24.16.0
+[debug] [2026-08-10T06:49:46.328Z] Detected Agent: unknown
+[debug] [2026-08-10T06:49:46.328Z] Time:          Mon Aug 10 2026 08:49:46 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-08-10T06:49:46.329Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-08-10T06:49:46.361Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-08-10T06:49:46.458Z] >>> [apiv2][query] GET https://accounts.google.com/o/oauth2/revoke token=1%2F%2F031CG6zBgx-q2CgYIARAAGAMSNwF-L9Irg6N8jMJhr523GNFp-Y2LS271aCls_I1YU_cbwEmxVWdq-MVglCyl4I5-gYamfL3qftA
+[debug] [2026-08-10T06:49:46.812Z] <<< [apiv2][status] GET https://accounts.google.com/o/oauth2/revoke 200

@@ -35,24 +35,20 @@ export default function Footer() {
           <h4 className="font-extrabold uppercase text-ink-black text-xs tracking-wider">
             {t("legalSupport")}
           </h4>
-          <a
-            href="https://www.atheerio.com/terms-of-service"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/terms"
             className="text-graphite hover:text-ink-black transition-colors"
           >
             {t("termsOfUse")}
-          </a>
-          <a
-            href="https://www.atheerio.com/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
+          </Link>
+          <Link
+            href="/privacy"
             className="text-graphite hover:text-ink-black transition-colors"
           >
             {t("privacyPolicy")}
-          </a>
+          </Link>
           <a
-            href="mailto:hello@autobots.ly"
+            href="mailto:info@msf-hor.org"
             className="text-graphite hover:text-ink-black transition-colors"
           >
             {t("supportEmail")}
@@ -65,39 +61,20 @@ export default function Footer() {
             {t("connect")}
           </h4>
           <a
-            href="https://www.facebook.com/profile.php?id=61572682074346"
+            href="https://www.facebook.com/p/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%A3%D9%85%D8%A9-%D9%84%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84-61576664882231/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-graphite hover:text-ink-black transition-colors"
           >
             {t("facebook")}
           </a>
-          <a
-            href="https://www.instagram.com/autobots.ly/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-graphite hover:text-ink-black transition-colors"
-          >
-            {t("instagram")}
-          </a>
-          <a
-            href="https://www.linkedin.com/company/autobots-%D8%A3%D8%AA%D9%88%D8%A8%D9%88%D8%AA%D8%B3/?viewAsMember=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-graphite hover:text-ink-black transition-colors"
-          >
-            {t("linkedin")}
-          </a>
         </div>
       </div>
 
       {/* Bottom info */}
-      <div className="mt-12 pt-8 border-t border-ink-black/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-sans font-semibold text-graphite">
+      <div className="mt-12 pt-8 border-t border-ink-black/5 flex flex-col md:flex-row justify-center items-center gap-4 text-xs font-sans font-semibold text-graphite">
         <div>
           © {t("appName")} {currentYear} - {t("rights")}
-        </div>
-        <div>
-          <span>{t("madeIn")}</span>
         </div>
       </div>
     </footer>
