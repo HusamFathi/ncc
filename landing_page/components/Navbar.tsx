@@ -39,20 +39,20 @@ export default function Navbar() {
       {/* Nav Links & Language Switcher */}
       <div className="flex items-center gap-4 md:gap-8 font-sans text-xs md:text-sm font-semibold tracking-tight">
         <Link
-          href="#home"
+          href="/#home"
           className="text-ink-black hover:underline underline-offset-4 decoration-graphite"
         >
           {t("home")}
         </Link>
         <Link
-          href="#features"
+          href="/#features"
           className="text-ink-black relative hover:underline underline-offset-4 decoration-graphite"
         >
           {t("features")}
           <span className="absolute -top-1 -right-2 w-1.5 h-1.5 bg-alert-magenta rounded-full"></span>
         </Link>
         <Link
-          href="#about"
+          href="/#about"
           className="text-ink-black hover:underline underline-offset-4 decoration-graphite"
         >
           {t("about")}
