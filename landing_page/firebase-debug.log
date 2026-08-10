@@ -84,3 +84,246 @@ You're about to initialize a Firebase project in this directory:
 [info] +  Wrote project information to .firebaserc 
 [info] 
 [info] +  Firebase initialization complete! 
+[debug] [2026-08-10T08:23:24.127Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T08:23:24.131Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\husam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-08-10T08:23:24.132Z] CLI Version:   15.26.0
+[debug] [2026-08-10T08:23:24.132Z] Platform:      win32
+[debug] [2026-08-10T08:23:24.132Z] Node Version:  v24.16.0
+[debug] [2026-08-10T08:23:24.132Z] Detected Agent: unknown
+[debug] [2026-08-10T08:23:24.133Z] Time:          Mon Aug 10 2026 10:23:24 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-08-10T08:23:24.133Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-08-10T08:23:49.009Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-10T08:23:49.009Z] > authorizing via signed-in user (libya.mustaqbal.app@gmail.com)
+[debug] [2026-08-10T08:23:49.010Z] [iam] checking project the-nations-platform for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-08-10T08:23:49.032Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:49.032Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:49.034Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions [none]
+[debug] [2026-08-10T08:23:49.034Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions  x-goog-user-project=the-nations-platform
+[debug] [2026-08-10T08:23:49.034Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-08-10T08:23:50.690Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions 200
+[debug] [2026-08-10T08:23:50.691Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-08-10T08:23:50.692Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:50.692Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:50.692Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform [none]
+[debug] [2026-08-10T08:23:51.579Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform 200
+[debug] [2026-08-10T08:23:51.579Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform {"projectId":"the-nations-platform","projectNumber":"238796788431","displayName":"The Nations Platform","name":"projects/the-nations-platform","resources":{"hostingSite":"the-nations-platform"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_bb08770d-f892-4879-8858-cb610dc8a781"}
+[info] 
+[info] === Deploying to 'the-nations-platform'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-08-10T08:23:51.582Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:51.583Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:51.583Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/the-nations-platform/sites/the-nations-platform [none]
+[debug] [2026-08-10T08:23:52.866Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/the-nations-platform/sites/the-nations-platform 200
+[debug] [2026-08-10T08:23:52.866Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/the-nations-platform/sites/the-nations-platform {"name":"projects/the-nations-platform/sites/the-nations-platform","defaultUrl":"https://the-nations-platform.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-08-10T08:23:52.871Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:52.871Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:52.872Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions [none]
+[debug] [2026-08-10T08:23:52.872Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-08-10T08:23:55.978Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions 200
+[debug] [2026-08-10T08:23:55.978Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions {"name":"projects/238796788431/sites/the-nations-platform/versions/eb951b0445f35b46","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[the-nations-platform]: beginning deploy... 
+[info] i  hosting[the-nations-platform]: found 25 files in public 
+[debug] [2026-08-10T08:23:55.994Z] [hosting] uploading with 200 concurrency
+[debug] [2026-08-10T08:23:55.996Z] [hosting] hash cache [cHVibGlj] not populated
+[debug] [2026-08-10T08:23:56.326Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:56.326Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:56.329Z] [hosting] hash cache [cHVibGlj] stored for 25 files
+[debug] [2026-08-10T08:23:56.329Z] [hosting][hash queue][FINAL] {"max":323,"min":21,"avg":61.6,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":332}
+[debug] [2026-08-10T08:23:56.330Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/238796788431/sites/the-nations-platform/versions/eb951b0445f35b46:populateFiles [none]
+[debug] [2026-08-10T08:23:56.330Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/238796788431/sites/the-nations-platform/versions/eb951b0445f35b46:populateFiles {"files":{"/index.html":"dddd5894b9b74433e97cd267c9bd120afa4301af4de810eb5496c2eb3dc134dd","/file.svg":"5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c","/globe.svg":"6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2","/images/google-play.png":"307fd31410cc22d2bd8c7533f5763ff8adb6ddcce96e7d5707a2e6d51a1c039e","/images/game.png":"7ec81a5d80aecf5f4ba7c5364d2ca7b4d4d12bd4612b7117fc0236d9794aac85","/fonts/OFL.txt":"f845c063b7033b541521bf5210955cb0c734a5c41a037f4a375a2966bebfce95","/fonts/Tajawal-Light.ttf":"32a708a87ae4a77c21a27cf1840b50b4485a7f9f714a9d27ac211868df415bde","/fonts/Tajawal-Medium.ttf":"8d5c7687274398d926a9a7bfc1aa9bf2ab6440895af4c97fba2448c2e8a1acce","/fonts/Tajawal-Regular.ttf":"d543649f7f2716159bede7af3418c96ec9a77050bcb16ec1ca21eaa3b8a273c0","/fonts/Tajawal-ExtraLight.ttf":"75e457afeb943b70a0602a2a11b80359b064cf45dd77940c21db6909f9e693a2","/fonts/Tajawal-Black.ttf":"31c96ce33e108ded39c62b3465e493be3432f834a9a725df3896d3fde995a47a","/fonts/Tajawal-ExtraBold.ttf":"171e53df4550a90b1582e1aa7181105f47b953acbbd6cfa0ba3a9177d811fa6c","/fonts/Tajawal-Bold.ttf":"99d7e41d9cd0e1cf0efe43b5d8002e787e64f55321951f73d36736ad580c2ec0","/images/notion-radio.png":"e4d1a60e6ca22d1b8243cfcc391285b03e5d2f9fc358e2aeb44d3b7fa6a2f622","/images/ncc-small.jpg":"b250151d81a3ccaaf21c46bb700399f3f1bbe5d4f45e961f1058c34e3a7d1e07","/images/mof.png":"0ea8afbfd10bf30358ec9ba31da9c02b5243c8498cb505296ec8da40ba840213","/images/app-icon.png":"eb18e7cf33c141e36e1be4f51355987e67f4b38cd931fb0b2e2a22c149e6b03f","/images/notion-radio-background-less.png":"605161e3b4cfc679791919dbdba71f35b2b9028dbff004ac76778625ecdf0ccb","/images/ncc-small-rounded.png":"c15047950887f2c3b2082032b17e0c2f72083db5abd4e147f2a11c3f2b3f7f95","/app_screenshot.png":"49bcf1d56a5de6d543dd8f46b5023d75111e9004be56d907caa0fbcf993862f1","/images/heritage-radio-background-less.png":"ee00267d4128cbcaee5e64d58c045b267e39170fe75b77266b1f442bfa7a27d0","/images/ncc.jpg":"2d8b0607338e5cb8c906441478f11f386fd668f79ed1a0ac444e123cdad31bd7","/images/heritage-radio.jpg":"e95aad0e871b2da7f5575da10390d3140f85fab50ba9bf52168849f492270d7a","/images/ncc-graph.jpg":"268058d19d45a96bfb2815e78642199c744585439e85ccf13f646cd074f69712","/images/graph.jpg":"268058d19d45a96bfb2815e78642199c744585439e85ccf13f646cd074f69712"}}
+[debug] [2026-08-10T08:23:57.207Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/238796788431/sites/the-nations-platform/versions/eb951b0445f35b46:populateFiles 200
+[debug] [2026-08-10T08:23:57.207Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/238796788431/sites/the-nations-platform/versions/eb951b0445f35b46:populateFiles {"uploadRequiredHashes":["268058d19d45a96bfb2815e78642199c744585439e85ccf13f646cd074f69712","49bcf1d56a5de6d543dd8f46b5023d75111e9004be56d907caa0fbcf993862f1","605161e3b4cfc679791919dbdba71f35b2b9028dbff004ac76778625ecdf0ccb","5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c","eb18e7cf33c141e36e1be4f51355987e67f4b38cd931fb0b2e2a22c149e6b03f","7ec81a5d80aecf5f4ba7c5364d2ca7b4d4d12bd4612b7117fc0236d9794aac85","0ea8afbfd10bf30358ec9ba31da9c02b5243c8498cb505296ec8da40ba840213","ee00267d4128cbcaee5e64d58c045b267e39170fe75b77266b1f442bfa7a27d0","32a708a87ae4a77c21a27cf1840b50b4485a7f9f714a9d27ac211868df415bde","8d5c7687274398d926a9a7bfc1aa9bf2ab6440895af4c97fba2448c2e8a1acce","d543649f7f2716159bede7af3418c96ec9a77050bcb16ec1ca21eaa3b8a273c0","b250151d81a3ccaaf21c46bb700399f3f1bbe5d4f45e961f1058c34e3a7d1e07","99d7e41d9cd0e1cf0efe43b5d8002e787e64f55321951f73d36736ad580c2ec0","31c96ce33e108ded39c62b3465e493be3432f834a9a725df3896d3fde995a47a","6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2","e95aad0e871b2da7f5575da10390d3140f85fab50ba9bf52168849f492270d7a","307fd31410cc22d2bd8c7533f5763ff8adb6ddcce96e7d5707a2e6d51a1c039e","171e53df4550a90b1582e1aa7181105f47b953acbbd6cfa0ba3a9177d811fa6c","dddd5894b9b74433e97cd267c9bd120afa4301af4de810eb5496c2eb3dc134dd","2d8b0607338e5cb8c906441478f11f386fd668f79ed1a0ac444e123cdad31bd7","c15047950887f2c3b2082032b17e0c2f72083db5abd4e147f2a11c3f2b3f7f95","f845c063b7033b541521bf5210955cb0c734a5c41a037f4a375a2966bebfce95","75e457afeb943b70a0602a2a11b80359b064cf45dd77940c21db6909f9e693a2","e4d1a60e6ca22d1b8243cfcc391285b03e5d2f9fc358e2aeb44d3b7fa6a2f622"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files"}
+[debug] [2026-08-10T08:23:57.208Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.208Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.209Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.209Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.209Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.209Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.210Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.210Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.210Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.210Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.210Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.210Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.211Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.211Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.211Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.211Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.211Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.212Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.212Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.212Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.212Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.213Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.213Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.213Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.213Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.214Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.214Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.214Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.214Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.215Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.215Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.215Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.215Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.215Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.216Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.216Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.216Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.216Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.217Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.217Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.217Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.217Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.218Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.218Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.218Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.218Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.218Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.218Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:23:57.219Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/268058d19d45a96bfb2815e78642199c744585439e85ccf13f646cd074f69712 [none]
+[debug] [2026-08-10T08:23:57.219Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/268058d19d45a96bfb2815e78642199c744585439e85ccf13f646cd074f69712 [stream]
+[debug] [2026-08-10T08:23:57.221Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/49bcf1d56a5de6d543dd8f46b5023d75111e9004be56d907caa0fbcf993862f1 [none]
+[debug] [2026-08-10T08:23:57.221Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/49bcf1d56a5de6d543dd8f46b5023d75111e9004be56d907caa0fbcf993862f1 [stream]
+[debug] [2026-08-10T08:23:57.222Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/605161e3b4cfc679791919dbdba71f35b2b9028dbff004ac76778625ecdf0ccb [none]
+[debug] [2026-08-10T08:23:57.222Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/605161e3b4cfc679791919dbdba71f35b2b9028dbff004ac76778625ecdf0ccb [stream]
+[debug] [2026-08-10T08:23:57.223Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c [none]
+[debug] [2026-08-10T08:23:57.224Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c [stream]
+[debug] [2026-08-10T08:23:57.226Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/eb18e7cf33c141e36e1be4f51355987e67f4b38cd931fb0b2e2a22c149e6b03f [none]
+[debug] [2026-08-10T08:23:57.226Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/eb18e7cf33c141e36e1be4f51355987e67f4b38cd931fb0b2e2a22c149e6b03f [stream]
+[debug] [2026-08-10T08:23:57.227Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/7ec81a5d80aecf5f4ba7c5364d2ca7b4d4d12bd4612b7117fc0236d9794aac85 [none]
+[debug] [2026-08-10T08:23:57.227Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/7ec81a5d80aecf5f4ba7c5364d2ca7b4d4d12bd4612b7117fc0236d9794aac85 [stream]
+[debug] [2026-08-10T08:23:57.227Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/0ea8afbfd10bf30358ec9ba31da9c02b5243c8498cb505296ec8da40ba840213 [none]
+[debug] [2026-08-10T08:23:57.228Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/0ea8afbfd10bf30358ec9ba31da9c02b5243c8498cb505296ec8da40ba840213 [stream]
+[debug] [2026-08-10T08:23:57.228Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/ee00267d4128cbcaee5e64d58c045b267e39170fe75b77266b1f442bfa7a27d0 [none]
+[debug] [2026-08-10T08:23:57.228Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/ee00267d4128cbcaee5e64d58c045b267e39170fe75b77266b1f442bfa7a27d0 [stream]
+[debug] [2026-08-10T08:23:57.229Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/32a708a87ae4a77c21a27cf1840b50b4485a7f9f714a9d27ac211868df415bde [none]
+[debug] [2026-08-10T08:23:57.229Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/32a708a87ae4a77c21a27cf1840b50b4485a7f9f714a9d27ac211868df415bde [stream]
+[debug] [2026-08-10T08:23:57.229Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/8d5c7687274398d926a9a7bfc1aa9bf2ab6440895af4c97fba2448c2e8a1acce [none]
+[debug] [2026-08-10T08:23:57.229Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/8d5c7687274398d926a9a7bfc1aa9bf2ab6440895af4c97fba2448c2e8a1acce [stream]
+[debug] [2026-08-10T08:23:57.230Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/d543649f7f2716159bede7af3418c96ec9a77050bcb16ec1ca21eaa3b8a273c0 [none]
+[debug] [2026-08-10T08:23:57.230Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/d543649f7f2716159bede7af3418c96ec9a77050bcb16ec1ca21eaa3b8a273c0 [stream]
+[debug] [2026-08-10T08:23:57.231Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/b250151d81a3ccaaf21c46bb700399f3f1bbe5d4f45e961f1058c34e3a7d1e07 [none]
+[debug] [2026-08-10T08:23:57.231Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/b250151d81a3ccaaf21c46bb700399f3f1bbe5d4f45e961f1058c34e3a7d1e07 [stream]
+[debug] [2026-08-10T08:23:57.231Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/99d7e41d9cd0e1cf0efe43b5d8002e787e64f55321951f73d36736ad580c2ec0 [none]
+[debug] [2026-08-10T08:23:57.231Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/99d7e41d9cd0e1cf0efe43b5d8002e787e64f55321951f73d36736ad580c2ec0 [stream]
+[debug] [2026-08-10T08:23:57.232Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/31c96ce33e108ded39c62b3465e493be3432f834a9a725df3896d3fde995a47a [none]
+[debug] [2026-08-10T08:23:57.232Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/31c96ce33e108ded39c62b3465e493be3432f834a9a725df3896d3fde995a47a [stream]
+[debug] [2026-08-10T08:23:57.232Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2 [none]
+[debug] [2026-08-10T08:23:57.233Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2 [stream]
+[debug] [2026-08-10T08:23:57.233Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/e95aad0e871b2da7f5575da10390d3140f85fab50ba9bf52168849f492270d7a [none]
+[debug] [2026-08-10T08:23:57.233Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/e95aad0e871b2da7f5575da10390d3140f85fab50ba9bf52168849f492270d7a [stream]
+[debug] [2026-08-10T08:23:57.234Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/307fd31410cc22d2bd8c7533f5763ff8adb6ddcce96e7d5707a2e6d51a1c039e [none]
+[debug] [2026-08-10T08:23:57.234Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/307fd31410cc22d2bd8c7533f5763ff8adb6ddcce96e7d5707a2e6d51a1c039e [stream]
+[debug] [2026-08-10T08:23:57.235Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/171e53df4550a90b1582e1aa7181105f47b953acbbd6cfa0ba3a9177d811fa6c [none]
+[debug] [2026-08-10T08:23:57.235Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/171e53df4550a90b1582e1aa7181105f47b953acbbd6cfa0ba3a9177d811fa6c [stream]
+[debug] [2026-08-10T08:23:57.236Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/dddd5894b9b74433e97cd267c9bd120afa4301af4de810eb5496c2eb3dc134dd [none]
+[debug] [2026-08-10T08:23:57.236Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/dddd5894b9b74433e97cd267c9bd120afa4301af4de810eb5496c2eb3dc134dd [stream]
+[debug] [2026-08-10T08:23:57.236Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/2d8b0607338e5cb8c906441478f11f386fd668f79ed1a0ac444e123cdad31bd7 [none]
+[debug] [2026-08-10T08:23:57.236Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/2d8b0607338e5cb8c906441478f11f386fd668f79ed1a0ac444e123cdad31bd7 [stream]
+[debug] [2026-08-10T08:23:57.237Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/c15047950887f2c3b2082032b17e0c2f72083db5abd4e147f2a11c3f2b3f7f95 [none]
+[debug] [2026-08-10T08:23:57.237Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/c15047950887f2c3b2082032b17e0c2f72083db5abd4e147f2a11c3f2b3f7f95 [stream]
+[debug] [2026-08-10T08:23:57.238Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/f845c063b7033b541521bf5210955cb0c734a5c41a037f4a375a2966bebfce95 [none]
+[debug] [2026-08-10T08:23:57.239Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/f845c063b7033b541521bf5210955cb0c734a5c41a037f4a375a2966bebfce95 [stream]
+[debug] [2026-08-10T08:23:57.239Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/75e457afeb943b70a0602a2a11b80359b064cf45dd77940c21db6909f9e693a2 [none]
+[debug] [2026-08-10T08:23:57.239Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/75e457afeb943b70a0602a2a11b80359b064cf45dd77940c21db6909f9e693a2 [stream]
+[debug] [2026-08-10T08:23:57.240Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/e4d1a60e6ca22d1b8243cfcc391285b03e5d2f9fc358e2aeb44d3b7fa6a2f622 [none]
+[debug] [2026-08-10T08:23:57.240Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/e4d1a60e6ca22d1b8243cfcc391285b03e5d2f9fc358e2aeb44d3b7fa6a2f622 [stream]
+[debug] [2026-08-10T08:23:57.257Z] [hosting][populate queue][FINAL] {"max":893,"min":893,"avg":893,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":931}
+[debug] [2026-08-10T08:23:57.258Z] [hosting] uploads queued: 24
+[debug] [2026-08-10T08:23:58.502Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c 200
+[debug] [2026-08-10T08:23:58.503Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c [stream]
+[debug] [2026-08-10T08:23:58.521Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/7ec81a5d80aecf5f4ba7c5364d2ca7b4d4d12bd4612b7117fc0236d9794aac85 200
+[debug] [2026-08-10T08:23:58.522Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/7ec81a5d80aecf5f4ba7c5364d2ca7b4d4d12bd4612b7117fc0236d9794aac85 [stream]
+[debug] [2026-08-10T08:23:58.646Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/dddd5894b9b74433e97cd267c9bd120afa4301af4de810eb5496c2eb3dc134dd 200
+[debug] [2026-08-10T08:23:58.646Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/dddd5894b9b74433e97cd267c9bd120afa4301af4de810eb5496c2eb3dc134dd [stream]
+[debug] [2026-08-10T08:23:58.731Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2 200
+[debug] [2026-08-10T08:23:58.731Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2 [stream]
+[debug] [2026-08-10T08:23:58.732Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/99d7e41d9cd0e1cf0efe43b5d8002e787e64f55321951f73d36736ad580c2ec0 200
+[debug] [2026-08-10T08:23:58.732Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/99d7e41d9cd0e1cf0efe43b5d8002e787e64f55321951f73d36736ad580c2ec0 [stream]
+[debug] [2026-08-10T08:23:58.752Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/171e53df4550a90b1582e1aa7181105f47b953acbbd6cfa0ba3a9177d811fa6c 200
+[debug] [2026-08-10T08:23:58.752Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/171e53df4550a90b1582e1aa7181105f47b953acbbd6cfa0ba3a9177d811fa6c [stream]
+[debug] [2026-08-10T08:23:58.753Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/f845c063b7033b541521bf5210955cb0c734a5c41a037f4a375a2966bebfce95 200
+[debug] [2026-08-10T08:23:58.753Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/f845c063b7033b541521bf5210955cb0c734a5c41a037f4a375a2966bebfce95 [stream]
+[debug] [2026-08-10T08:23:58.759Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/307fd31410cc22d2bd8c7533f5763ff8adb6ddcce96e7d5707a2e6d51a1c039e 200
+[debug] [2026-08-10T08:23:58.759Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/307fd31410cc22d2bd8c7533f5763ff8adb6ddcce96e7d5707a2e6d51a1c039e [stream]
+[debug] [2026-08-10T08:23:58.779Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/32a708a87ae4a77c21a27cf1840b50b4485a7f9f714a9d27ac211868df415bde 200
+[debug] [2026-08-10T08:23:58.779Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/32a708a87ae4a77c21a27cf1840b50b4485a7f9f714a9d27ac211868df415bde [stream]
+[debug] [2026-08-10T08:23:58.797Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/75e457afeb943b70a0602a2a11b80359b064cf45dd77940c21db6909f9e693a2 200
+[debug] [2026-08-10T08:23:58.797Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/75e457afeb943b70a0602a2a11b80359b064cf45dd77940c21db6909f9e693a2 [stream]
+[debug] [2026-08-10T08:23:58.805Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/31c96ce33e108ded39c62b3465e493be3432f834a9a725df3896d3fde995a47a 200
+[debug] [2026-08-10T08:23:58.805Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/31c96ce33e108ded39c62b3465e493be3432f834a9a725df3896d3fde995a47a [stream]
+[debug] [2026-08-10T08:23:58.827Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/d543649f7f2716159bede7af3418c96ec9a77050bcb16ec1ca21eaa3b8a273c0 200
+[debug] [2026-08-10T08:23:58.827Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/d543649f7f2716159bede7af3418c96ec9a77050bcb16ec1ca21eaa3b8a273c0 [stream]
+[debug] [2026-08-10T08:23:58.926Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/8d5c7687274398d926a9a7bfc1aa9bf2ab6440895af4c97fba2448c2e8a1acce 200
+[debug] [2026-08-10T08:23:58.926Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/8d5c7687274398d926a9a7bfc1aa9bf2ab6440895af4c97fba2448c2e8a1acce [stream]
+[debug] [2026-08-10T08:23:59.075Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/b250151d81a3ccaaf21c46bb700399f3f1bbe5d4f45e961f1058c34e3a7d1e07 200
+[debug] [2026-08-10T08:23:59.075Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/b250151d81a3ccaaf21c46bb700399f3f1bbe5d4f45e961f1058c34e3a7d1e07 [stream]
+[debug] [2026-08-10T08:23:59.121Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/e4d1a60e6ca22d1b8243cfcc391285b03e5d2f9fc358e2aeb44d3b7fa6a2f622 200
+[debug] [2026-08-10T08:23:59.121Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/e4d1a60e6ca22d1b8243cfcc391285b03e5d2f9fc358e2aeb44d3b7fa6a2f622 [stream]
+[debug] [2026-08-10T08:23:59.328Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/0ea8afbfd10bf30358ec9ba31da9c02b5243c8498cb505296ec8da40ba840213 200
+[debug] [2026-08-10T08:23:59.329Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/0ea8afbfd10bf30358ec9ba31da9c02b5243c8498cb505296ec8da40ba840213 [stream]
+[debug] [2026-08-10T08:23:59.725Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/eb18e7cf33c141e36e1be4f51355987e67f4b38cd931fb0b2e2a22c149e6b03f 200
+[debug] [2026-08-10T08:23:59.726Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/eb18e7cf33c141e36e1be4f51355987e67f4b38cd931fb0b2e2a22c149e6b03f [stream]
+[debug] [2026-08-10T08:23:59.749Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/49bcf1d56a5de6d543dd8f46b5023d75111e9004be56d907caa0fbcf993862f1 200
+[debug] [2026-08-10T08:23:59.775Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/49bcf1d56a5de6d543dd8f46b5023d75111e9004be56d907caa0fbcf993862f1 [stream]
+[debug] [2026-08-10T08:23:59.789Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/605161e3b4cfc679791919dbdba71f35b2b9028dbff004ac76778625ecdf0ccb 200
+[debug] [2026-08-10T08:23:59.790Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/605161e3b4cfc679791919dbdba71f35b2b9028dbff004ac76778625ecdf0ccb [stream]
+[debug] [2026-08-10T08:23:59.891Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/2d8b0607338e5cb8c906441478f11f386fd668f79ed1a0ac444e123cdad31bd7 200
+[debug] [2026-08-10T08:23:59.892Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/2d8b0607338e5cb8c906441478f11f386fd668f79ed1a0ac444e123cdad31bd7 [stream]
+[debug] [2026-08-10T08:24:00.021Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/ee00267d4128cbcaee5e64d58c045b267e39170fe75b77266b1f442bfa7a27d0 200
+[debug] [2026-08-10T08:24:00.021Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/ee00267d4128cbcaee5e64d58c045b267e39170fe75b77266b1f442bfa7a27d0 [stream]
+[debug] [2026-08-10T08:24:00.428Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/e95aad0e871b2da7f5575da10390d3140f85fab50ba9bf52168849f492270d7a 200
+[debug] [2026-08-10T08:24:00.428Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/e95aad0e871b2da7f5575da10390d3140f85fab50ba9bf52168849f492270d7a [stream]
+[debug] [2026-08-10T08:24:00.697Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/c15047950887f2c3b2082032b17e0c2f72083db5abd4e147f2a11c3f2b3f7f95 200
+[debug] [2026-08-10T08:24:00.697Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/c15047950887f2c3b2082032b17e0c2f72083db5abd4e147f2a11c3f2b3f7f95 [stream]
+[debug] [2026-08-10T08:24:03.865Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/268058d19d45a96bfb2815e78642199c744585439e85ccf13f646cd074f69712 200
+[debug] [2026-08-10T08:24:03.866Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/eb951b0445f35b46/files/268058d19d45a96bfb2815e78642199c744585439e85ccf13f646cd074f69712 [stream]
+[debug] [2026-08-10T08:24:03.866Z] [hosting][upload queue][FINAL] {"max":6659,"min":1294,"avg":2172.9583333333335,"active":0,"complete":24,"success":24,"errored":0,"retried":0,"total":24,"elapsed":6659}
+[info] +  hosting[the-nations-platform]: file upload complete 
+[debug] [2026-08-10T08:24:03.867Z] [hosting] deploy completed after 7886ms
+[debug] [2026-08-10T08:24:03.867Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "the-nations-platform"
+    },
+    "version": "projects/238796788431/sites/the-nations-platform/versions/eb951b0445f35b46"
+  }
+]
+[info] i  hosting[the-nations-platform]: finalizing version... 
+[debug] [2026-08-10T08:24:03.869Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:24:03.869Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:24:03.870Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions/eb951b0445f35b46 updateMask=status%2Cconfig
+[debug] [2026-08-10T08:24:03.870Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions/eb951b0445f35b46 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2026-08-10T08:24:05.809Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions/eb951b0445f35b46 200
+[debug] [2026-08-10T08:24:05.809Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions/eb951b0445f35b46 {"name":"projects/238796788431/sites/the-nations-platform/versions/eb951b0445f35b46","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-08-10T08:23:44.067049Z","createUser":{"email":"libya.mustaqbal.app@gmail.com"},"finalizeTime":"2026-08-10T08:23:56.036195Z","finalizeUser":{"email":"libya.mustaqbal.app@gmail.com"}}
+[debug] [2026-08-10T08:24:05.809Z] [hosting] finalized version for the-nations-platform:[object Object]
+[info] +  hosting[the-nations-platform]: version finalized 
+[info] i  hosting[the-nations-platform]: releasing new version... 
+[debug] [2026-08-10T08:24:05.810Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:24:05.810Z] Checked if tokens are valid: true, expires at: 1786353483156
+[debug] [2026-08-10T08:24:05.810Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/channels/live/releases versionName=projects%2F238796788431%2Fsites%2Fthe-nations-platform%2Fversions%2Feb951b0445f35b46
+[debug] [2026-08-10T08:24:05.810Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/channels/live/releases {}
+[debug] [2026-08-10T08:24:07.040Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/channels/live/releases 200
+[debug] [2026-08-10T08:24:07.040Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/channels/live/releases {"name":"projects/238796788431/sites/the-nations-platform/channels/live/releases/1786350236348000","version":{"name":"projects/238796788431/sites/the-nations-platform/versions/eb951b0445f35b46","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-08-10T08:23:44.067049Z","createUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"},"finalizeTime":"2026-08-10T08:23:56.036195Z","finalizeUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"}},"type":"DEPLOY","releaseTime":"2026-08-10T08:23:56.348Z","releaseUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"}}
+[debug] [2026-08-10T08:24:07.040Z] [hosting] release: {"name":"projects/238796788431/sites/the-nations-platform/channels/live/releases/1786350236348000","version":{"name":"projects/238796788431/sites/the-nations-platform/versions/eb951b0445f35b46","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-08-10T08:23:44.067049Z","createUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"},"finalizeTime":"2026-08-10T08:23:56.036195Z","finalizeUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"}},"type":"DEPLOY","releaseTime":"2026-08-10T08:23:56.348Z","releaseUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"}}
+[info] +  hosting[the-nations-platform]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/the-nations-platform/overview
+[info] Hosting URL: https://the-nations-platform.web.app
