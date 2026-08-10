@@ -534,3 +534,233 @@ You're about to initialize a Firebase project in this directory:
 [info] 
 [info] Project Console: https://console.firebase.google.com/project/the-nations-platform/overview
 [info] Hosting URL: https://the-nations-platform.web.app
+[debug] [2026-08-10T09:45:03.202Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T09:45:03.205Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\husam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2026-08-10T09:45:03.205Z] CLI Version:   15.26.0
+[debug] [2026-08-10T09:45:03.206Z] Platform:      win32
+[debug] [2026-08-10T09:45:03.206Z] Node Version:  v24.16.0
+[debug] [2026-08-10T09:45:03.207Z] Detected Agent: unknown
+[debug] [2026-08-10T09:45:03.207Z] Time:          Mon Aug 10 2026 11:45:03 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-08-10T09:45:03.208Z] ----------------------------------------------------------------------
+[debug] 
+[info] Already logged in as libya.mustaqbal.app@gmail.com
+[debug] [2026-08-10T09:45:53.243Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T09:45:53.247Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\husam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-08-10T09:45:53.247Z] CLI Version:   15.26.0
+[debug] [2026-08-10T09:45:53.247Z] Platform:      win32
+[debug] [2026-08-10T09:45:53.248Z] Node Version:  v24.16.0
+[debug] [2026-08-10T09:45:53.248Z] Detected Agent: unknown
+[debug] [2026-08-10T09:45:53.248Z] Time:          Mon Aug 10 2026 11:45:53 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-08-10T09:45:53.248Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\husam\MyProjects\ncc\landing_page
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-08-10T09:46:39.585Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-10T09:46:39.585Z] > authorizing via signed-in user (libya.mustaqbal.app@gmail.com)
+[debug] [2026-08-10T09:46:39.608Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:46:39.608Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:46:39.611Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform [none]
+[debug] [2026-08-10T09:46:40.144Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform 200
+[debug] [2026-08-10T09:46:40.144Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform {"projectId":"the-nations-platform","projectNumber":"238796788431","displayName":"The Nations Platform","name":"projects/the-nations-platform","resources":{"hostingSite":"the-nations-platform"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_bb08770d-f892-4879-8858-cb610dc8a781"}
+[info] i  Using project the-nations-platform (The Nations Platform) . 
+[info] 
+=== Hosting Setup
+[info] 
+[debug] [2026-08-10T09:47:41.310Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:47:41.310Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:47:41.311Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform [none]
+[debug] [2026-08-10T09:47:41.813Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform 200
+[debug] [2026-08-10T09:47:41.813Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform {"projectId":"the-nations-platform","projectNumber":"238796788431","displayName":"The Nations Platform","name":"projects/the-nations-platform","resources":{"hostingSite":"the-nations-platform"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_bb08770d-f892-4879-8858-cb610dc8a781"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] 
+[info] i  Detected a .git folder at C:\Users\husam\MyProjects\ncc 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=612372009&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2026-08-10T09:47:55.640Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T09:47:55.644Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\husam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-08-10T09:47:55.644Z] CLI Version:   15.26.0
+[debug] [2026-08-10T09:47:55.645Z] Platform:      win32
+[debug] [2026-08-10T09:47:55.645Z] Node Version:  v24.16.0
+[debug] [2026-08-10T09:47:55.645Z] Detected Agent: unknown
+[debug] [2026-08-10T09:47:55.645Z] Time:          Mon Aug 10 2026 11:47:55 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-08-10T09:47:55.646Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\husam\MyProjects\ncc\landing_page
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-08-10T09:48:24.169Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-10T09:48:24.169Z] > authorizing via signed-in user (libya.mustaqbal.app@gmail.com)
+[debug] [2026-08-10T09:48:24.188Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:48:24.189Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:48:24.191Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform [none]
+[debug] [2026-08-10T09:48:24.713Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform 200
+[debug] [2026-08-10T09:48:24.714Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform {"projectId":"the-nations-platform","projectNumber":"238796788431","displayName":"The Nations Platform","name":"projects/the-nations-platform","resources":{"hostingSite":"the-nations-platform"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_bb08770d-f892-4879-8858-cb610dc8a781"}
+[info] i  Using project the-nations-platform (The Nations Platform) . 
+[info] 
+=== Hosting Setup
+[info] 
+[debug] [2026-08-10T09:48:34.610Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:48:34.611Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:48:34.611Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform [none]
+[debug] [2026-08-10T09:48:35.061Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform 200
+[debug] [2026-08-10T09:48:35.061Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform {"projectId":"the-nations-platform","projectNumber":"238796788431","displayName":"The Nations Platform","name":"projects/the-nations-platform","resources":{"hostingSite":"the-nations-platform"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_bb08770d-f892-4879-8858-cb610dc8a781"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2026-08-10T09:48:40.284Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2026-08-10T09:48:40.619Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2026-08-10T09:48:40.619Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"12.17.1","browserURL":"https://www.gstatic.com/firebasejs/12.17.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/12.17.1/firebase.tgz"},"live":{"version":"12.17","browserURL":"https://www.gstatic.com/firebasejs/live/12.17/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/12.17/firebase.tgz"},"components":{"ai":"https://www.gstatic.com/firebasejs/12.17.1/firebase-ai.js","analytics":"https://www.gstatic.com/firebasejs/12.17.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/12.17.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/12.17.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/12.17.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/12.17.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore/lite.js","firestore/pipelines":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore/pipelines.js","firestore/lite/pipelines":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore/lite/pipelines.js","installations":"https://www.gstatic.com/firebasejs/12.17.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/12.17.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/12.17.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/12.17.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/12.17.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/12.17.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/12.17.1/firebase-database.js","data-connect":"https://www.gstatic.com/firebasejs/12.17.1/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.memory.js"}}
+[info] i  public\index.html is unchanged 
+[info] 
+=== Agent Skills Setup
+[info] If you are using an AI coding agent, Firebase Agent Skills make it an expert at Firebase.
+[info] 
+[info] +  Wrote configuration info to firebase.json 
+[info] +  Wrote project information to .firebaserc 
+[info] 
+[info] +  Firebase initialization complete! 
+[debug] [2026-08-10T09:49:25.003Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T09:49:25.007Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\husam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-08-10T09:49:25.007Z] CLI Version:   15.26.0
+[debug] [2026-08-10T09:49:25.007Z] Platform:      win32
+[debug] [2026-08-10T09:49:25.008Z] Node Version:  v24.16.0
+[debug] [2026-08-10T09:49:25.008Z] Detected Agent: unknown
+[debug] [2026-08-10T09:49:25.008Z] Time:          Mon Aug 10 2026 11:49:25 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2026-08-10T09:49:25.008Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-08-10T09:49:31.233Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-10T09:49:31.233Z] > authorizing via signed-in user (libya.mustaqbal.app@gmail.com)
+[debug] [2026-08-10T09:49:31.233Z] [iam] checking project the-nations-platform for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-08-10T09:49:31.248Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:31.248Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:31.250Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions [none]
+[debug] [2026-08-10T09:49:31.250Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions  x-goog-user-project=the-nations-platform
+[debug] [2026-08-10T09:49:31.250Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-08-10T09:49:32.361Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions 200
+[debug] [2026-08-10T09:49:32.361Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-nations-platform:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-08-10T09:49:32.362Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:32.362Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:32.363Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform [none]
+[debug] [2026-08-10T09:49:33.068Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform 200
+[debug] [2026-08-10T09:49:33.068Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-nations-platform {"projectId":"the-nations-platform","projectNumber":"238796788431","displayName":"The Nations Platform","name":"projects/the-nations-platform","resources":{"hostingSite":"the-nations-platform"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_bb08770d-f892-4879-8858-cb610dc8a781"}
+[info] 
+[info] === Deploying to 'the-nations-platform'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-08-10T09:49:33.071Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:33.072Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:33.072Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/the-nations-platform/sites/the-nations-platform [none]
+[debug] [2026-08-10T09:49:34.502Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/the-nations-platform/sites/the-nations-platform 200
+[debug] [2026-08-10T09:49:34.503Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/the-nations-platform/sites/the-nations-platform {"name":"projects/the-nations-platform/sites/the-nations-platform","defaultUrl":"https://the-nations-platform.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-08-10T09:49:34.507Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:34.508Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:34.509Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions [none]
+[debug] [2026-08-10T09:49:34.509Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-08-10T09:49:35.985Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions 200
+[debug] [2026-08-10T09:49:35.985Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions {"name":"projects/238796788431/sites/the-nations-platform/versions/3a67e35d6eb88ace","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[the-nations-platform]: beginning deploy... 
+[info] i  hosting[the-nations-platform]: found 25 files in public 
+[debug] [2026-08-10T09:49:35.999Z] [hosting] uploading with 200 concurrency
+[debug] [2026-08-10T09:49:36.014Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:36.015Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:36.016Z] [hosting] hash cache [cHVibGlj] stored for 25 files
+[debug] [2026-08-10T09:49:36.017Z] [hosting][hash queue][FINAL] {"max":11,"min":1,"avg":1,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":14}
+[debug] [2026-08-10T09:49:36.017Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/238796788431/sites/the-nations-platform/versions/3a67e35d6eb88ace:populateFiles [none]
+[debug] [2026-08-10T09:49:36.017Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/238796788431/sites/the-nations-platform/versions/3a67e35d6eb88ace:populateFiles {"files":{"/index.html":"dddd5894b9b74433e97cd267c9bd120afa4301af4de810eb5496c2eb3dc134dd","/globe.svg":"6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2","/file.svg":"5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c","/app_screenshot.png":"257a5559934f3a1a383886fa0d8123887509e3b93b1322e0e775ee5b86f9e319","/images/notion-radio.png":"e4d1a60e6ca22d1b8243cfcc391285b03e5d2f9fc358e2aeb44d3b7fa6a2f622","/images/notion-radio-background-less.png":"605161e3b4cfc679791919dbdba71f35b2b9028dbff004ac76778625ecdf0ccb","/images/ncc.jpg":"2d8b0607338e5cb8c906441478f11f386fd668f79ed1a0ac444e123cdad31bd7","/images/ncc-small.jpg":"b250151d81a3ccaaf21c46bb700399f3f1bbe5d4f45e961f1058c34e3a7d1e07","/images/ncc-small-rounded.png":"c15047950887f2c3b2082032b17e0c2f72083db5abd4e147f2a11c3f2b3f7f95","/images/ncc-graph.jpg":"268058d19d45a96bfb2815e78642199c744585439e85ccf13f646cd074f69712","/images/mof.png":"0ea8afbfd10bf30358ec9ba31da9c02b5243c8498cb505296ec8da40ba840213","/images/heritage-radio.jpg":"e95aad0e871b2da7f5575da10390d3140f85fab50ba9bf52168849f492270d7a","/images/heritage-radio-background-less.png":"ee00267d4128cbcaee5e64d58c045b267e39170fe75b77266b1f442bfa7a27d0","/images/graph.jpg":"268058d19d45a96bfb2815e78642199c744585439e85ccf13f646cd074f69712","/images/google-play.png":"307fd31410cc22d2bd8c7533f5763ff8adb6ddcce96e7d5707a2e6d51a1c039e","/images/game.png":"7ec81a5d80aecf5f4ba7c5364d2ca7b4d4d12bd4612b7117fc0236d9794aac85","/images/app-icon.png":"eb18e7cf33c141e36e1be4f51355987e67f4b38cd931fb0b2e2a22c149e6b03f","/fonts/Tajawal-Regular.ttf":"d543649f7f2716159bede7af3418c96ec9a77050bcb16ec1ca21eaa3b8a273c0","/fonts/Tajawal-Medium.ttf":"8d5c7687274398d926a9a7bfc1aa9bf2ab6440895af4c97fba2448c2e8a1acce","/fonts/Tajawal-Light.ttf":"32a708a87ae4a77c21a27cf1840b50b4485a7f9f714a9d27ac211868df415bde","/fonts/Tajawal-ExtraLight.ttf":"75e457afeb943b70a0602a2a11b80359b064cf45dd77940c21db6909f9e693a2","/fonts/Tajawal-ExtraBold.ttf":"171e53df4550a90b1582e1aa7181105f47b953acbbd6cfa0ba3a9177d811fa6c","/fonts/Tajawal-Bold.ttf":"99d7e41d9cd0e1cf0efe43b5d8002e787e64f55321951f73d36736ad580c2ec0","/fonts/Tajawal-Black.ttf":"31c96ce33e108ded39c62b3465e493be3432f834a9a725df3896d3fde995a47a","/fonts/OFL.txt":"f845c063b7033b541521bf5210955cb0c734a5c41a037f4a375a2966bebfce95"}}
+[debug] [2026-08-10T09:49:37.076Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/238796788431/sites/the-nations-platform/versions/3a67e35d6eb88ace:populateFiles 200
+[debug] [2026-08-10T09:49:37.076Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/238796788431/sites/the-nations-platform/versions/3a67e35d6eb88ace:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/the-nations-platform/versions/3a67e35d6eb88ace/files"}
+[debug] [2026-08-10T09:49:37.076Z] [hosting][populate queue][FINAL] {"max":1062,"min":1062,"avg":1062,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1062}
+[debug] [2026-08-10T09:49:37.077Z] [hosting] uploads queued: 0
+[debug] [2026-08-10T09:49:37.077Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1786355377077}
+[info] +  hosting[the-nations-platform]: file upload complete 
+[debug] [2026-08-10T09:49:37.077Z] [hosting] deploy completed after 1090ms
+[debug] [2026-08-10T09:49:37.078Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "the-nations-platform"
+    },
+    "version": "projects/238796788431/sites/the-nations-platform/versions/3a67e35d6eb88ace"
+  }
+]
+[info] i  hosting[the-nations-platform]: finalizing version... 
+[debug] [2026-08-10T09:49:37.080Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:37.080Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:37.081Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions/3a67e35d6eb88ace updateMask=status%2Cconfig
+[debug] [2026-08-10T09:49:37.081Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions/3a67e35d6eb88ace {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2026-08-10T09:49:38.598Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions/3a67e35d6eb88ace 200
+[debug] [2026-08-10T09:49:38.598Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/versions/3a67e35d6eb88ace {"name":"projects/238796788431/sites/the-nations-platform/versions/3a67e35d6eb88ace","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-08-10T09:49:25.581005Z","createUser":{"email":"libya.mustaqbal.app@gmail.com"},"finalizeTime":"2026-08-10T09:49:28.938592Z","finalizeUser":{"email":"libya.mustaqbal.app@gmail.com"}}
+[debug] [2026-08-10T09:49:38.598Z] [hosting] finalized version for the-nations-platform:[object Object]
+[info] +  hosting[the-nations-platform]: version finalized 
+[info] i  hosting[the-nations-platform]: releasing new version... 
+[debug] [2026-08-10T09:49:38.599Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:38.599Z] Checked if tokens are valid: true, expires at: 1786358121616
+[debug] [2026-08-10T09:49:38.599Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/channels/live/releases versionName=projects%2F238796788431%2Fsites%2Fthe-nations-platform%2Fversions%2F3a67e35d6eb88ace
+[debug] [2026-08-10T09:49:38.600Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/channels/live/releases {}
+[debug] [2026-08-10T09:49:40.039Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/channels/live/releases 200
+[debug] [2026-08-10T09:49:40.040Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/the-nations-platform/channels/live/releases {"name":"projects/238796788431/sites/the-nations-platform/channels/live/releases/1786355369379000","version":{"name":"projects/238796788431/sites/the-nations-platform/versions/3a67e35d6eb88ace","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-08-10T09:49:25.581005Z","createUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"},"finalizeTime":"2026-08-10T09:49:28.938592Z","finalizeUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"}},"type":"DEPLOY","releaseTime":"2026-08-10T09:49:29.379Z","releaseUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"}}
+[debug] [2026-08-10T09:49:40.040Z] [hosting] release: {"name":"projects/238796788431/sites/the-nations-platform/channels/live/releases/1786355369379000","version":{"name":"projects/238796788431/sites/the-nations-platform/versions/3a67e35d6eb88ace","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-08-10T09:49:25.581005Z","createUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"},"finalizeTime":"2026-08-10T09:49:28.938592Z","finalizeUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"}},"type":"DEPLOY","releaseTime":"2026-08-10T09:49:29.379Z","releaseUser":{"email":"libya.mustaqbal.app@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLsrj5NYuPRlS4Bc2hnCfVT_zXkvuHlATeMIgFNN0I3SOG79Kg"}}
+[info] +  hosting[the-nations-platform]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/the-nations-platform/overview
+[info] Hosting URL: https://the-nations-platform.web.app
