@@ -142,7 +142,7 @@ class RadioDetailsPage extends StatelessWidget {
                                             },
                                             icon: Icon(Icons.play_arrow),
                                           ),
-                                
+
                                     IconButton(
                                       onPressed: () {
                                         audioPlayer.stop();
