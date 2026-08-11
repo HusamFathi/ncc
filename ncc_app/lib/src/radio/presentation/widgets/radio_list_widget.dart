@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../domain/entities/radio_stream_data.dart';
+import '../extensions/radio_stream_data_extension.dart';
 import 'radio_image_rotation_widget.dart';
 
 class RadioListWidget extends StatelessWidget {
@@ -27,8 +28,8 @@ class RadioListWidget extends StatelessWidget {
         imageUrl: radio!.imageUrl,
         isRotating: isRotating!,
       ),
-      title: Text(radio!.name),
-      subtitle: Text(radio!.subtitle),
+      title: Text(radio!.getLocalizedName(context)),
+      subtitle: Text(radio!.getLocalizedSubtitle(context)),
       onTap: () {
         if (onTap != null) {
           onTap!(radio!);

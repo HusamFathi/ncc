@@ -63,7 +63,13 @@ class _AppState extends State<App> {
         BlocProvider(create: (context) => sl<RadioStreamBloc>()),
       ],
       child: BlocConsumer<DeviceSettingsBloc, DeviceSettingsState>(
-        listener: (context, state) {},
+        listener: (context, state) {
+          if (state is DeviceSettingsLoadedState) {
+            context.read<RadioStreamBloc>().add(
+              RadioStreamStarted(initVolume: state.deviceSettings.radioVolume),
+            );
+          }
+        },
         builder: (context, state) {
           return BlocBuilder<DeviceSettingsBloc, DeviceSettingsState>(
             builder: (context, state) {

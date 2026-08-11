@@ -24,8 +24,8 @@ class RadioStreamData extends Equatable {
 
   const RadioStreamData.loading()
     : streamUrl = '',
-      name = 'Loading.......',
-      subtitle = '"Loading................................',
+      name = 'loading',
+      subtitle = 'loading',
       imageUrl =
           'https://www.image2url.com/r2/default/files/1786260663047-bc72c8e9-a80b-4fac-97da-10e79a719d3b.jpg',
       radioPrimaryColor = Colors.transparent,
