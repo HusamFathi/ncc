@@ -119,7 +119,7 @@ abstract class AppLocalizations {
   /// No description provided for @badRequestException.
   ///
   /// In en, this message translates to:
-  /// **'Invalid request format'**
+  /// **'Invalid request'**
   String get badRequestException;
 
   /// No description provided for @netWorkConnectionErrorMessage.
@@ -131,13 +131,13 @@ abstract class AppLocalizations {
   /// No description provided for @sessionExpiredFailureMessage.
   ///
   /// In en, this message translates to:
-  /// **'Session expired - please log in again'**
+  /// **'Your session has expired. Please log in again.'**
   String get sessionExpiredFailureMessage;
 
   /// No description provided for @forbiddenFailureMessage.
   ///
   /// In en, this message translates to:
-  /// **'Unauthorized access'**
+  /// **'You are not authorized to access this resource.'**
   String get forbiddenFailureMessage;
 
   /// No description provided for @cacheFailure.
@@ -161,7 +161,7 @@ abstract class AppLocalizations {
   /// No description provided for @unKnownErrorMessage.
   ///
   /// In en, this message translates to:
-  /// **'Unexpected error occurred'**
+  /// **'An unexpected error occurred.'**
   String get unKnownErrorMessage;
 
   /// No description provided for @unableToLoadLocalData.
@@ -200,11 +200,23 @@ abstract class AppLocalizations {
   /// **'Powered by'**
   String get msfSlideTitle;
 
+  /// No description provided for @msfSlideDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Media Services Foundation of the House of Representatives'**
+  String get msfSlideDescription;
+
   /// No description provided for @onboardingGoalsTitle.
   ///
   /// In en, this message translates to:
   /// **'Our Goals'**
   String get onboardingGoalsTitle;
+
+  /// No description provided for @onboardingGoalsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Create meaningful content, strengthen media partnerships, and promote community awareness.'**
+  String get onboardingGoalsDescription;
 
   /// No description provided for @radioVolume.
   ///
@@ -215,7 +227,7 @@ abstract class AppLocalizations {
   /// No description provided for @live.
   ///
   /// In en, this message translates to:
-  /// **'live'**
+  /// **'Live'**
   String get live;
 
   /// No description provided for @ok.
@@ -227,20 +239,14 @@ abstract class AppLocalizations {
   /// No description provided for @setUpRadioVolumeLevel.
   ///
   /// In en, this message translates to:
-  /// **'Set Up Radio Volume Level'**
+  /// **'Set Radio Volume'**
   String get setUpRadioVolumeLevel;
 
   /// No description provided for @setUpRadioVolumeLevelMessage.
   ///
   /// In en, this message translates to:
-  /// **'You can set up the radio volume without affecting your device volume level'**
+  /// **'Adjust the radio volume without changing your device\'s system volume.'**
   String get setUpRadioVolumeLevelMessage;
-
-  /// No description provided for @onboardingGoalsDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Create meaningful content, strengthen media partnerships, and promote community awareness.'**
-  String get onboardingGoalsDescription;
 
   /// No description provided for @onboardingVisionTitle.
   ///
@@ -251,7 +257,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingVisionDescription.
   ///
   /// In en, this message translates to:
-  /// **'To be a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community.'**
+  /// **'To become a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community.'**
   String get onboardingVisionDescription;
 
   /// No description provided for @onboardingMissionTitle.
@@ -272,34 +278,28 @@ abstract class AppLocalizations {
   /// **'Light mode'**
   String get light;
 
-  /// No description provided for @msfSlideDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Media Services Foundation of the Libyan House of Representatives'**
-  String get msfSlideDescription;
-
   /// No description provided for @onboardingNotionRadioTitle.
   ///
   /// In en, this message translates to:
-  /// **'Notion Radio'**
+  /// **'Nation Radio'**
   String get onboardingNotionRadioTitle;
 
   /// No description provided for @onboardingNotionRadioDescription.
   ///
   /// In en, this message translates to:
-  /// **'A radio platform delivering news, talk shows, and meaningful programs to keep you connected with your community.'**
+  /// **'A radio platform delivering news, talk shows, and engaging programs that keep you connected with your community.'**
   String get onboardingNotionRadioDescription;
 
   /// No description provided for @onboardingHeritageRadioTitle.
   ///
   /// In en, this message translates to:
-  /// **'Al-Ummah Heritage Radio'**
+  /// **'Al-Umma Heritage Radio'**
   String get onboardingHeritageRadioTitle;
 
   /// No description provided for @onboardingHeritageRadioDescription.
   ///
   /// In en, this message translates to:
-  /// **'Discover Libya\'s rich heritage through programs that celebrate national identity and preserve stories for future generations.'**
+  /// **'Discover Libya\'s rich heritage through programs that celebrate national identity and preserve its stories for future generations.'**
   String get onboardingHeritageRadioDescription;
 
   /// No description provided for @dark.
@@ -323,13 +323,13 @@ abstract class AppLocalizations {
   /// No description provided for @tapToContinue.
   ///
   /// In en, this message translates to:
-  /// **'Tap To Continue'**
+  /// **'Tap to continue'**
   String get tapToContinue;
 
   /// No description provided for @notionRadioForHeritage.
   ///
   /// In en, this message translates to:
-  /// **'Nation Heritage Radio'**
+  /// **'Al-Umma Heritage Radio'**
   String get notionRadioForHeritage;
 
   /// No description provided for @backgroundPlaybackTitle.
@@ -341,13 +341,13 @@ abstract class AppLocalizations {
   /// No description provided for @notNow.
   ///
   /// In en, this message translates to:
-  /// **'Not Now'**
+  /// **'Not now'**
   String get notNow;
 
   /// No description provided for @backgroundPlaybackDescription.
   ///
   /// In en, this message translates to:
-  /// **'Allow notifications so our app can keep your radio playing while you use other apps or lock your device. Playback controls will also appear in your notification panel.'**
+  /// **'Allow notifications to control radio playback while using other apps or when your device is locked.'**
   String get backgroundPlaybackDescription;
 
   /// No description provided for @kContinue.
@@ -401,31 +401,31 @@ abstract class AppLocalizations {
   /// No description provided for @notionRadio.
   ///
   /// In en, this message translates to:
-  /// **'Notion Radio'**
+  /// **'Nation Radio'**
   String get notionRadio;
 
   /// No description provided for @notionRadioInfo.
   ///
   /// In en, this message translates to:
-  /// **'Radio Al-Umma is the first unified shortwave radio (93.9 FM), and its broadcast was launched in the city of Benghazi on 1/1/2020, in most Libyan cities, to be the voice of Libyans who find in it spaces to express their opinions with complete freedom and independence, and to scatter fragments of their creativity in the spaces of knowledge and literature, where the free, unique, and purposeful word is. And as the Media Services Foundation of the House of Representatives has always been with its audience on the path of creativity, the launch of Radio Al-Umma is an embodiment of its goals to create bridges of communication and love between creators who were separated by the hand of fate here and there, so that they may find in the gardens of Radio Al-Umma, adorned with their presence, a pleasure and delight from the harvest of knowledge and the delicate pulse.'**
+  /// **'Al-Umma Radio is a unified FM radio station broadcasting on 93.9 FM. Its broadcast was launched in Benghazi on January 1, 2020, reaching audiences across most Libyan cities. The station provides a platform for Libyans to freely express their opinions, share their creativity, and engage with knowledge, culture, and literature.\n\nAs the Media Services Foundation of the House of Representatives continues to connect with its audience through creative and meaningful media, the launch of Al-Umma Radio represents an extension of its mission to build bridges of communication between creators and communities across Libya.'**
   String get notionRadioInfo;
 
   /// No description provided for @errorCode.
   ///
   /// In en, this message translates to:
-  /// **'Error code {code}!'**
+  /// **'Error code: {code}'**
   String errorCode(Object code);
 
   /// No description provided for @channelRadioName.
   ///
   /// In en, this message translates to:
-  /// **'Omma Radio Heritage'**
+  /// **'Al-Umma Heritage Radio'**
   String get channelRadioName;
 
   /// No description provided for @channelRadioDescription.
   ///
   /// In en, this message translates to:
-  /// **'Notification channel for Omma Radio Heritage - a station to revive Libyan cultural heritage and strengthen national identity with specialized programs and important audio updates.'**
+  /// **'Notification channel for Al-Umma Heritage Radio, dedicated to preserving Libyan cultural heritage, strengthening national identity, and delivering specialized programs and important audio updates.'**
   String get channelRadioDescription;
 
   /// No description provided for @retry.
@@ -461,7 +461,7 @@ abstract class AppLocalizations {
   /// No description provided for @notionRadioSlogan.
   ///
   /// In en, this message translates to:
-  /// **'Notion Radio... The Pulse of the Nation'**
+  /// **'Nation Radio... The Pulse of the Nation'**
   String get notionRadioSlogan;
 
   /// No description provided for @notionRadioForHeritageSlogan.
@@ -473,31 +473,31 @@ abstract class AppLocalizations {
   /// No description provided for @notionRadioForHeritageInfo.
   ///
   /// In en, this message translates to:
-  /// **'Nation Heritage Radio is a cultural broadcasting initiative dedicated to preserving Libyan heritage through programs exploring national history, traditional arts, and regional customs. Operated by the Nation Communication Center, it bridges generations by promoting awareness of Libya\'s rich cultural legacy.\n\nAvailable on multiple platforms:\n• Live streaming via the official website\n• Android mobile app\n• Social media platforms (Facebook/YouTube)'**
+  /// **'Al-Umma Heritage Radio is a cultural broadcasting initiative dedicated to preserving and celebrating Libya\'s heritage through programs exploring national history, traditional arts, and regional customs. Operated by the Nation Communication Center, it connects generations by promoting awareness of Libya\'s rich cultural legacy.\n\nAvailable on multiple platforms:\n• Live streaming via the official website\n• Android mobile app\n• Social media platforms, including Facebook and YouTube'**
   String get notionRadioForHeritageInfo;
 
   /// No description provided for @appSlogan.
   ///
   /// In en, this message translates to:
-  /// **'Official media platform of the Parliamentary Media Services Foundation - delivering professional content that aligns with national aspirations while maintaining institutional transparency.'**
+  /// **'The official media platform of the Parliamentary Media Services Foundation, delivering professional content that reflects national aspirations while upholding institutional transparency.'**
   String get appSlogan;
 
   /// No description provided for @ourVision.
   ///
   /// In en, this message translates to:
-  /// **'Strategic vision'**
+  /// **'Strategic Vision'**
   String get ourVision;
 
   /// No description provided for @ourMessage.
   ///
   /// In en, this message translates to:
-  /// **'Core mission'**
+  /// **'Core Mission'**
   String get ourMessage;
 
   /// No description provided for @ourGoals.
   ///
   /// In en, this message translates to:
-  /// **'Strategic objectives'**
+  /// **'Strategic Objectives'**
   String get ourGoals;
 
   /// No description provided for @settings.
@@ -509,19 +509,19 @@ abstract class AppLocalizations {
   /// No description provided for @nccVision.
   ///
   /// In en, this message translates to:
-  /// **'To become Libya\'s premier institution for governmental communication and public awareness'**
+  /// **'To become Libya\'s leading institution for governmental communication and public awareness'**
   String get nccVision;
 
   /// No description provided for @nccMessage.
   ///
   /// In en, this message translates to:
-  /// **'Delivering trusted media that fosters transparency, national unity, and institutional governance'**
+  /// **'Deliver trusted media that promotes transparency, national unity, and effective institutional communication'**
   String get nccMessage;
 
   /// No description provided for @nccGoals.
   ///
   /// In en, this message translates to:
-  /// **'• Development of public-service media content\n• Support for national development through strategic communication\n• Fostering media collaboration between government and civil entities'**
+  /// **'• Develop public-service media content\n• Support national development through strategic communication\n• Foster media collaboration between government and civil society'**
   String get nccGoals;
 
   /// No description provided for @msfhor.

@@ -18,30 +18,31 @@ class AppLocalizationsAr extends AppLocalizations {
   String get emptyHistoryRoutes => 'لا توجد سجلات للمسارات';
 
   @override
-  String get badRequestException => 'طلب غير صالح';
+  String get badRequestException => 'الطلب غير صالح';
 
   @override
   String get netWorkConnectionErrorMessage => 'فشل الاتصال بالشبكة';
 
   @override
   String get sessionExpiredFailureMessage =>
-      'انتهت الجلسة، يرجى تسجيل الدخول مرة أخرى';
+      'انتهت الجلسة. يُرجى تسجيل الدخول مرة أخرى.';
 
   @override
-  String get forbiddenFailureMessage => 'الوصول غير مصرح به';
+  String get forbiddenFailureMessage =>
+      'ليس لديك صلاحية للوصول إلى هذا المورد.';
 
   @override
   String get cacheFailure => 'فشلت عملية التخزين المؤقت';
 
   @override
-  String get metaAuthErrorMessage => 'فشلت المصادقة';
+  String get metaAuthErrorMessage => 'فشلت عملية المصادقة';
 
   @override
   String get lowVolumeWarningMessage =>
       'الصوت مكتوم. يُرجى رفع مستوى الصوت لسماع المحتوى.';
 
   @override
-  String get unKnownErrorMessage => 'حدث خطأ غير متوقع';
+  String get unKnownErrorMessage => 'حدث خطأ غير متوقع.';
 
   @override
   String get unableToLoadLocalData => 'تعذر تحميل البيانات المحلية';
@@ -58,13 +59,20 @@ class AppLocalizationsAr extends AppLocalizations {
   String get syncWithSystem => 'مزامنة مع إعدادات النظام';
 
   @override
-  String get aboutPlatform => 'حول المنصة';
+  String get aboutPlatform => 'عن المنصة';
 
   @override
   String get msfSlideTitle => 'بدعم من';
 
   @override
+  String get msfSlideDescription => 'مؤسسة الخدمات الإعلامية بمجلس النواب';
+
+  @override
   String get onboardingGoalsTitle => 'أهدافنا';
+
+  @override
+  String get onboardingGoalsDescription =>
+      'إنتاج محتوى هادف، وتعزيز الشراكات الإعلامية، ونشر الوعي المجتمعي.';
 
   @override
   String get radioVolume => 'مستوى صوت الراديو';
@@ -81,10 +89,6 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get setUpRadioVolumeLevelMessage =>
       'يمكنك ضبط مستوى صوت الراديو دون التأثير على مستوى صوت جهازك.';
-
-  @override
-  String get onboardingGoalsDescription =>
-      'إنتاج محتوى هادف، وتعزيز الشراكات الإعلامية، ودعم الوعي المجتمعي.';
 
   @override
   String get onboardingVisionTitle => 'رؤيتنا';
@@ -104,28 +108,24 @@ class AppLocalizationsAr extends AppLocalizations {
   String get light => 'الوضع الفاتح';
 
   @override
-  String get msfSlideDescription =>
-      'مؤسسة الخدمات الإعلامية بمجلس النواب الليبي';
-
-  @override
-  String get onboardingNotionRadioTitle => 'Notion Radio';
+  String get onboardingNotionRadioTitle => 'راديو الأمة';
 
   @override
   String get onboardingNotionRadioDescription =>
-      'A radio platform delivering news, talk shows, and meaningful programs to keep you connected with your community.';
+      'منصة إذاعية تقدم الأخبار والبرامج الحوارية والمحتوى الهادف، لتبقيك على تواصل مع مجتمعك.';
 
   @override
-  String get onboardingHeritageRadioTitle => 'Al-Ummah Heritage Radio';
+  String get onboardingHeritageRadioTitle => 'راديو الأمة للتراث';
 
   @override
   String get onboardingHeritageRadioDescription =>
-      'Discover Libya\'s rich heritage through programs that celebrate national identity and preserve stories for future generations.';
+      'اكتشف ثراء التراث الليبي من خلال برامج تحتفي بالهوية الوطنية وتحافظ على قصصه للأجيال القادمة.';
 
   @override
   String get dark => 'الوضع الداكن';
 
   @override
-  String get hello => 'مرحباً';
+  String get hello => 'مرحبًا';
 
   @override
   String get onboardingWelcomeDescription =>
@@ -145,7 +145,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get backgroundPlaybackDescription =>
-      'اسمح بالإشعارات حتى يتمكن التطبيق من مواصلة تشغيل الراديو أثناء استخدام تطبيقات أخرى أو قفل الجهاز. ستظهر أيضًا عناصر التحكم في التشغيل في لوحة الإشعارات.';
+      'اسمح بالإشعارات للتحكم في تشغيل الراديو أثناء استخدام تطبيقات أخرى أو عند قفل الجهاز.';
 
   @override
   String get kContinue => 'متابعة';
@@ -178,11 +178,11 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get notionRadioInfo =>
-      'راديو الأمة هو أول راديو موحد على الموجة القصيرة (93.9 FM)، وانطلق بثه في مدينة بنغازي بتاريخ 1/1/2020م، في معظم المدن الليبية، ليكون صوت الليبيين الذين يجدون فيه مساحات للتعبير عن آرائهم بحرية تامة واستقلالية، ولينثروا شذرات إبداعهم في فضاءات المعرفة والأدب، حيث الكلمة الحرة والفريدة والهادفة. وكما كانت مؤسسة الخدمات الإعلامية بمجلس النواب دائمًا مع جمهورها في طريق الإبداع، فإن انطلاقة راديو الأمة تجسيد لأهدافها في إيجاد جسور للتواصل والمحبة بين المبدعين الذين فرّقتهم يد القدر هنا وهناك، ليجدوا في حدائق راديو الأمة المزدانة بوجودهم متعة من قطاف المعرفة والنبض الرقيق.';
+      'راديو الأمة هو إذاعة FM موحدة تبث على تردد 93.9 ميغاهرتز، وانطلق بثها من مدينة بنغازي في 1 يناير 2020، لتصل إلى جمهورها في معظم المدن الليبية. وتسعى الإذاعة إلى أن تكون صوتًا لليبيين، ومنبرًا يتيح لهم التعبير عن آرائهم بحرية واستقلالية، ومشاركة إبداعاتهم في مجالات المعرفة والثقافة والأدب.\n\nوانطلاقًا من اهتمام مؤسسة الخدمات الإعلامية بمجلس النواب بالتواصل مع جمهورها ودعم الإبداع الإعلامي، جاءت انطلاقة راديو الأمة تجسيدًا لرؤيتها في بناء جسور التواصل بين المبدعين والمجتمع، وإتاحة مساحة تجمع المعرفة والثقافة والكلمة الهادفة.';
 
   @override
   String errorCode(Object code) {
-    return 'رمز الخطأ $code!';
+    return 'رمز الخطأ: $code';
   }
 
   @override
@@ -190,7 +190,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get channelRadioDescription =>
-      'قناة إشعارات راديو الأمة للتراث - محطة تهتم بإحياء التراث الثقافي الليبي وتعزيز الهوية الوطنية من خلال برامج متخصصة وتحديثات صوتية مهمة.';
+      'قناة إشعارات راديو الأمة للتراث، المخصصة لإحياء التراث الثقافي الليبي وتعزيز الهوية الوطنية من خلال برامج متخصصة وتحديثات صوتية مهمة.';
 
   @override
   String get retry => 'إعادة المحاولة';
@@ -215,11 +215,11 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get notionRadioForHeritageInfo =>
-      'راديو الأمة للتراث هو مبادرة إذاعية ثقافية تهتم بالحفاظ على التراث الليبي وتعزيز الهوية الوطنية من خلال برامج تستكشف التاريخ الوطني، والفنون التقليدية، والعادات والتقاليد في مختلف مناطق ليبيا. يديره مركز الأمة للتواصل، ويهدف إلى ربط الأجيال بتراثهم وتعميق الوعي بالموروث الثقافي الليبي.\n\nيتوفر راديو الأمة للتراث عبر منصات متعددة:\n• البث المباشر عبر الموقع الرسمي\n• تطبيق الهاتف المحمول لنظام أندرويد\n• منصات التواصل الاجتماعي مثل فيسبوك ويوتيوب';
+      'راديو الأمة للتراث هو مبادرة إذاعية ثقافية تهدف إلى الحفاظ على التراث الليبي وتعزيز الهوية الوطنية من خلال برامج تتناول التاريخ الوطني، والفنون التقليدية، والعادات والتقاليد في مختلف مناطق ليبيا. ويديره مركز الأمة للتواصل، ويسهم في ربط الأجيال بتراثها وتعزيز الوعي بالموروث الثقافي الليبي.\n\nيتوفر راديو الأمة للتراث عبر منصات متعددة:\n• البث المباشر عبر الموقع الرسمي\n• تطبيق الهاتف المحمول لنظام أندرويد\n• منصات التواصل الاجتماعي، بما في ذلك فيسبوك ويوتيوب';
 
   @override
   String get appSlogan =>
-      'منصة إعلامية وطنية تابعة لمؤسسة الخدمات الإعلامية بمجلس النواب الليبي، تقدم محتوى إعلاميًا مهنيًا يعزز التواصل المؤسسي الفعال، ويواكب تطلعات الشارع الليبي، ويعكس صوت مؤسسات الدولة باحترافية وشفافية.';
+      'المنصة الإعلامية الرسمية لمؤسسة الخدمات الإعلامية بمجلس النواب، تقدم محتوى إعلاميًا مهنيًا يعزز التواصل المؤسسي، ويواكب تطلعات المجتمع الليبي، ويعكس رسالتها الإعلامية بمهنية وشفافية.';
 
   @override
   String get ourVision => 'الرؤية الاستراتيجية';
@@ -235,22 +235,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get nccVision =>
-      'أن نكون الكيان الإعلامي الرائد في ليبيا في مجال التواصل المؤسسي والتوعية المجتمعية.';
+      'أن نكون المؤسسة الرائدة في ليبيا في مجال التواصل المؤسسي والإعلام والتوعية المجتمعية.';
 
   @override
   String get nccMessage =>
-      'تقديم إعلام موثوق يعزز الشفافية والوحدة الوطنية، ويساهم في بناء دولة المؤسسات والقانون.';
+      'تقديم إعلام موثوق يعزز الشفافية والوحدة الوطنية، ويدعم التواصل المؤسسي الفعال.';
 
   @override
   String get nccGoals =>
-      '• إنتاج محتوى إعلامي توعوي وتفاعلي يخدم الصالح العام.\n• دعم جهود التنمية الوطنية من خلال التواصل الاستراتيجي.\n• تعزيز التعاون الإعلامي بين الجهات الحكومية والمؤسسات المدنية.';
+      '• تطوير محتوى إعلامي يخدم الصالح العام\n• دعم التنمية الوطنية من خلال التواصل الاستراتيجي\n• تعزيز التعاون الإعلامي بين الجهات الحكومية ومؤسسات المجتمع المدني';
 
   @override
   String get msfhor => 'مؤسسة الخدمات الإعلامية بمجلس النواب';
 
   @override
   String autobotsCopyRights(Object appName, Object year) {
-    return 'جميع الحقوق محفوظة © $appName $year.';
+    return '© $appName $year - جميع الحقوق محفوظة';
   }
 
   @override
