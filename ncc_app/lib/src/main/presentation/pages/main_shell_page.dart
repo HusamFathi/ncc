@@ -31,6 +31,7 @@ class _MainShellPageState extends State<MainShellPage> {
         context.read<RadioStreamBloc>().add(
           RadioStreamStarted(
             initVolume: settingsState.deviceSettings.radioVolume,
+            context: context,
           ),
         );
       }
