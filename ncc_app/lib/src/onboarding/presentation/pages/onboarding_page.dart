@@ -33,7 +33,8 @@ class OnboardingPage extends StatelessWidget {
               final ListIntroDataBloc bloc = context.read<ListIntroDataBloc>();
               return Scaffold(
                 appBar: AppBar(
-                  leading: state is ListIntroDataLoadedState &&
+                  leading:
+                      state is ListIntroDataLoadedState &&
                           (state.index > 0 && state.index < 2)
                       ? BackButton(
                           onPressed: () {
@@ -82,7 +83,9 @@ class OnboardingPage extends StatelessWidget {
                           ConcentricPageView(
                             pageController: bloc.concentricPageController,
                             onChange: (page) {
-                              bloc.add(ListIntroDataChangeIndex(index: page+1));
+                              bloc.add(
+                                ListIntroDataChangeIndex(index: page + 1),
+                              );
                             },
                             colors: slides.map((e) {
                               return e.getColor(context);

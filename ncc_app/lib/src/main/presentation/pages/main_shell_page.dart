@@ -80,7 +80,7 @@ class _MainShellPageState extends State<MainShellPage> {
                 ),
               ],
             ),
-            InternetStatusWidget()
+            InternetStatusWidget(),
           ],
         ),
       ),

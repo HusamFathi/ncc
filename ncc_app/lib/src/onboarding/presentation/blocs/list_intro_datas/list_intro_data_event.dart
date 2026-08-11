@@ -6,7 +6,6 @@ sealed class ListIntroDataEvent extends Equatable {
 
 // Initial Go event
 final class ListIntroDataStarted extends ListIntroDataEvent {
-
   const ListIntroDataStarted();
 
   @override

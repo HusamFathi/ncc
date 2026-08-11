@@ -63,7 +63,7 @@ class _InternetStatusWidgetState extends State<InternetStatusWidget> {
           ),
         );
       },
-     duration: const Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       switchInCurve: Curves.easeOut,
       switchOutCurve: Curves.easeIn,
       child: !_isVisible
