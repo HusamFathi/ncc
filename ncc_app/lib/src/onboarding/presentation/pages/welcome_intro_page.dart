@@ -46,54 +46,34 @@ class _WelcomeIntroPageState extends State<WelcomeIntroPage> {
       extendBodyBehindAppBar: true,
 
       extendBody: true,
-      body: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  kNCCPrimaryColor, // Primary
-                  Colors.white, // Secondary
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(kSmallPadding),
-            child: Image.asset(
-              'assets/images/onboarding/welcome.png',
-              fit: BoxFit.contain,
-            ),
-          ),
-          Column(
+      bottomNavigationBar: ClipRRect(
+        // 3. Apply the top rounded corners
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(24.0),
+          topRight: Radius.circular(24.0),
+        ),
+        child: BottomAppBar(
+          elevation: 22,
+          height: 150,
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: .min,
             children: [
-              Spacer(),
-
-              Container(
-                alignment: widget.isMobile
-                    ? AlignmentDirectional.bottomEnd
-                    : AlignmentDirectional.center,
-                child: SizedBox(
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.all(kMediumPadding),
-                    child: FilledButton(
-                      onPressed: () {
-                        widget.goNext();
-                      },
-                      child: Text(
-                        Tr.of(context).tapToContinue.toTitle(),
-                        style: Theme.of(
-                          context,
-                        ).textTheme.bodyLarge?.copyWith(color: textColor),
-                      ),
-                    ),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () {
+                    widget.goNext();
+                  },
+                  child: Text(
+                    Tr.of(context).tapToContinue.toTitle(),
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodyLarge?.copyWith(color: textColor),
                   ),
                 ),
               ),
+              Gap(kSmallGap),
 
               BaseAnimatorWidget(
                 child: DropdownButton<String>(
@@ -133,8 +113,30 @@ class _WelcomeIntroPageState extends State<WelcomeIntroPage> {
                   },
                 ),
               ),
-              Gap(kMediumGap),
             ],
+          ),
+        ),
+      ),
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  kNCCPrimaryColor, // Primary
+                  Colors.white, // Secondary
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(kSmallPadding),
+            child: Image.asset(
+              'assets/images/onboarding/welcome.png',
+              fit: BoxFit.contain,
+            ),
           ),
         ],
       ),
