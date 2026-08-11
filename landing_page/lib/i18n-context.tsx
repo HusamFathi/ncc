@@ -29,10 +29,17 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
   const [language, setLanguageState] = useState<Language>('ar');
 
   useEffect(() => {
+    // 1. Check if user has a saved preference
     const savedLang = localStorage.getItem('language') as Language;
     if (savedLang && ['en', 'ar'].includes(savedLang)) {
       setLanguageState(savedLang);
+      return;
     }
+    // 2. Otherwise, detect from browser/device language
+    const deviceLang = navigator.language || navigator.languages?.[0] || 'ar';
+    // If the device is set to any Arabic variant (ar, ar-SA, ar-LY, etc.) use 'ar', else 'en'
+    const detected: Language = deviceLang.startsWith('ar') ? 'ar' : 'en';
+    setLanguageState(detected);
   }, []);
 
   const setLanguage = (lang: Language) => {
