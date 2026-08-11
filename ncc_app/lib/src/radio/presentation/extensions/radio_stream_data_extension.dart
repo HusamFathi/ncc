@@ -7,20 +7,30 @@ import '../../domain/entities/radio_stream_data.dart';
 
 extension RadioStreamDataExtension on RadioStreamData {
   String getLocalizedName(BuildContext context) {
-    return _localizedValue(context, name,'Loading.....').toTitle();
+    return _localizedValue(context, name, 'Loading.....').toTitle();
   }
 
   String getLocalizedSubtitle(BuildContext context) {
-    return _localizedValue(context, subtitle,'Loading..................').capitalizeFirstLetter();
+    return _localizedValue(
+      context,
+      subtitle,
+      'Loading..................',
+    ).capitalizeFirstLetter();
   }
 
   String getLocalizedDescription(BuildContext context) {
-    return _localizedValue(context, description,'Loading ................................').capitalizeFirstLetter();
+    return _localizedValue(
+      context,
+      description,
+      'Loading ................................',
+    ).capitalizeFirstLetter();
   }
 
-  
-
-  String _localizedValue(BuildContext context, String key,String defaultString) {
+  String _localizedValue(
+    BuildContext context,
+    String key,
+    String defaultString,
+  ) {
     final AppLocalizations tr = Tr.of(context);
 
     switch (key) {

@@ -11,7 +11,6 @@ import 'core/utils/configure_non_web.dart'
 import 'core/utils/constants.dart';
 
 Future<void> main() async {
-  
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await EncryptedSharedPreferences.initialize('9UwbWAJo8elUBZFg');
