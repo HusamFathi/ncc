@@ -59,6 +59,7 @@ dependencies:
   permission_handler: ^13.0.1
   no_screenshot: ^2.0.1
   cached_network_image: ^3.4.1
+  volume_controller: ^3.6.0
 
 dev_dependencies:
   flutter_test:

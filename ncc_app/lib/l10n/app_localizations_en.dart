@@ -37,6 +37,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get metaAuthErrorMessage => 'Authentication failed';
 
   @override
+  String get lowVolumeWarningMessage =>
+      'Your volume is muted. Please turn it up.';
+
+  @override
   String get unKnownErrorMessage => 'Unexpected error occurred';
 
   @override

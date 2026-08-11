@@ -7,7 +7,7 @@
   "sessionExpiredFailureMessage": "Session expired - please log in again",
   "forbiddenFailureMessage": "Unauthorized access",
   "cacheFailure": "Cache operation failed",
-  "metaAuthErrorMessage": "Authentication failed",
+  "metaAuthErrorMessage": "Authentication failed","lowVolumeWarningMessage": "Your volume is muted. Please turn it up.",
   "unKnownErrorMessage": "Unexpected error occurred",
   "unableToLoadLocalData": "Failed to load local data",
   "syncWithSystem": "Sync with system settings",
@@ -15,6 +15,7 @@
   "msfSlideTitle": "Powered by",
   "onboardingGoalsTitle": "Our Goals",
   "radioVolume": "Radio Volume",
+
   "live":"live",
   "ok": "OK",
   "setUpRadioVolumeLevel": "Set Up Radio Volume Level",

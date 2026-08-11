@@ -37,6 +37,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get metaAuthErrorMessage => 'فشلت المصادقة';
 
   @override
+  String get lowVolumeWarningMessage =>
+      'الصوت مكتوم. يُرجى رفع مستوى الصوت لسماع المحتوى.';
+
+  @override
   String get unKnownErrorMessage => 'حدث خطأ غير متوقع';
 
   @override

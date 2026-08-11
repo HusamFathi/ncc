@@ -152,6 +152,12 @@ abstract class AppLocalizations {
   /// **'Authentication failed'**
   String get metaAuthErrorMessage;
 
+  /// No description provided for @lowVolumeWarningMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your volume is muted. Please turn it up.'**
+  String get lowVolumeWarningMessage;
+
   /// No description provided for @unKnownErrorMessage.
   ///
   /// In en, this message translates to:

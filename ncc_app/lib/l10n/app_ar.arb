@@ -10,6 +10,7 @@
   "metaAuthErrorMessage": "فشلت المصادقة",
   "unKnownErrorMessage": "حدث خطأ غير متوقع",
   "unableToLoadLocalData": "تعذر تحميل البيانات المحلية",
+  "lowVolumeWarningMessage": "الصوت مكتوم. يُرجى رفع مستوى الصوت لسماع المحتوى.",
   "syncWithSystem": "مزامنة مع إعدادات النظام",
   "msfSlideTitle": "بدعم من",
   "msfSlideDescription": "مؤسسة الخدمات الإعلامية بمجلس النواب الليبي",

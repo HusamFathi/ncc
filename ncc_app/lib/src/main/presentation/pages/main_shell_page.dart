@@ -8,6 +8,7 @@ import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../radio/presentation/blocs/radio_stream/radio_stream_bloc.dart';
 import '../../../radio/presentation/widgets/radio_stream_controller_widget.dart';
 import '../../../settings/presentation/blocs/device_settings/device_settings_bloc.dart';
+import '../widgets/system_volume_widget.dart';
 
 class MainShellPage extends StatefulWidget {
   final StatefulNavigationShell navigationShell;
@@ -42,32 +43,41 @@ class _MainShellPageState extends State<MainShellPage> {
       child: Scaffold(
         body: Stack(
           children: [
-            widget.navigationShell,
+            Positioned.fill(child: widget.navigationShell),
             Align(
               alignment: AlignmentDirectional.bottomCenter,
               child: RadioStreamControllerWidget(),
             ),
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          useLegacyColorScheme: false,
+        bottomNavigationBar: Column(
+          mainAxisAlignment: .center,
+          crossAxisAlignment: .center,
+          mainAxisSize: .min,
+          children: [
+            SystemVolumeWidget(),
 
-          elevation: 18,
-          currentIndex: widget.navigationShell.currentIndex,
-          onTap: (index) {
-            widget.navigationShell.goBranch(
-              index,
-              initialLocation: index == widget.navigationShell.currentIndex,
-            );
-          },
-          items: [
-            BottomNavigationBarItem(
-              icon: const Icon(Icons.home),
-              label: Tr.of(context).home.toTitle(),
-            ),
-            BottomNavigationBarItem(
-              icon: const Icon(Icons.menu),
-              label: Tr.of(context).menu.toTitle(),
+            BottomNavigationBar(
+              useLegacyColorScheme: false,
+
+              elevation: 18,
+              currentIndex: widget.navigationShell.currentIndex,
+              onTap: (index) {
+                widget.navigationShell.goBranch(
+                  index,
+                  initialLocation: index == widget.navigationShell.currentIndex,
+                );
+              },
+              items: [
+                BottomNavigationBarItem(
+                  icon: const Icon(Icons.home),
+                  label: Tr.of(context).home.toTitle(),
+                ),
+                BottomNavigationBarItem(
+                  icon: const Icon(Icons.menu),
+                  label: Tr.of(context).menu.toTitle(),
+                ),
+              ],
             ),
           ],
         ),
