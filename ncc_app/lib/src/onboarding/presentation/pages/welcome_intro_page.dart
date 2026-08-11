@@ -61,15 +61,14 @@ class _WelcomeIntroPageState extends State<WelcomeIntroPage> {
             children: [
               SizedBox(
                 width: double.infinity,
+                height: 45,
                 child: FilledButton(
                   onPressed: () {
                     widget.goNext();
                   },
                   child: Text(
                     Tr.of(context).tapToContinue.toTitle(),
-                    style: Theme.of(
-                      context,
-                    ).textTheme.bodyLarge?.copyWith(color: textColor),
+                    style: TextStyle(fontSize: 22),
                   ),
                 ),
               ),
@@ -125,17 +124,21 @@ class _WelcomeIntroPageState extends State<WelcomeIntroPage> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  kNCCPrimaryColor, // Primary
-                  Colors.white, // Secondary
+                  Theme.of(context).colorScheme.secondary, // Primary
+                  Theme.of(context).colorScheme.primary, // Primary
+                  Theme.of(context).colorScheme.secondary, // Primary
                 ],
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(kSmallPadding),
-            child: Image.asset(
-              'assets/images/onboarding/welcome.png',
-              fit: BoxFit.contain,
+          Align(
+            alignment: AlignmentGeometry.center,
+            child: Padding(
+              padding: const EdgeInsets.all(kLargePadding),
+              child: Image.asset(
+                'assets/images/onboarding/welcome.png',
+                fit: BoxFit.contain,
+              ),
             ),
           ),
         ],
