@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function Stations() {
   return (
@@ -20,7 +20,7 @@ export default function Stations() {
             Notion Radio
           </h2>
           <p className="italic text-base text-signal-purple font-semibold">
-            "Notion Radio... The Pulse of the Nation"
+            &quot;Notion Radio... The Pulse of the Nation&quot;
           </p>
           <p className="font-arial text-sm text-graphite leading-relaxed">
             Launched in Benghazi on 1/1/2020, Radio Al-Umma serves as a unified
@@ -199,7 +199,7 @@ export default function Stations() {
             Nation Heritage Radio
           </h2>
           <p className="italic text-base text-signal-yellow font-semibold">
-            "Echoing the past... Resonating with the present"
+            &quot;Echoing the past... Resonating with the present&quot;
           </p>
           <p className="font-arial text-sm text-graphite leading-relaxed">
             A cultural broadcasting initiative dedicated to preserving Libyan

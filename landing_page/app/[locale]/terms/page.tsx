@@ -57,8 +57,8 @@ export default function TermsPage() {
                 1. تعريف منصة الأمة
               </h2>
               <p className="mb-4">
-                يقصد بـ <strong>"منصة الأمة"</strong> أو{' '}
-                <strong>"المنصة"</strong> في هذه الشروط:
+                يقصد بـ <strong>&quot;منصة الأمة&quot;</strong> أو{' '}
+                <strong>&quot;المنصة&quot;</strong> في هذه الشروط:
               </p>
               <ul className="list-disc list-inside mb-4 space-y-1">
                 <li>تطبيق منصة الأمة.</li>
@@ -71,7 +71,7 @@ export default function TermsPage() {
                 </li>
               </ul>
               <p className="mb-4">
-                ويُقصد بـ <strong>"المحتوى"</strong> جميع المواد التي يتم
+                ويُقصد بـ <strong>&quot;المحتوى&quot;</strong> جميع المواد التي يتم
                 توفيرها من خلال المنصة، بما في ذلك على سبيل المثال لا الحصر:
               </p>
               <ul className="list-disc list-inside mb-4 space-y-1">
@@ -566,7 +566,7 @@ export default function TermsPage() {
                 <li>تغييرات تشغيلية أو تقنية.</li>
               </ul>
               <p className="mb-4">
-                سيتم تحديث تاريخ <strong>"آخر تحديث"</strong> في أعلى هذه الشروط
+                سيتم تحديث تاريخ <strong>&quot;آخر تحديث&quot;</strong> في أعلى هذه الشروط
                 عند إجراء تغييرات عليها.
               </p>
               <p>
