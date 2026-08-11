@@ -47,6 +47,14 @@ class AppLocalizationsAr extends AppLocalizations {
   String get unableToLoadLocalData => 'تعذر تحميل البيانات المحلية';
 
   @override
+  String get internetConnectionRestoredMessage =>
+      'تم استعادة الاتصال بالإنترنت.';
+
+  @override
+  String get noInternetConnectionMessage =>
+      'لا يوجد اتصال بالإنترنت. يُرجى التحقق من اتصالك.';
+
+  @override
   String get syncWithSystem => 'مزامنة مع إعدادات النظام';
 
   @override

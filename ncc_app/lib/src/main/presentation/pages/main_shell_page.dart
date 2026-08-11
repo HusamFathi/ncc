@@ -8,6 +8,7 @@ import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../radio/presentation/blocs/radio_stream/radio_stream_bloc.dart';
 import '../../../radio/presentation/widgets/radio_stream_controller_widget.dart';
 import '../../../settings/presentation/blocs/device_settings/device_settings_bloc.dart';
+import '../widgets/internet_status_widget.dart';
 import '../widgets/system_volume_widget.dart';
 
 class MainShellPage extends StatefulWidget {
@@ -79,6 +80,7 @@ class _MainShellPageState extends State<MainShellPage> {
                 ),
               ],
             ),
+            InternetStatusWidget()
           ],
         ),
       ),

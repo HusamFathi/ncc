@@ -170,6 +170,18 @@ abstract class AppLocalizations {
   /// **'Failed to load local data'**
   String get unableToLoadLocalData;
 
+  /// No description provided for @internetConnectionRestoredMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Internet connection restored.'**
+  String get internetConnectionRestoredMessage;
+
+  /// No description provided for @noInternetConnectionMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'No internet connection. Please check your connection.'**
+  String get noInternetConnectionMessage;
+
   /// No description provided for @syncWithSystem.
   ///
   /// In en, this message translates to:

@@ -55,7 +55,7 @@ class _SystemVolumeWidgetState extends State<SystemVolumeWidget> {
     // Reset the timer every time the volume changes.
     _hideTimer?.cancel();
 
-    _hideTimer = Timer(const Duration(seconds: 3), () {
+    _hideTimer = Timer(const Duration(seconds: 2), () {
       setState(() {
         if (volume != 0) {
           _isVisible = false;
@@ -77,9 +77,22 @@ class _SystemVolumeWidgetState extends State<SystemVolumeWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedSize(
+    return AnimatedSwitcher(
+      transitionBuilder: (child, animation) {
+        return FadeTransition(
+          opacity: animation,
+          child: SlideTransition(
+            position: Tween<Offset>(
+              begin: const Offset(0, 0.3),
+              end: Offset.zero,
+            ).animate(animation),
+            child: child,
+          ),
+        );
+      },
       duration: const Duration(milliseconds: 300),
-      curve: Curves.easeInOut,
+      switchInCurve: Curves.easeOut,
+      switchOutCurve: Curves.easeIn,
       child: !_isVisible
           ? const SizedBox.shrink()
           : StreamBuilder(

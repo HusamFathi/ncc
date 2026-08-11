@@ -10,6 +10,8 @@
   "metaAuthErrorMessage": "فشلت المصادقة",
   "unKnownErrorMessage": "حدث خطأ غير متوقع",
   "unableToLoadLocalData": "تعذر تحميل البيانات المحلية",
+  "internetConnectionRestoredMessage": "تم استعادة الاتصال بالإنترنت.",
+  "noInternetConnectionMessage": "لا يوجد اتصال بالإنترنت. يُرجى التحقق من اتصالك.",
   "lowVolumeWarningMessage": "الصوت مكتوم. يُرجى رفع مستوى الصوت لسماع المحتوى.",
   "syncWithSystem": "مزامنة مع إعدادات النظام",
   "msfSlideTitle": "بدعم من",

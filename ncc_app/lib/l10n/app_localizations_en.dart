@@ -47,6 +47,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get unableToLoadLocalData => 'Failed to load local data';
 
   @override
+  String get internetConnectionRestoredMessage =>
+      'Internet connection restored.';
+
+  @override
+  String get noInternetConnectionMessage =>
+      'No internet connection. Please check your connection.';
+
+  @override
   String get syncWithSystem => 'Sync with system settings';
 
   @override
