@@ -7,22 +7,20 @@ import '../../domain/entities/radio_stream_data.dart';
 
 extension RadioStreamDataExtension on RadioStreamData {
   String getLocalizedName(BuildContext context) {
-    return _localizedValue(context, name).toTitle();
+    return _localizedValue(context, name,'Loading.....').toTitle();
   }
 
   String getLocalizedSubtitle(BuildContext context) {
-    return _localizedValue(context, subtitle).capitalizeFirstLetter();
+    return _localizedValue(context, subtitle,'Loading..................').capitalizeFirstLetter();
   }
 
   String getLocalizedDescription(BuildContext context) {
-    return _localizedValue(context, description).capitalizeFirstLetter();
+    return _localizedValue(context, description,'Loading ................................').capitalizeFirstLetter();
   }
 
-  Color getRadioPrimaryColor(BuildContext context) {
-    return radioPrimaryColor;
-  }
+  
 
-  String _localizedValue(BuildContext context, String key) {
+  String _localizedValue(BuildContext context, String key,String defaultString) {
     final AppLocalizations tr = Tr.of(context);
 
     switch (key) {
@@ -39,7 +37,7 @@ extension RadioStreamDataExtension on RadioStreamData {
       case 'notionRadioInfo':
         return tr.notionRadioInfo;
       default:
-        return '';
+        return defaultString;
     }
   }
 }
