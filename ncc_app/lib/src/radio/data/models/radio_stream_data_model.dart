@@ -17,16 +17,13 @@ class RadioStreamDataModel extends RadioStreamData {
   factory RadioStreamDataModel.fromJson(Map<String, dynamic> json) {
     return RadioStreamDataModel(
       streamUrl: json['stream_url'],
-      id: json['id'], // Default to empty string if not provided
+      id: json['id'],
       name: json['name'],
       subtitle: json['subtitle'],
       imageUrl: json['image_url'],
-      description:
-          json['description'], // Default to empty string if not provided
+      description: json['description'],
       backgroundLessonImageUrl: json['background_lesson_image_url'],
-      radioPrimaryColor: colorFromHex(
-        json['radio_primary_color'],
-      ), // Default color if not provided
+      radioPrimaryColor: colorFromHex(json['radio_primary_color']),
     );
   }
 
@@ -41,10 +38,13 @@ class RadioStreamDataModel extends RadioStreamData {
 
   Map<String, dynamic> toJson() {
     return {
-      'streamUrl': streamUrl,
+      'stream_url': streamUrl,
       'name': name,
       'subtitle': subtitle,
-      'imageUrl': imageUrl,
+      'image_url': imageUrl,
+      'background_lesson_image_url': backgroundLessonImageUrl,
+      'description': description,
+      'id': id,
     };
   }
 }

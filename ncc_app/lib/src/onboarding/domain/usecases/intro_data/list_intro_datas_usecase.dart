@@ -1,17 +1,14 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 
 import '../../../../../core/src/usecases/base_usecase.dart';
 import '../../entities/intro_data.dart';
 import '../../repositories/intro_data_repository.dart';
 
 class ListIntroDataUsecaseParams extends Equatable {
-  final BuildContext context;
-
-  const ListIntroDataUsecaseParams({required this.context});
+  const ListIntroDataUsecaseParams();
 
   @override
-  List<Object?> get props => [context];
+  List<Object?> get props => [];
 }
 
 class ListIntroDataUsecase
@@ -22,6 +19,6 @@ class ListIntroDataUsecase
 
   @override
   Future<IntroData> execute(ListIntroDataUsecaseParams params) {
-    return _repository.listIntroData(context: params.context);
+    return _repository.listIntroData();
   }
 }

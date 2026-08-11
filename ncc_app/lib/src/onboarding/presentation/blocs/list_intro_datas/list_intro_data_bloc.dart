@@ -24,7 +24,7 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
       emit(ListIntroDataLoadingState());
 
       Either<Failure, IntroData> resultsOrError = await listIntroData(
-        params: ListIntroDataUsecaseParams(context: event.context),
+        params: const ListIntroDataUsecaseParams(),
       );
 
       resultsOrError.fold(

@@ -13,6 +13,7 @@ import 'package:ncc/src/radio/domain/entities/radio_stream_data.dart';
 import '../../../../core/locale/app_localizations_helper.dart';
 import '../../../../core/src/widgets/live_blinking_dot_widget.dart';
 import '../blocs/radio_stream/radio_stream_bloc.dart';
+import '../extensions/radio_stream_data_extension.dart';
 import '../widgets/radio_stream_controller_widget.dart';
 
 class RadioDetailsPage extends StatelessWidget {
@@ -48,7 +49,10 @@ class RadioDetailsPage extends StatelessWidget {
             bool playing = audioPlayer.playerState.playing;
 
             return Scaffold(
-              appBar: AppBar(centerTitle: true, title: Text(radio.name)),
+              appBar: AppBar(
+                centerTitle: true,
+                title: Text(radio.getLocalizedName(context)),
+              ),
               body: Padding(
                 padding: const EdgeInsets.all(kSmallPadding),
                 child: SingleChildScrollView(
@@ -74,16 +78,16 @@ class RadioDetailsPage extends StatelessWidget {
                       ),
                       Gap(kMediumGap),
                       Text(
-                        radio.name,
+                        radio.getLocalizedName(context),
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: radio.radioPrimaryColor,
+                          color: radio.getRadioPrimaryColor(context),
                         ),
                       ),
                       Gap(kSmallGap),
                       Text(
-                        radio.subtitle,
+                        radio.getLocalizedSubtitle(context),
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: radio.radioPrimaryColor,
+                          color: radio.getRadioPrimaryColor(context),
                         ),
                       ),
                       Gap(kMediumGap),
@@ -170,7 +174,7 @@ class RadioDetailsPage extends StatelessWidget {
                       Card.filled(
                         child: Padding(
                           padding: const EdgeInsets.all(kMediumPadding),
-                          child: Text(radio.description),
+                          child: Text(radio.getLocalizedDescription(context)),
                         ),
                       ),
                       Gap(kLargeGap),

@@ -12,6 +12,7 @@ import '../../../../core/route/routes_config.dart';
 import '../../../../core/src/widgets/loading_widget.dart';
 import '../../domain/entities/onboarding_slide.dart';
 import '../blocs/list_intro_datas/list_intro_data_bloc.dart';
+import '../extensions/onboarding_slide_extension.dart';
 import '../widgets/onboarding_slide_widget.dart';
 import 'notifications_permissions_page.dart';
 
@@ -59,7 +60,7 @@ class OnboardingPage extends StatelessWidget {
                           ),
                           ConcentricPageView(
                             colors: slides.map((e) {
-                              return e.color;
+                              return e.getColor(context);
                             }).toList(),
                             itemCount: slides.length,
                             nextButtonBuilder: (context) {
@@ -88,8 +89,10 @@ class OnboardingPage extends StatelessWidget {
                               final OnboardingSlide slide = slides[index];
                               return OnboardingSlideWidget(
                                 image: slide.image,
-                                title: slide.title,
-                                description: slide.description,
+                                title: slide.getLocalizedTitle(context),
+                                description: slide.getLocalizedDescription(
+                                  context,
+                                ),
                               );
                             },
                           ),
