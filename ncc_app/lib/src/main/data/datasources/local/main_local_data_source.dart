@@ -1,6 +1,5 @@
-import '../../../../../core/utils/constants.dart';
-
 import '../../../../../core/route/routes_config.dart';
+import '../../../../../core/utils/constants.dart';
 import '../../models/intro_slide_data_model.dart';
 
 abstract class MainLocalDataSource {
