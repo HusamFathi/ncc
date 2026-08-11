@@ -40,29 +40,32 @@ final class ListIntroDataLoadedState extends ListIntroDataState {
   final String? message;
   final String? shortMessage;
   final IntroData introData;
+  final int index;
 
   const ListIntroDataLoadedState({
     this.status = ListIntroDataLoadedStatus.initial,
     this.message,
     this.shortMessage,
-    required this.introData, // Required parameter for PagingState
+    required this.introData,
+    required this.index,
   });
 
   @override
-  List<Object?> get props => [status, message, shortMessage, introData]; // Include pagingState in props
+  List<Object?> get props => [status, message, shortMessage, introData, index]; // Include pagingState in props
 
   ListIntroDataLoadedState copyWith({
     ListIntroDataLoadedStatus? status,
     String? message,
     String? shortMessage,
     IntroData? introData,
+    int? index,
   }) {
     return ListIntroDataLoadedState(
       status: status ?? this.status,
       message: message ?? this.message,
       shortMessage: shortMessage ?? this.shortMessage,
-      introData:
-          introData ?? this.introData, // Update copying logic for PagingState
+      introData: introData ?? this.introData,
+      index: index ?? this.index,
     );
   }
 }

@@ -23,19 +23,40 @@ class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          sl<ListIntroDataBloc>()..add(ListIntroDataStarted(context: context)),
+      create: (context) => sl<ListIntroDataBloc>()..add(ListIntroDataStarted()),
       child: BlocConsumer<ListIntroDataBloc, ListIntroDataState>(
-        listener: (context, state) {
-          if (state is ListIntroDataLoadedState) {}
-        },
+        listener: (context, state) {},
         builder: (context, state) {
           return ResponsiveBuilder(
             builder: (context, sizingInformation) {
               bool isMobile = sizingInformation.isMobile;
               final ListIntroDataBloc bloc = context.read<ListIntroDataBloc>();
               return Scaffold(
-                appBar: AppBar(),
+                appBar: AppBar(
+                  leading: state is ListIntroDataLoadedState &&
+                          (state.index > 0 && state.index < 2)
+                      ? BackButton(
+                          onPressed: () {
+                            int newIndex = state.index - 1;
+                            log('state.index ${state.index}');
+                            if (state.index < 2) {
+                              bloc.pageController.animateToPage(
+                                newIndex,
+                                curve: Curves.linear,
+                                duration: Duration(seconds: 1),
+                              );
+                            } else {
+                              bloc.concentricPageController.animateToPage(
+                                newIndex - 3,
+                                curve: Curves.linear,
+                                duration: Duration(seconds: 1),
+                              );
+                            }
+                            bloc.add(ListIntroDataChangeIndex(index: newIndex));
+                          },
+                        )
+                      : null,
+                ),
                 extendBody: true,
                 extendBodyBehindAppBar: true,
                 body: Builder(
@@ -59,6 +80,10 @@ class OnboardingPage extends StatelessWidget {
                             },
                           ),
                           ConcentricPageView(
+                            pageController: bloc.concentricPageController,
+                            onChange: (page) {
+                              bloc.add(ListIntroDataChangeIndex(index: page+1));
+                            },
                             colors: slides.map((e) {
                               return e.getColor(context);
                             }).toList(),

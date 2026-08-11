@@ -16,6 +16,7 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
   final ListIntroDataUsecase listIntroData;
   final ToggleOnboardingIsSeenKeyUsecase toggleOnboardingIsSeenKey;
   final PageController pageController = PageController();
+  final PageController concentricPageController = PageController();
   ListIntroDataBloc({
     required this.listIntroData,
     required this.toggleOnboardingIsSeenKey,
@@ -34,7 +35,7 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
               message: failure.message,
               code: failure.code,
               onRetry: () {
-                add(ListIntroDataStarted(context: event.context));
+                add(ListIntroDataStarted());
               },
             ),
           );
@@ -44,6 +45,7 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
             ListIntroDataLoadedState(
               status: ListIntroDataLoadedStatus.success,
               introData: results,
+              index: 0,
             ),
           );
         },
@@ -51,11 +53,17 @@ class ListIntroDataBloc extends Bloc<ListIntroDataEvent, ListIntroDataState> {
     });
 
     on<ListIntroDataChangeIndex>((event, emit) {
-      pageController.animateToPage(
-        event.index,
-        duration: Duration(milliseconds: 500),
-        curve: Curves.decelerate,
-      );
+      if (state is ListIntroDataLoadedState) {
+        final ListIntroDataLoadedState loadedState =
+            state as ListIntroDataLoadedState;
+        emit(loadedState.copyWith(index: event.index));
+
+        pageController.animateToPage(
+          event.index,
+          duration: Duration(milliseconds: 500),
+          curve: Curves.decelerate,
+        );
+      }
     });
     on<ListIntroDataToggleOnboardingIsSeenKey>((event, emit) async {
       final Either<Failure, Unit> resultsOrError =
