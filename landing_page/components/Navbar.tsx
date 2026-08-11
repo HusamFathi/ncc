@@ -1,24 +1,31 @@
 'use client';
 
-import { Locale, localeDir, localeLabels } from '@/i18n/locales';
-import { Link, usePathname, useRouter } from '@/i18n/navigation';
-import { routing } from '@/i18n/routing';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslation, Language } from '@/lib/i18n-context';
+import Link from 'next/link';
 import Image from 'next/image';
 
+const localeLabels: Record<Language, string> = {
+  en: 'English',
+  ar: 'العربية',
+};
+
+const localeDir: Record<Language, 'ltr' | 'rtl'> = {
+  en: 'ltr',
+  ar: 'rtl',
+};
+
 export default function Navbar() {
-  const t = useTranslations('nav');
-  const locale = useLocale() as Locale;
-  const router = useRouter();
-  const pathname = usePathname();
+  const { t: rootT, language: locale, setLanguage } = useTranslation();
+  const t = (key: string) => rootT(`nav.${key}`);
 
   // Cycle through available locales on toggle
-  const handleLocaleChange = (newLocale: Locale) => {
-    router.replace(pathname, { locale: newLocale });
+  const handleLocaleChange = (newLocale: Language) => {
+    setLanguage(newLocale);
   };
 
   // Get all other locales (not current)
-  const otherLocales = routing.locales.filter((l) => l !== locale) as Locale[];
+  const allLocales: Language[] = ['en', 'ar'];
+  const otherLocales = allLocales.filter((l) => l !== locale) as Language[];
 
   return (
     <nav className="w-full bg-paper-white py-6 px-6 md:px-12 flex justify-between items-center max-w-[1200px] mx-auto z-50">

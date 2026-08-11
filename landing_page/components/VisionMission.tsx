@@ -1,12 +1,10 @@
 'use client';
 
-import { useTranslations, useLocale } from 'next-intl';
-import { localeDir, Locale } from '@/i18n/locales';
+import { useTranslation } from '@/lib/i18n-context';
 
 export default function VisionMission() {
-  const t = useTranslations('about');
-  const locale = useLocale() as Locale;
-  const dir = localeDir[locale];
+  const { t: rootT, dir } = useTranslation();
+  const t = (key: string) => rootT(`about.${key}`);
   const arrow = dir === 'rtl' ? '←' : '→';
 
   return (

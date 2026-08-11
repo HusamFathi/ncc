@@ -1,11 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { useTranslation } from '@/lib/i18n-context';
+import Link from 'next/link';
 
 export default function Footer() {
-  const t = useTranslations('footer');
+  const { t: rootT } = useTranslation();
+  const t = (key: string) => rootT(`footer.${key}`);
   const currentYear = new Date().getFullYear();
 
   return (

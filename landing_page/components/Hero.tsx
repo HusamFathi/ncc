@@ -1,13 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { useTranslations, useLocale } from 'next-intl';
-import { localeDir, Locale } from '@/i18n/locales';
+import { useTranslation } from '@/lib/i18n-context';
 
 export default function Hero() {
-  const t = useTranslations('hero');
-  const locale = useLocale() as Locale;
-  const dir = localeDir[locale];
+  const { t: rootT, dir } = useTranslation();
+  const t = (key: string) => rootT(`hero.${key}`);
   const arrow = dir === 'rtl' ? '←' : '→';
 
   return (

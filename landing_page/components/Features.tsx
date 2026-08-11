@@ -1,9 +1,10 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslation } from '@/lib/i18n-context';
 
 export default function Features() {
-  const t = useTranslations('features');
+  const { t: rootT } = useTranslation();
+  const t = (key: string) => rootT(`features.${key}`);
 
   return (
     <section
