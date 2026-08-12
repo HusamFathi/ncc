@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import 'package:ncc/src/radio/presentation/extensions/radio_stream_data_extension.dart';
+import '../../extensions/radio_stream_data_extension.dart';
 
 import '../../../../../core/failures/failures.dart';
 import '../../../../../core/src/entities/no_params.dart';

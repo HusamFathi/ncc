@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:ncc/core/route/routes_config.dart';
+import '../../../../core/route/routes_config.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/extensions/string.dart';

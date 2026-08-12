@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ncc/core/utils/constants.dart';
+import '../../../../core/utils/constants.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../../../core/locale/app_localizations_helper.dart';

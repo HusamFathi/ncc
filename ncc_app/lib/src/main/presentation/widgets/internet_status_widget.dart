@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
-import '../../../../core/locale/app_localizations_helper.dart';
 
 import '../../../../core/injection/init_di.dart';
+import '../../../../core/locale/app_localizations_helper.dart';
 
 class InternetStatusWidget extends StatefulWidget {
   const InternetStatusWidget({super.key});
