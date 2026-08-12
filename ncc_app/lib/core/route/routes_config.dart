@@ -28,6 +28,7 @@ class RoutesService {
   static const String oboardingRoute = '/oboarding';
   static const String mainRoute = '/app';
   static const String settingsRoute = '/settings';
+  static const String shareAppRoute = '/share-app';
   bool _isOnboardingSeen = false;
 
   /// route for control

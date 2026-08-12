@@ -55,7 +55,7 @@ class _SystemVolumeWidgetState extends State<SystemVolumeWidget> {
     // Reset the timer every time the volume changes.
     _hideTimer?.cancel();
 
-    _hideTimer = Timer(const Duration(seconds: 2), () {
+    _hideTimer = Timer(const Duration(seconds: 5), () {
       setState(() {
         if (volume != 0) {
           _isVisible = false;

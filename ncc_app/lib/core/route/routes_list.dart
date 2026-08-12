@@ -4,6 +4,7 @@ import '../../src/main/presentation/pages/main_page.dart';
 import '../../src/main/presentation/pages/main_shell_page.dart';
 import '../../src/onboarding/presentation/pages/onboarding_page.dart';
 import '../../src/settings/presentation/pages/settings_page.dart';
+import '../../src/settings/presentation/pages/share_app_page.dart';
 import 'routes_config.dart';
 
 class RoutesList {
@@ -18,7 +19,11 @@ class RoutesList {
         builder: (context, state) =>
             OnboardingPage(query: state.pathParameters),
       ),
-
+      GoRoute(
+        path: RoutesService.shareAppRoute,
+        builder: (context, state) =>
+            ShareAppPage(query: state.pathParameters),
+      ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
           return MainShellPage(navigationShell: navigationShell);
