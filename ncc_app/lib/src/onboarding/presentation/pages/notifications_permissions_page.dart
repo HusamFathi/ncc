@@ -21,7 +21,7 @@ class _NotificationsPermissionsPageState
   @override
   void initState() {
     super.initState();
-    Permission.notification.request();
+    // Permission.notification.request();
   }
 
   @override
