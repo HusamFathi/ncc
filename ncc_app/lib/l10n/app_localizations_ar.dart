@@ -56,6 +56,10 @@ class AppLocalizationsAr extends AppLocalizations {
       'لا يوجد اتصال بالإنترنت. يُرجى التحقق من اتصالك.';
 
   @override
+  String get moreRadioChannelsComing =>
+      'المزيد من القنوات الإذاعية ستتوفر قريبًا.';
+
+  @override
   String get syncWithSystem => 'مزامنة مع إعدادات النظام';
 
   @override

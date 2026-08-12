@@ -182,6 +182,12 @@ abstract class AppLocalizations {
   /// **'No internet connection. Please check your connection.'**
   String get noInternetConnectionMessage;
 
+  /// No description provided for @moreRadioChannelsComing.
+  ///
+  /// In en, this message translates to:
+  /// **'More radio channels will be available soon.'**
+  String get moreRadioChannelsComing;
+
   /// No description provided for @syncWithSystem.
   ///
   /// In en, this message translates to:

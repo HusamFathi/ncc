@@ -14,7 +14,8 @@
   "unableToLoadLocalData": "Failed to load local data",
   "internetConnectionRestoredMessage": "Internet connection restored.",
   "noInternetConnectionMessage": "No internet connection. Please check your connection.",
-
+  "moreRadioChannelsComing": "More radio channels will be available soon."
+,
   "syncWithSystem": "Sync with system settings",
   "aboutPlatform": "About the Platform",
 

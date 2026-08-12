@@ -56,6 +56,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'No internet connection. Please check your connection.';
 
   @override
+  String get moreRadioChannelsComing =>
+      'More radio channels will be available soon.';
+
+  @override
   String get syncWithSystem => 'Sync with system settings';
 
   @override
