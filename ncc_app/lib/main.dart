@@ -19,7 +19,7 @@ Future<void> main() async {
 
   configureApp();
   await JustAudioBackground.init(
-    androidNotificationChannelId: 'ncc_radios_channel',
+    androidNotificationChannelId: '9UwbWAJekjfwurt09twe4ufjew4po8elUBZFg',
     androidShowNotificationBadge: true,
     notificationColor: kNCCSecondaryColor,
     androidNotificationChannelName: 'البث الإذاعي',
