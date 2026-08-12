@@ -26,7 +26,7 @@ class IntroDataLocalDataSourceImpl implements IntroDataLocalDataSource {
           'color': const Color(0xFF7C3AED),
           'title': 'appName',
           'description': 'onboardingWelcomeDescription',
-          'image': 'assets/images/onboarding/ncc.png',
+          'image': 'assets/images/splash.png',
         },
         {
           'color': const Color(0xFF4F46E5),
@@ -50,19 +50,19 @@ class IntroDataLocalDataSourceImpl implements IntroDataLocalDataSource {
           'color': const Color(0xFFD97706),
           'title': 'onboardingHeritageRadioTitle',
           'description': 'onboardingHeritageRadioDescription',
-          'image': 'assets/images/onboarding/heritage.png',
+          'image': 'assets/images/heritage-radio-background-less.png',
         },
         {
           'color': const Color(0xFF2563EB),
           'title': 'onboardingNotionRadioTitle',
           'description': 'onboardingNotionRadioDescription',
-          'image': 'assets/images/onboarding/notion.png',
+          'image': 'assets/images/notion-radio-background-less.png',
         },
         {
           'color': const Color(0xFFDC2626),
           'title': 'msfSlideTitle',
           'description': 'msfSlideDescription',
-          'image': 'assets/images/onboarding/msf-hor.png',
+          'image': 'assets/images/mof.png',
         },
       ],
     };

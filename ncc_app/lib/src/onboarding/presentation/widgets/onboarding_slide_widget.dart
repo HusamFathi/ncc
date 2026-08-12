@@ -32,8 +32,19 @@ class OnboardingSlideWidget extends StatelessWidget {
         mainAxisSize: .min,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(kRoundedCorners)),
-            child: Image.asset(image, height: 200, width: 200),
+            borderRadius: BorderRadius.all(Radius.circular(100)),
+            child: Container(
+              height: 200,
+              width: 200,
+              color: Colors.white,
+              padding: EdgeInsets.all(kSmallPadding),
+              child: Image.asset(
+                image,
+                fit: BoxFit.contain,
+                height: 180,
+                width: 180,
+              ),
+            ),
           ),
           Gap(kMediumGap),
           BaseAnimatorWidget(

@@ -70,6 +70,7 @@ class MainPage extends StatelessWidget {
               SliverToBoxAdapter(
                 child: Container(
                   color: baseBgColor,
+                  padding: EdgeInsetsDirectional.only(top: kLargePadding),
                   height: MediaQuery.sizeOf(context).height - expandedHeight,
                   child: Align(
                     alignment: AlignmentGeometry.topCenter,
