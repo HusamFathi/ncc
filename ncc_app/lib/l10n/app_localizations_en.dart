@@ -60,6 +60,9 @@ class AppLocalizationsEn extends AppLocalizations {
       'More radio channels will be available soon.';
 
   @override
+  String get shareAppMessage => 'Share The App';
+
+  @override
   String get syncWithSystem => 'Sync with system settings';
 
   @override
@@ -240,6 +243,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings => 'Settings';
 
   @override
+  String get shareWithMessage => 'Share with more options....';
+
+  @override
   String get nccVision =>
       'To become Libya\'s leading institution for governmental communication and public awareness';
 
@@ -262,6 +268,15 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String powerBy(Object orgName) {
     return 'Provided by: $orgName';
+  }
+
+  @override
+  String get openFacebookPageMessage =>
+      'Stay connected with us and be part of our journey on Facebook.';
+
+  @override
+  String shareAppLinkMessage(Object link) {
+    return 'Discover our app and stay connected with us! Download it here: $link';
   }
 
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/extensions/string.dart';
 import '../../../../core/injection/init_di.dart';
@@ -15,6 +16,7 @@ import '../../../home/presentation/widgets/ncc_info/ncc_info_widget.dart';
 import '../../domain/entities/device_settings.dart';
 import '../blocs/device_settings/device_settings_bloc.dart';
 import '../widgets/radio_sound_volume_widget.dart';
+import 'share_app_page.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -24,9 +26,7 @@ class SettingsPage extends StatelessWidget {
     return BlocProvider.value(
       value: context.read<DeviceSettingsBloc>(),
       child: BlocConsumer<DeviceSettingsBloc, DeviceSettingsState>(
-        listener: (context, state) {
-          // TODO: implement listener
-        },
+        listener: (context, state) {},
         builder: (context, settingState) {
           if (settingState is! DeviceSettingsLoadedState) {
             return const Scaffold(body: LoadingWidget());
@@ -117,6 +117,38 @@ class SettingsPage extends StatelessWidget {
                               ),
                               Divider(),
                               RadioSoundVolumeWidget(),
+                              Divider(),
+
+                              ListTile(
+                                leading: Icon(Icons.share),
+                                title: Text(Tr.of(context).shareAppMessage),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    DialogRoute(
+                                      context: context,
+                                      builder: (context) {
+                                        return ShareAppPage();
+                                      },
+                                    ),
+                                  );
+                                },
+                              ),
+                              Divider(),
+
+                              ListTile(
+                                leading: Icon(Icons.facebook),
+                                title: Text(
+                                  Tr.of(context).openFacebookPageMessage,
+                                ),
+                                onTap: () async {
+                                  final Uri url = Uri.parse(kFacebookPageLink);
+
+                                  if (!await launchUrl(url)) {
+                                    throw Exception('Could not launch $url');
+                                  }
+                                },
+                              ),
                             ],
                           ),
                         ),

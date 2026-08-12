@@ -1,7 +1,6 @@
 {
   "appName": "The Nation's Platform",
   "appNameShort": "The Nation's Platform",
-
   "emptyHistoryRoutes": "No route history available",
   "badRequestException": "Invalid request",
   "netWorkConnectionErrorMessage": "Network connection failed",
@@ -14,105 +13,70 @@
   "unableToLoadLocalData": "Failed to load local data",
   "internetConnectionRestoredMessage": "Internet connection restored.",
   "noInternetConnectionMessage": "No internet connection. Please check your connection.",
-  "moreRadioChannelsComing": "More radio channels will be available soon."
-,
+  "moreRadioChannelsComing": "More radio channels will be available soon.",
+  "shareAppMessage": "Share The App",
   "syncWithSystem": "Sync with system settings",
   "aboutPlatform": "About the Platform",
-
   "msfSlideTitle": "Powered by",
   "msfSlideDescription": "Media Services Foundation of the House of Representatives",
-
   "onboardingGoalsTitle": "Our Goals",
   "onboardingGoalsDescription": "Create meaningful content, strengthen media partnerships, and promote community awareness.",
-
   "radioVolume": "Radio Volume",
   "live": "Live",
   "ok": "OK",
-
   "setUpRadioVolumeLevel": "Set Radio Volume",
   "setUpRadioVolumeLevelMessage": "Adjust the radio volume without changing your device's system volume.",
-
   "onboardingVisionTitle": "Our Vision",
   "onboardingVisionDescription": "To become a leading national media platform that strengthens communication, promotes awareness, and serves the Libyan community.",
-
   "onboardingMissionTitle": "Our Mission",
   "onboardingMissionDescription": "Deliver trusted media that promotes transparency, supports institutions, and serves the public interest.",
-
   "light": "Light mode",
-
   "onboardingNotionRadioTitle": "Nation Radio",
   "onboardingNotionRadioDescription": "A radio platform delivering news, talk shows, and engaging programs that keep you connected with your community.",
-
   "onboardingHeritageRadioTitle": "Al-Umma Heritage Radio",
   "onboardingHeritageRadioDescription": "Discover Libya's rich heritage through programs that celebrate national identity and preserve its stories for future generations.",
-
   "dark": "Dark mode",
   "hello": "Hello",
-
   "onboardingWelcomeDescription": "A national media platform delivering professional content that strengthens communication and reflects the aspirations of the Libyan community.",
-
   "tapToContinue": "Tap to continue",
-
   "notionRadioForHeritage": "Al-Umma Heritage Radio",
-
   "backgroundPlaybackTitle": "Keep Listening in the Background",
   "notNow": "Not now",
   "backgroundPlaybackDescription": "Allow notifications to control radio playback while using other apps or when your device is locked.",
-
   "kContinue": "Continue",
-
   "play": "Play",
   "next": "Next",
   "pause": "Pause",
   "close": "Close",
-
   "versionInfo": "Version {version}+{build}",
-
   "mobileApps": "Mobile apps",
   "comingSoon": "Coming soon",
-
   "notionRadio": "Nation Radio",
-
   "notionRadioInfo": "Al-Umma Radio is a unified FM radio station broadcasting on 93.9 FM. Its broadcast was launched in Benghazi on January 1, 2020, reaching audiences across most Libyan cities. The station provides a platform for Libyans to freely express their opinions, share their creativity, and engage with knowledge, culture, and literature.\n\nAs the Media Services Foundation of the House of Representatives continues to connect with its audience through creative and meaningful media, the launch of Al-Umma Radio represents an extension of its mission to build bridges of communication between creators and communities across Libya.",
-
   "errorCode": "Error code: {code}",
-
   "channelRadioName": "Al-Umma Heritage Radio",
   "channelRadioDescription": "Notification channel for Al-Umma Heritage Radio, dedicated to preserving Libyan cultural heritage, strengthening national identity, and delivering specialized programs and important audio updates.",
-
   "retry": "Retry",
   "cancel": "Cancel",
-
   "selectLanguage": "Select language",
-
   "menu": "Menu",
   "home": "Home",
-
   "notionRadioSlogan": "Nation Radio... The Pulse of the Nation",
   "notionRadioForHeritageSlogan": "Echoing the past... Resonating with the present",
-
   "notionRadioForHeritageInfo": "Al-Umma Heritage Radio is a cultural broadcasting initiative dedicated to preserving and celebrating Libya's heritage through programs exploring national history, traditional arts, and regional customs. Operated by the Nation Communication Center, it connects generations by promoting awareness of Libya's rich cultural legacy.\n\nAvailable on multiple platforms:\n• Live streaming via the official website\n• Android mobile app\n• Social media platforms, including Facebook and YouTube",
-
   "appSlogan": "The official media platform of the Parliamentary Media Services Foundation, delivering professional content that reflects national aspirations while upholding institutional transparency.",
-
   "ourVision": "Strategic Vision",
   "ourMessage": "Core Mission",
   "ourGoals": "Strategic Objectives",
-
   "settings": "Settings",
-
+  "shareWithMessage": "Share with more options....",
   "nccVision": "To become Libya's leading institution for governmental communication and public awareness",
-
   "nccMessage": "Deliver trusted media that promotes transparency, national unity, and effective institutional communication",
-
   "nccGoals": "• Develop public-service media content\n• Support national development through strategic communication\n• Foster media collaboration between government and civil society",
-
   "msfhor": "Parliamentary Media Services Foundation",
-
   "autobotsCopyRights": "© {appName} {year} - All rights reserved",
-
-  "powerBy": "Provided by: {orgName}",
-
+  "powerBy": "Provided by: {orgName}","openFacebookPageMessage": "Stay connected with us and be part of our journey on Facebook.",
+  "shareAppLinkMessage": "Discover our app and stay connected with us! Download it here: {link}",
   "madeInMessage": "Made in Benghazi"
+  
 }
-

@@ -60,6 +60,9 @@ class AppLocalizationsAr extends AppLocalizations {
       'المزيد من القنوات الإذاعية ستتوفر قريبًا.';
 
   @override
+  String get shareAppMessage => 'شارك التطبيق';
+
+  @override
   String get syncWithSystem => 'مزامنة مع إعدادات النظام';
 
   @override
@@ -238,6 +241,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get settings => 'الإعدادات';
 
   @override
+  String get shareWithMessage => 'شارك مع المزيد من الخيارات..';
+
+  @override
   String get nccVision =>
       'أن نكون المؤسسة الرائدة في ليبيا في مجال التواصل المؤسسي والإعلام والتوعية المجتمعية.';
 
@@ -260,6 +266,15 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String powerBy(Object orgName) {
     return 'مقدّم من: $orgName';
+  }
+
+  @override
+  String get openFacebookPageMessage =>
+      'ابقَ قريبًا منا وكن جزءًا من رحلتنا عبر فيسبوك.';
+
+  @override
+  String shareAppLinkMessage(Object link) {
+    return 'اكتشف تطبيقنا وابقَ على تواصل معنا! حمّله من هنا: $link';
   }
 
   @override

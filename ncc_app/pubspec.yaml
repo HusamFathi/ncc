@@ -60,6 +60,7 @@ dependencies:
   no_screenshot: ^2.0.1
   cached_network_image: ^3.4.1
   volume_controller: ^3.6.0
+  share_plus: ^13.3.0
 
 dev_dependencies:
   flutter_test:

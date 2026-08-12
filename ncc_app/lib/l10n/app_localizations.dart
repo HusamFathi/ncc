@@ -188,6 +188,12 @@ abstract class AppLocalizations {
   /// **'More radio channels will be available soon.'**
   String get moreRadioChannelsComing;
 
+  /// No description provided for @shareAppMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Share The App'**
+  String get shareAppMessage;
+
   /// No description provided for @syncWithSystem.
   ///
   /// In en, this message translates to:
@@ -512,6 +518,12 @@ abstract class AppLocalizations {
   /// **'Settings'**
   String get settings;
 
+  /// No description provided for @shareWithMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Share with more options....'**
+  String get shareWithMessage;
+
   /// No description provided for @nccVision.
   ///
   /// In en, this message translates to:
@@ -547,6 +559,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Provided by: {orgName}'**
   String powerBy(Object orgName);
+
+  /// No description provided for @openFacebookPageMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Stay connected with us and be part of our journey on Facebook.'**
+  String get openFacebookPageMessage;
+
+  /// No description provided for @shareAppLinkMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover our app and stay connected with us! Download it here: {link}'**
+  String shareAppLinkMessage(Object link);
 
   /// No description provided for @madeInMessage.
   ///
