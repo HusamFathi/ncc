@@ -71,6 +71,7 @@ class MainPage extends StatelessWidget {
                 child: Container(
                   color: baseBgColor,
                   height: MediaQuery.sizeOf(context).height - expandedHeight,
+                  child: Text('more to come'),
                 ),
               ),
             ],
