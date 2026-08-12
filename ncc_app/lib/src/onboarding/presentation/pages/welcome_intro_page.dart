@@ -61,14 +61,14 @@ class _WelcomeIntroPageState extends State<WelcomeIntroPage> {
             children: [
               SizedBox(
                 width: double.infinity,
-                height: 45,
+                height: 50,
                 child: FilledButton(
                   onPressed: () {
                     widget.goNext();
                   },
                   child: Text(
                     Tr.of(context).tapToContinue.toTitle(),
-                    style: TextStyle(fontSize: 22),
+                    style: TextStyle(fontSize: 20),
                   ),
                 ),
               ),

@@ -78,16 +78,12 @@ class RadioDetailsPage extends StatelessWidget {
                       Gap(kMediumGap),
                       Text(
                         radio.getLocalizedName(context),
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: radio.radioPrimaryColor,
-                        ),
+                        style: Theme.of(context).textTheme.headlineSmall,
                       ),
                       Gap(kSmallGap),
                       Text(
                         radio.getLocalizedSubtitle(context),
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: radio.radioPrimaryColor,
-                        ),
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
 
                       Gap(kMediumGap),
