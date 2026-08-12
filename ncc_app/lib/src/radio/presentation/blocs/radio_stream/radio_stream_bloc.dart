@@ -43,8 +43,7 @@ class RadioStreamBloc extends Bloc<RadioStreamEvent, RadioStreamState> {
             RadioStreamErrorState(
               message: failure.message,
               code: failure.code,
-              onRetry: () =>
-                  add(event),
+              onRetry: () => add(event),
             ),
           );
         },

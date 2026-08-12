@@ -21,8 +21,7 @@ class RoutesList {
       ),
       GoRoute(
         path: RoutesService.shareAppRoute,
-        builder: (context, state) =>
-            ShareAppPage(query: state.pathParameters),
+        builder: (context, state) => ShareAppPage(query: state.pathParameters),
       ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
