@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n-context';
+import Image from 'next/image';
 
 export default function Hero() {
   const { t: rootT, dir } = useTranslation();
@@ -35,21 +35,34 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Android Mockup with Blob */}
-        <div className="relative w-full flex justify-center items-center py-8">
-          <div className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px] bg-gradient-to-br from-signal-purple to-signal-magenta blob-backing animate-[pulse_8s_infinite] shadow-xl shadow-signal-purple/30"></div>
+        {/* Mockup column */}
+        <div className="relative w-full flex flex-col justify-center items-center py-8 gap-5">
 
-          {/* Android Mockup Frame */}
-          <div className="relative z-10 w-[280px] h-[570px] md:w-[310px] md:h-[630px] bg-ink-black rounded-[36px] p-[8px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] border-[4px] border-ink-black ring-[1px] ring-ink-black/20">
-            <div className="w-full h-full rounded-[28px] overflow-hidden bg-zinc-900 relative">
-              <Image
-                src="/app_screenshot.png"
-                alt={t('screenshotAlt')}
-                fill
-                priority
-                sizes="(max-width: 768px) 280px, 310px"
-                className="object-cover object-top"
-              />
+          {/* Store badges image — above the mockup */}
+          <div className="relative z-10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/stores.svg"
+              alt="Available on Google Play and App Store"
+              className="h-[50px] w-auto drop-shadow-md"
+            />
+          </div>
+
+          {/* Phone mockup with blob */}
+          <div className="relative flex justify-center items-center">
+            <div className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px] bg-gradient-to-br from-signal-purple to-signal-magenta blob-backing animate-[pulse_8s_infinite] shadow-xl shadow-signal-purple/30"></div>
+
+            <div className="relative z-10 w-[280px] h-[570px] md:w-[310px] md:h-[630px] bg-ink-black rounded-[36px] p-[8px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] border-[4px] border-ink-black ring-[1px] ring-ink-black/20">
+              <div className="w-full h-full rounded-[28px] overflow-hidden bg-zinc-900 relative">
+                <Image
+                  src="/app_screenshot.png"
+                  alt={t('screenshotAlt')}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 280px, 310px"
+                  className="object-cover object-top"
+                />
+              </div>
             </div>
           </div>
         </div>
