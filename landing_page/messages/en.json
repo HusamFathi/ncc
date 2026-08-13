@@ -9,6 +9,7 @@
     "title": "The Nation's Platform.",
     "description": "A unified media streaming platform built for the Libyan community. Listen to live radio, follow national broadcasts, and stay connected to the news and content that matters to you - anytime, anywhere.",
     "exploreFeatures": "Explore Features",
+    "downloadApp": "Download the App",
     "learnMore": "Learn More",
     "screenshotAlt": "App Screenshot"
   },
@@ -55,6 +56,20 @@
       "description": "Create meaningful content, strengthen media partnerships, and promote community awareness.",
       "link": "Objectives"
     }
+  },
+  "download": {
+    "title": "Download the App",
+    "subtitle": "Available on Android. iOS coming soon.",
+    "androidCard": "Android",
+    "iosCard": "iOS",
+    "downloadOnGoogle": "Download on Google Play",
+    "comingSoon": "Coming Soon",
+    "scanQr": "Scan to download",
+    "backHome": "Back to Home"
+  },
+  "storeSection": {
+    "title": "Get the App",
+    "subtitle": "Download now and stay connected to live Libyan radio and national broadcasts."
   },
   "footer": {
     "appName": "The Nation's Platform",

@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import StoreSection from '@/components/StoreSection';
 import Features from '@/components/Features';
 import VisionMission from '@/components/VisionMission';
 import Footer from '@/components/Footer';
@@ -17,6 +18,9 @@ export default function Home() {
         <div id="home">
           <Hero />
         </div>
+
+        {/* App Store Badges */}
+        <StoreSection />
 
         {/* Features Section */}
         <Features />

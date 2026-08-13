@@ -21,10 +21,10 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-4 w-full">
             <a
-              href="#features"
+              href="/download"
               className="bg-signal-purple hover:bg-signal-magenta text-paper-white font-sans text-sm md:text-base font-bold rounded-2xl py-3 px-6 transition-all duration-300 flex items-center gap-2"
             >
-              {t('exploreFeatures')} <span className="text-lg">{arrow}</span>
+              {t('downloadApp')} <span className="text-lg">{arrow}</span>
             </a>
             <a
               href="#about"
