@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:encrypt_shared_preferences/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -18,16 +20,20 @@ Future<void> main() async {
   VolumeController.instance.showSystemUI = false;
 
   configureApp();
-  await JustAudioBackground.init(
-    androidNotificationChannelId: '9UwbWAJekjfwurt09twe4ufjew4po8elUBZFg',
-    androidShowNotificationBadge: true,
-    notificationColor: kNCCSecondaryColor,
-    androidNotificationChannelName: 'البث الإذاعي',
-    androidNotificationChannelDescription:
-        'قناة إشعارات لتشغيل البث الإذاعي في الخلفية والتحكم في التشغيل.',
-    androidNotificationOngoing: true,
-    androidNotificationIcon: 'drawable/ic_radio_notification',
-  );
+  try {
+    await JustAudioBackground.init(
+      androidNotificationChannelId: '9UwbWAJekjfwurt09twe4ufjew4po8elUBZFg',
+      androidShowNotificationBadge: true,
+      notificationColor: kNCCSecondaryColor,
+      androidNotificationChannelName: 'البث الإذاعي',
+      androidNotificationChannelDescription:
+          'قناة إشعارات لتشغيل البث الإذاعي في الخلفية والتحكم في التشغيل.',
+      androidNotificationOngoing: true,
+      androidNotificationIcon: 'drawable/ic_radio_notification',
+    );
+  } catch (e, stack) {
+    log('JustAudioBackground.init failed: $e\n$stack');
+  }
 
   await initDi();
   await sl<RoutesService>().init();
