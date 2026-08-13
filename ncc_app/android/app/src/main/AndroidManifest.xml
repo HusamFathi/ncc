@@ -39,7 +39,7 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
-        <!-- Hard reference to notification icon so R8 keeps it in release builds -->
+        Hard reference to notification icon so R8 keeps it in release builds
         <meta-data
             android:name="com.ryanheise.audioservice.NOTIFICATION_ICON"
             android:resource="@drawable/ic_radio_notification" />
