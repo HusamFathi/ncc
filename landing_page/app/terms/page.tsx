@@ -71,8 +71,8 @@ export default function TermsPage() {
                 </li>
               </ul>
               <p className="mb-4">
-                ويُقصد بـ <strong>&quot;المحتوى&quot;</strong> جميع المواد التي يتم
-                توفيرها من خلال المنصة، بما في ذلك على سبيل المثال لا الحصر:
+                ويُقصد بـ <strong>&quot;المحتوى&quot;</strong> جميع المواد التي
+                يتم توفيرها من خلال المنصة، بما في ذلك على سبيل المثال لا الحصر:
               </p>
               <ul className="list-disc list-inside mb-4 space-y-1">
                 <li>البث الإذاعي.</li>
@@ -566,8 +566,8 @@ export default function TermsPage() {
                 <li>تغييرات تشغيلية أو تقنية.</li>
               </ul>
               <p className="mb-4">
-                سيتم تحديث تاريخ <strong>&quot;آخر تحديث&quot;</strong> في أعلى هذه الشروط
-                عند إجراء تغييرات عليها.
+                سيتم تحديث تاريخ <strong>&quot;آخر تحديث&quot;</strong> في أعلى
+                هذه الشروط عند إجراء تغييرات عليها.
               </p>
               <p>
                 ويُعد استمرارك في استخدام المنصة بعد نشر التعديلات موافقة على

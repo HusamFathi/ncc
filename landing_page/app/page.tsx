@@ -5,7 +5,6 @@ import VisionMission from '@/components/VisionMission';
 import Footer from '@/components/Footer';
 
 export default function Home() {
-
   return (
     <div className="min-h-screen bg-paper-white text-ink-black flex flex-col antialiased">
       {/* Navigation */}

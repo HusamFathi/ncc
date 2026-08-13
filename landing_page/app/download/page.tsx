@@ -22,10 +22,7 @@ export default function DownloadPage() {
   }, []);
 
   return (
-    <div
-      className="min-h-screen bg-paper-white flex flex-col"
-      dir={dir}
-    >
+    <div className="min-h-screen bg-paper-white flex flex-col" dir={dir}>
       {/* Header */}
       <header className="w-full max-w-[1200px] mx-auto px-6 md:px-12 pt-8 pb-4 flex items-center justify-between">
         <Link
@@ -75,7 +72,6 @@ export default function DownloadPage() {
 
         {/* Cards */}
         <div className="flex flex-col sm:flex-row gap-6 md:gap-10 w-full max-w-2xl justify-center items-stretch">
-
           {/* ── Google Play Card ── */}
           <div
             id="download-card-android"
@@ -106,7 +102,9 @@ export default function DownloadPage() {
                 className="rounded-lg block"
               />
             </div>
-            <p className="text-xs font-sans text-graphite mb-4">{t('scanQr')}</p>
+            <p className="text-xs font-sans text-graphite mb-4">
+              {t('scanQr')}
+            </p>
 
             {/* Spacer pushes button to bottom */}
             <div className="flex-1" />
@@ -152,7 +150,9 @@ export default function DownloadPage() {
                 </span>
               </div>
             </div>
-            <p className="text-xs font-sans text-graphite mb-4 opacity-0 select-none">—</p>
+            <p className="text-xs font-sans text-graphite mb-4 opacity-0 select-none">
+              —
+            </p>
 
             {/* Spacer pushes button to bottom */}
             <div className="flex-1" />

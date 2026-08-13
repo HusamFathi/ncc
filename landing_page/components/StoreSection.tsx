@@ -25,7 +25,6 @@ export default function StoreSection() {
 
       {/* Badges */}
       <div className="flex flex-wrap justify-center items-center gap-4">
-
         {/* Google Play Badge */}
         <a
           id="store-badge-google-play"
@@ -43,8 +42,12 @@ export default function StoreSection() {
             className="shrink-0"
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-[10px] font-sans opacity-70 tracking-wide">GET IT ON</span>
-            <span className="text-base font-sans font-bold tracking-tight">Google Play</span>
+            <span className="text-[10px] font-sans opacity-70 tracking-wide">
+              GET IT ON
+            </span>
+            <span className="text-base font-sans font-bold tracking-tight">
+              Google Play
+            </span>
           </div>
         </a>
 
@@ -63,15 +66,18 @@ export default function StoreSection() {
             className="shrink-0 grayscale opacity-60"
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-[10px] font-sans opacity-60 tracking-wide">DOWNLOAD ON THE</span>
-            <span className="text-base font-sans font-bold tracking-tight">App Store</span>
+            <span className="text-[10px] font-sans opacity-60 tracking-wide">
+              DOWNLOAD ON THE
+            </span>
+            <span className="text-base font-sans font-bold tracking-tight">
+              App Store
+            </span>
           </div>
           {/* Coming Soon pill */}
           <span className="absolute -top-2.5 -end-2 bg-signal-purple text-paper-white text-[10px] font-bold font-sans px-2 py-0.5 rounded-full shadow-md whitespace-nowrap">
             Soon
           </span>
         </Link>
-
       </div>
     </section>
   );

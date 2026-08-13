@@ -37,7 +37,6 @@ export default function Hero() {
 
         {/* Mockup column */}
         <div className="relative w-full flex flex-col justify-center items-center py-8 gap-5">
-
           {/* Store badges image — above the mockup */}
           <div className="relative z-10">
             {/* eslint-disable-next-line @next/next/no-img-element */}

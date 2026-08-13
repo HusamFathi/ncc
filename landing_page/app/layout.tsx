@@ -66,7 +66,8 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "The Nation's Platform",
     title: "The Nation's Platform - Live Radio & Media Streaming",
-    description: "Stream live Libyan radio stations and national broadcasts on The Nation's Platform. Stay connected to the news, culture, and content that matters to your community - anytime, anywhere.",
+    description:
+      "Stream live Libyan radio stations and national broadcasts on The Nation's Platform. Stay connected to the news, culture, and content that matters to your community - anytime, anywhere.",
     images: [
       {
         url: `${siteUrl}/images/app-icon.png`,
@@ -80,7 +81,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "The Nation's Platform - Live Radio & Media Streaming",
-    description: "Stream live Libyan radio stations and national broadcasts on The Nation's Platform. Stay connected to the news, culture, and content that matters to your community - anytime, anywhere.",
+    description:
+      "Stream live Libyan radio stations and national broadcasts on The Nation's Platform. Stay connected to the news, culture, and content that matters to your community - anytime, anywhere.",
     images: [`${siteUrl}/images/app-icon.png`],
   },
   robots: {
@@ -102,11 +104,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl" className={`${tajawal.variable} h-full antialiased`}>
+    <html
+      lang="ar"
+      dir="rtl"
+      className={`${tajawal.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col font-sans">
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
