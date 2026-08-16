@@ -127,6 +127,7 @@ class _RadioWidgetState extends State<RadioWidget> {
 
                                           isRotating:
                                               playing &&
+                                              !hasError &&
                                               !isNotLoadingAndNotReady &&
                                               currentId == index,
                                           radio: radioStreamData,
