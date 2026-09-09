@@ -101,7 +101,10 @@ class RadioStreamControllerWidget extends StatelessWidget {
                             leading: Hero(
                               tag: radioTagString,
                               child: RadioImageRotationWidget(
-                                isRotating: playing && !hasError&& !isNotLoadingAndNotReady,
+                                isRotating:
+                                    playing &&
+                                    !hasError &&
+                                    !isNotLoadingAndNotReady,
                                 imageUrl: currentStreamData.imageUrl,
                               ),
                             ),

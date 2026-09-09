@@ -6,12 +6,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import '../../extensions/radio_stream_data_extension.dart';
 
 import '../../../../../core/failures/failures.dart';
 import '../../../../../core/src/entities/no_params.dart';
 import '../../../domain/entities/radio_stream_data.dart';
 import '../../../domain/usecases/list_radio_streams_usecase.dart';
+import '../../extensions/radio_stream_data_extension.dart';
 
 part 'radio_stream_event.dart';
 part 'radio_stream_state.dart';

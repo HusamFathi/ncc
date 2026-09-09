@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import '../../../../core/route/routes_config.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/extensions/string.dart';
 import '../../../../core/injection/init_di.dart';
 import '../../../../core/locale/app_language.dart';
 import '../../../../core/locale/app_localizations_helper.dart';
+import '../../../../core/route/routes_config.dart';
 import '../../../../core/src/entities/language.dart';
 import '../../../../core/src/widgets/app_version_widget.dart';
 import '../../../../core/src/widgets/loading_widget.dart';
@@ -161,6 +161,23 @@ class SettingsPage extends StatelessWidget {
                           padding: const EdgeInsets.all(kSmallPadding),
                           child: Column(
                             children: [
+                              ListTile(
+                                leading: Icon(Icons.email),
+                                subtitle: Text('info@msf-hor.rog'),
+                                title: Text(Tr.of(context).contactUs.toTitle()),
+                                onTap: () async {
+                                  final Uri emailUri = Uri(
+                                    scheme: 'mailto',
+                                    path: 'info@msf-hor.rog',
+                                  );
+                                  if (!await launchUrl(emailUri)) {
+                                    throw Exception(
+                                      'Could not launch $emailUri',
+                                    );
+                                  }
+                                },
+                              ),
+                              Divider(),
                               ListTile(
                                 subtitle: AppVersionWidget(),
 

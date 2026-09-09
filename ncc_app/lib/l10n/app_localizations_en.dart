@@ -66,6 +66,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get syncWithSystem => 'Sync with system settings';
 
   @override
+  String get contactUs => 'Contact Us';
+
+  @override
   String get aboutPlatform => 'About the Platform';
 
   @override

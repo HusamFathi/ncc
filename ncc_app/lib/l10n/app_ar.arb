@@ -16,7 +16,8 @@
   "onboardingHeritageRadioTitle": "راديو الأمة للتراث",
   "moreRadioChannelsComing": "المزيد من القنوات الإذاعية ستتوفر قريبًا.",
   "onboardingHeritageRadioDescription": "اكتشف ثراء التراث الليبي من خلال برامج تحتفي بالهوية الوطنية وتحافظ على قصصه للأجيال القادمة.",
-  "unableToLoadLocalData": "تعذر تحميل البيانات المحلية",
+  "unableToLoadLocalData": "تعذر تحميل البيانات المحلية",  "contactUs":"اتصل بنا",
+
   "shareAppMessage": "شارك التطبيق","shareAppLinkMessage": "اكتشف تطبيقنا وابقَ على تواصل معنا! حمّله من هنا: {link}",
   "shareWithMessage": "شارك مع المزيد من الخيارات..",
   "internetConnectionRestoredMessage": "تم استعادة الاتصال بالإنترنت.",

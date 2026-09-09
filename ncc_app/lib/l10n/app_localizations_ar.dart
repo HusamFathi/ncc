@@ -66,6 +66,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get syncWithSystem => 'مزامنة مع إعدادات النظام';
 
   @override
+  String get contactUs => 'اتصل بنا';
+
+  @override
   String get aboutPlatform => 'عن المنصة';
 
   @override

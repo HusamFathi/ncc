@@ -200,6 +200,12 @@ abstract class AppLocalizations {
   /// **'Sync with system settings'**
   String get syncWithSystem;
 
+  /// No description provided for @contactUs.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact Us'**
+  String get contactUs;
+
   /// No description provided for @aboutPlatform.
   ///
   /// In en, this message translates to:
