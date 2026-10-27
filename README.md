@@ -1,6 +1,20 @@
 # NCC (National Communication Center / مركز الأمة للتواصل)
 
+<p align="center">
+  <img src="ncc_app/media/banner.png" alt="NCC App Banner" width="100%">
+</p>
+
 Monorepo containing the **NCC Mobile Application** (Flutter) and the **NCC Landing Page** (Next.js).
+
+## Screenshots
+
+<p align="center">
+  <img src="ncc_app/media/1.png" alt="Promotional" width="19%">
+  <img src="ncc_app/media/2.png" alt="Home Screen" width="19%">
+  <img src="ncc_app/media/3.png" alt="Radio Player" width="19%">
+  <img src="ncc_app/media/4.png" alt="Volume Control" width="19%">
+  <img src="ncc_app/media/5.png" alt="Settings & About" width="19%">
+</p>
 
 ## Repository Overview
 
