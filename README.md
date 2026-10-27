@@ -95,3 +95,4 @@ A Next.js web application built with React 19, TypeScript, and Tailwind CSS. Pro
 ## Contributing & Development Guidelines
 - Ensure code adheres to Flutter and Next.js linting rules (`flutter analyze` and `npm run lint`).
 - Never commit credentials, keystores, `.env` files, or `key.properties` to version control.
+
