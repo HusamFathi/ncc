@@ -163,12 +163,12 @@ class SettingsPage extends StatelessWidget {
                             children: [
                               ListTile(
                                 leading: Icon(Icons.email),
-                                subtitle: Text('info@msf-hor.rog'),
+                                subtitle: Text('info@msf-hor.org'),
                                 title: Text(Tr.of(context).contactUs.toTitle()),
                                 onTap: () async {
                                   final Uri emailUri = Uri(
                                     scheme: 'mailto',
-                                    path: 'info@msf-hor.rog',
+                                    path: 'info@msf-hor.org',
                                   );
                                   if (!await launchUrl(emailUri)) {
                                     throw Exception(

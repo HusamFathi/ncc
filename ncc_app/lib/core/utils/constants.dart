@@ -92,7 +92,5 @@ TextStyle kLandingBlocTitleTextStyle(context) =>
     Theme.of(context).textTheme.headlineMedium!;
 const String kFacebookPageLink =
     'https://www.facebook.com/p/%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%A3%D9%85%D8%A9-%D9%84%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84-61576664882231/';
-const String kSupportEmail = '';
-const String privacyPolicyLink = 'https://www.atheerio.com/privacy'; //
 
 const String kRadioHeritageId = 'radio_heritage';

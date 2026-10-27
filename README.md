@@ -96,3 +96,17 @@ A Next.js web application built with React 19, TypeScript, and Tailwind CSS. Pro
 - Ensure code adheres to Flutter and Next.js linting rules (`flutter analyze` and `npm run lint`).
 - Never commit credentials, keystores, `.env` files, or `key.properties` to version control.
 
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+> [!NOTE]
+> The Tajawal font keeps its own license: the **SIL Open Font License (OFL) 1.1** (see `landing_page/public/fonts/OFL.txt`).
+
+---
+
+## Contact
+
+For business inquiries only: husamfathi132@gmail.com
