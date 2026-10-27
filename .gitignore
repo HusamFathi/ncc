@@ -1,0 +1,39 @@
+# Global / Monorepo root gitignore
+
+# Environment files
+.env
+.env.*
+!.env.example
+*.env
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs & Debugging
+*.log
+firebase-debug.log*
+
+# Build & Dependencies
+node_modules/
+build/
+.dart_tool/
+dist/
+out/
+.next/
+
+# Android Keystores & sensitive properties
+*.jks
+*.keystore
+key.properties
+local.properties
+google-services.json
+GoogleService-Info.plist
+firebase_options.dart

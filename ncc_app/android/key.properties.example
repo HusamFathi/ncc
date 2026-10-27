@@ -1,0 +1,6 @@
+# Android Signing Configuration
+# Copy this file to ncc_app/android/key.properties and replace with real credentials
+storePassword=your_keystore_password_here
+keyPassword=your_key_password_here
+keyAlias=your_key_alias_here
+storeFile=upload-keystore.jks
